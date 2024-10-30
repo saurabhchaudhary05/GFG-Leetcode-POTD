@@ -1,0 +1,27 @@
+Today’s focus was on array manipulation with a mountain structure constraint and finding pairs with a specific difference! Here’s a breakdown of the challenges:
+
+🏔 Minimum Number of Removals to Make Mountain Array
+Problem Statement: A mountain array requires an increasing sequence followed by a decreasing sequence. Given an array, determine the minimum number of elements to remove to transform it into a mountain array.
+
+Approach:
+1) Identify Left and Right Peaks: For each element in the array, compute the longest increasing subsequence (LIS) from the start and the longest decreasing subsequence (LDS) to the end. These will help in finding potential "peak" elements that satisfy the mountain array properties.
+2) Calculate Mountain Lengths: For each element that can serve as a peak (where both LIS and LDS have lengths >= 1), calculate the combined length of the mountain.
+3) Minimize Removals: To transform the array into a mountain array, find the maximum mountain length possible, then subtract this length from the total array length to get the minimum removals needed.
+
+Key Takeaways:
+• Dynamic Programming for LIS and LDS: Precomputing the LIS and LDS for each position gives efficient access to peak possibilities, streamlining the solution.
+• Maximizing Length, Minimizing Removals: By focusing on maximizing the length of a potential mountain, you can directly derive the minimum elements to remove.
+
+🔗 Pairs with Difference k
+Problem Statement: Given an array, find the number of unique pairs where the absolute difference between elements equals a given integer kkk.
+
+Approach:
+1) Hashing for Efficient Lookup: Use a set to store each element in the array. 2) For each element xxx, check if x+kx + kx+k or x−kx - kx−k exists in the set, as these would form pairs with xxx having the difference kkk.
+3) Avoid Duplicates: Maintain a visited set to track elements already counted, ensuring each pair is counted once without duplication.
+
+Key Takeaways:
+• Optimal Lookup with Hashing: Hash-based lookup for each element avoids the need for nested loops, keeping the solution efficient.
+• Handling Unique Pairs: Using a set-based approach ensures each valid pair is counted once, aligning with the problem's requirements for unique pairs.
+
+📚 Reflections & Learning:
+• Dynamic programming and hash-based lookups are powerful techniques for array-based problems, particularly where order and unique elements are essential.
