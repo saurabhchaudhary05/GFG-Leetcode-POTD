@@ -1,0 +1,27 @@
+Today was all about optimizing movement in grids and inserting elements in data structures! Here’s a quick dive into today’s problem-solving journey:
+
+🤖 Minimum Total Distance Traveled Problem Statement: Given robots and factories positioned along the X-axis, each robot must reach a factory to be repaired, minimizing the total distance traveled. Each factory has a limit on the number of robots it can repair, so finding an optimal assignment is key.
+
+Approach:
+1) Sort and Match Closest: Start by sorting both robot and factory positions. 2) Pair each robot with the closest available factory that still has repair capacity.
+3) Dynamic Programming for Optimal Assignment: Use a DP-based approach to calculate the minimum distance by evaluating the cost of assigning each robot to every feasible factory. Precompute costs for each robot-factory pair and ensure no factory exceeds its repair limit.
+4) Greedy & Efficient Traversal: By ordering both lists and using a limit counter, we avoid unnecessary calculations and ensure an efficient search for each robot's optimal factory.
+
+Key Takeaways:
+• Greedy & DP Approach: Combining greedy and DP ensures that each robot is assigned efficiently without overshooting factory limits.
+• Optimal Pairing: Sorting the lists and using optimal pairing techniques keeps the problem tractable and meets the problem's constraints.
+
+🔗 Insert in Sorted Way in a Sorted DLL Problem Statement: Given a sorted doubly linked list (DLL), insert a given value xxx in sorted order. The challenge is to maintain the DLL’s structure and keep it sorted post-insertion.
+
+Approach:
+1) Traversal to Find Position: Traverse the DLL from the head until reaching the correct insertion point, where the node value is just greater than or equal to xxx.
+2) Insert Node with Pointer Updates: Create a new node and adjust the next and prev pointers to insert xxx at the correct position, ensuring smooth linkage with surrounding nodes.
+3) Edge Cases: Account for inserting at the beginning or end of the list to avoid null pointer errors.
+
+Key Takeaways:
+• Pointer Manipulation in DLL: This reinforces understanding of pointer adjustments in a doubly linked list, especially ensuring that all next and prev connections are accurate after insertion.
+• Efficient Sorted Insertion: Direct traversal ensures that insertion is performed in optimal O(n)O(n)O(n) time while preserving list order.
+
+📚 Reflections & Learning:
+• Pairing optimization and linked list manipulations make for effective problem-solving in dynamic structures.
+• Balancing greedy strategies with dynamic programming can simplify complex optimization tasks and improve solution efficiency.
