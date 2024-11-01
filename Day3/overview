@@ -1,0 +1,26 @@
+Today, I tackled problems involving string manipulation and maximizing values in circular arrays. Here's the breakdown:
+
+📝 Delete Characters to Make Fancy String Problem Statement: Given a string sss, transform it into a "fancy" string where no three consecutive characters are identical. Delete the minimum number of characters to achieve this.
+
+Approach:
+1) Two-Pointer Check: Use a single pass through the string to check for three consecutive characters. When found, skip the third character to avoid duplication.
+2) Build the Result: Append valid characters to the result string, ensuring the condition is met without needing extra deletions.
+3) Unique Final Output: Since we only remove the minimal characters required to make the string fancy, the result is unique.
+
+Key Takeaways:
+• Single-Pass Validation: Keeping it efficient by scanning the string once and checking only the last two characters to decide if the next one can be added.
+• String Manipulation Basics: Reinforced understanding of string operations and condition-based character addition.
+
+🔗 Swap and Maximize Problem Statement: Given a circular array, find the maximum sum of absolute differences between consecutive elements by rearranging the array elements optimally.
+
+Approach:
+1) Sort & Maximize Differences: Sort the array and then arrange elements by taking from the smallest and largest ends alternately. This alternation maximizes absolute differences.
+2) Simulate Circular Difference Calculation: Once arranged, calculate the sum of absolute differences for each adjacent pair and the circular difference between the last and first elements.
+3) Efficiency Through Sorting: Sorting the array and alternating selection ensures we achieve the maximum difference in O(nlog⁡n)O(n \log n)O(nlogn) time.
+
+Key Takeaways:
+• Optimized Rearrangement: Leveraging sorted order to maximize differences highlights the power of thoughtful rearrangement in optimization problems.
+• Circular Array Handling: Addressing the wrap-around difference between the last and first elements adds complexity to calculating total differences effectively.
+📚 Reflections & Learning:
+These problems reinforced the importance of condition-based array and string manipulations.
+• Finding patterns in differences and constraints helps make sense of maximization goals in circular structures.
