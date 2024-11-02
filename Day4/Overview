@@ -1,0 +1,30 @@
+Today’s problems revolved around circular string validation and detecting nearby duplicates. Here’s a quick summary:
+
+📝 2490. Circular Sentence Problem Statement: Given a sentence, determine if it is circular, meaning:
+The last character of each word matches the first character of the following word.
+The last character of the final word matches the first character of the first word.
+
+Approach:
+1) Split and Check: First, split the sentence into words using spaces.
+2) Character Comparison: For each consecutive word pair, check if the last character of the first word matches the first character of the second word. 
+3) Finally, check if the last word’s last character matches the first word’s first character to ensure circularity.
+4) Return Result: If all conditions are met, the sentence is circular.
+
+Key Takeaways:
+• Edge Cases: This approach works well for sentences with only one word, where it’s automatically circular.
+• String Manipulation: String splitting and character checking reinforce handling constraints with minimal loops.
+
+🔗 Kth Distance Duplicate Check Problem Statement: Given an array and a number kkk, determine if there are any duplicate elements within kkk distance of each other in the array.
+
+Approach:
+1) Sliding Window with Set: Maintain a set to keep track of elements within the kkk-distance window.
+2) Check for Duplicates: As we slide the window, check if the current element already exists in the set, indicating a duplicate within kkk distance.
+3) Adjust Window: Add the current element to the set and remove elements that are more than kkk positions away to keep the window size in check.
+
+Key Takeaways:
+• Efficiency with Sets: Using a set allows for O(1)O(1)O(1) average time complexity in checking for duplicates.
+• Window Management: This approach highlights efficient sliding window handling without redundant checks.
+
+📚 Reflections & Learning:
+• Today’s problems reinforced sliding window usage with constraints on proximity and efficient handling of circular conditions.
+• Breaking down string and array manipulation into systematic checks simplifies logical constraints.
