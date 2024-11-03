@@ -1,0 +1,26 @@
+Today's challenges were a mix of string manipulation and linked list traversal. Here’s a breakdown of what I worked on:
+
+🌀 Rotate String Problem Statement: 
+Given two strings, s and goal, determine if s can become goal after any number of shifts. A shift moves the leftmost character of s to the end.
+
+Approach:
+1) Concatenate to Check Rotations: By doubling s to create s + s, any rotated version of s will appear as a substring within this doubled string.
+2) Containment Check: Simply check if goal exists as a substring within this concatenated string and if goal has the same length as s.
+
+Key Takeaways:
+• String Concatenation for Rotations: This approach allows checking for all possible rotations in a single containment check.
+• Efficiency: Achieved in O(n)O(n)O(n) time due to substring search, making it both concise and efficient.
+
+🔗 Is Linked List Length Even? Problem Statement: Given a linked list, determine if its length is even.
+
+Approach:
+1) Traverse with Toggle: Traverse the linked list, using a simple toggle to flip between even and odd each time a node is encountered.
+2) Direct Check: By the end of the traversal, the toggle state directly reveals if the length is even.
+
+Key Takeaways:
+• Minimal Space: This approach doesn’t require counting or storage, using a basic toggle to achieve constant space complexity.
+• Quick Traversal for Linked List Properties: Reinforces the utility of linked list traversal for simple property checks like length.
+
+📚 Reflections & Learning:
+• Efficient string manipulation through concatenation and substring checks was particularly useful for rotation checks.
+• Linked list traversal for parity checks is a straightforward but powerful method for optimizing simple list properties.
