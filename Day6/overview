@@ -1,0 +1,27 @@
+Today, I worked on two distinct problems that focused on finding patterns and compressing information. Here’s the rundown:
+🔎 Find All Triplets with Zero Sum 
+Problem Statement: Given an array arr[], find all indices [i, j, k] where arr[i] + arr[j] + arr[k] = 0 and i < j < k. Return the triplet indices in any order, with each triplet internally sorted.
+
+Approach:
+1) Sorting and Two-Pointer Technique: First, I sorted the array. Then, for each element arr[i], I used two pointers to find pairs in the subarray that sum up to -arr[i].
+2) Avoiding Duplicates: To ensure unique triplets, I handled duplicate values for both i and the pairs formed by the two pointers.
+3) Index Conversion: Once valid triplets were found, I mapped them back to their original indices to maintain the required output format.
+
+Key Takeaways:
+• Two-Pointer Efficiency: The sorted two-pointer approach simplifies finding pairs with a specific sum.
+• Attention to Indices: This problem required careful handling of indices to meet the "i < j < k" condition.
+
+📝 String Compression III 
+Problem Statement: Given a string word, compress it by repeatedly removing a maximum-length prefix of a single character (up to 9 times) and appending the count followed by the character to a compressed string comp.
+
+Approach:
+1) Character Counting: I iterated through word, counting consecutive characters up to a maximum of 9, then appending this count and character to comp.
+2) End of Word Handling: When reaching the end of word, I checked any remaining characters to ensure they were appended to comp.
+
+Key Takeaways:
+• Prefix Compression Limit: By limiting consecutive characters to 9, this problem became an exercise in counting and appending fixed-length chunks.
+• String Manipulation in Place: This approach emphasized in-place updates without additional structures, which kept it space-efficient.
+
+📚 Reflections:
+• Working with indices for specific conditions in Find All Triplets was insightful for dealing with distinct combinations.
+• Implementing fixed-length compression for String Compression III was a good exercise in concise string manipulation.
