@@ -1,0 +1,29 @@
+Today, I tackled two medium-level problems, each focusing on transforming data either by partitioning or rotating elements in place.
+
+🔍 Minimum Number of Changes to Make Binary String Beautiful Problem Statement: Given a binary string s of even length, we want to make it "beautiful" by ensuring it can be split into contiguous substrings where:
+Each substring has an even length.
+Each substring contains only 0s or only 1s. Our task is to determine the minimum number of changes needed in s to achieve this format.
+
+Approach:
+1) Pattern Identification: I first noticed two alternating patterns that could make the string "beautiful" if s followed them: either starting with 0 or starting with 1.
+2) Count Mismatches: I counted how many characters would need to change for each of these patterns to match the string.
+3) Minimum Changes Calculation: The result was the minimum number of changes between these two patterns.
+
+Key Takeaways:
+• Alternating Pattern Matching: This problem highlighted the efficiency of pattern-based solutions for binary transformations.
+• Two Pattern Check: By checking both possible starting patterns, I minimized the change count, ensuring an optimal solution.
+
+🔄 Rotate Matrix by 90 Degrees Problem Statement: Given a square matrix mat[][], rotate it by 90 degrees clockwise without using extra space.
+
+Approach:
+1) Transpose Matrix: I first transposed the matrix by swapping elements at positions (i, j) with (j, i) for all i < j.
+2) Reverse Rows: Then, I reversed each row in place to achieve a 90-degree clockwise rotation.
+3) In-Place Operation: This approach satisfied the space requirement, as both steps could be performed in-place.
+
+Key Takeaways:
+• In-Place Matrix Transformations: Transposing and reversing rows are common steps for in-place matrix rotations.
+• Optimized Space Complexity: No extra space was used, making it an efficient solution.
+
+📚 Reflections:
+• Pattern recognition in Minimum Changes was an interesting challenge that made binary manipulation more intuitive.
+• In-place matrix operations provided hands-on experience with rotation transformations, reinforcing matrix manipulation skills.
