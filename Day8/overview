@@ -1,0 +1,106 @@
+Today’s problems involved determining the sortability of an array under specific constraints and calculating path-based sums in a binary tree.
+
+
+
+🔍 Find if Array Can Be Sorted Problem Statement: We have an array nums of positive integers. We’re allowed to swap any two adjacent elements if they have the same number of set bits (1s) in their binary representation. The goal is to check if we can sort the array by performing these operations.
+
+
+
+Approach:
+
+1) Set Bit Count Grouping: First, I grouped elements based on the number of set bits in each number. This way, I ensured we only consider swaps allowed by the rules.
+
+2) Sorting Within Groups: I sorted each of these groups independently, as we can arrange elements within each set-bit count group.
+
+3) Reconstruction and Validation: Finally, I reconstructed the array by concatenating these sorted groups and checked if it matched the sorted version of nums. If they matched, the answer was true; otherwise, it was false.
+
+
+
+Key Takeaways:
+
+• Binary Manipulation: Counting set bits provided an interesting twist to the sorting problem.
+
+• Group-Based Sorting: This was a useful approach to control constraints while ensuring global order.
+
+
+
+🔄 Root to Leaf Paths Sum Problem Statement: Given a binary tree where each node contains a number, we need to calculate the sum of all numbers formed by root-to-leaf paths. Each path represents a number formed by interpreting the nodes as digits from root to leaf, where each step to a child multiplies the current value by 10 and adds the child's value.
+
+
+
+Approach:
+
+1) DFS Traversal: I used a Depth-First Search (DFS) approach to traverse the tree from root to leaves.
+
+2) Path Accumulation: For each path, I maintained a cumulative value representing the number formed so far by multiplying by 10 and adding the current node's value.
+
+3) Summing Leaf Paths: When a leaf node was reached, I added the cumulative value to the total sum. This total represented the sum of all root-to-leaf numbers.
+
+
+
+Key Takeaways:
+
+• Recursive Path Sum Calculation: This pattern is effective for aggregating results along paths in a tree.
+
+•DFS Efficiency: DFS made it easy to track and update path values as we progressed.
+
+
+
+📚 Reflections:
+
+• Both problems required grouping or accumulating values with specific constraints, enhancing problem-solving flexibility for condition-based constraints.
+
+• The binary and tree traversal skills sharpened here are often applicable to complex real-world data structures.
+
+
+Ques1:
+class Solution {
+    // Function to find the sum of all root to leaf paths.
+    public static int treePathsSum(Node root) {
+        // Calling the helper function inorder to calculate the sum
+        // of all root to leaf paths.
+        return preorder(root, 0);
+    }
+
+    // Helper function to calculate the sum of all root to leaf paths.
+    public static int preorder(Node root, int val) {
+        // If the current node is null, return 0.
+        if (root == null) return 0;
+
+        // Calculate the new value as the sum so far multiplied by 10
+        // and the current node's data.
+        val = val * 10 + root.data;
+
+        // If the current node is a leaf node, return the accumulated value.
+        if (root.left == null && root.right == null) return val;
+
+        // Recursively calculate the sum of root to leaf paths in the left and right
+        // subtree.
+        return preorder(root.left, val) + preorder(root.right, val);
+    }
+}
+
+
+
+
+Ques2 of leetcode
+class Solution {
+    public static boolean canSortArray(final int[] nums) {
+        short pmax = 0, cmin = 0, cmax = 0;
+        byte pcnt = 0;
+        for (final int v : nums) {
+            final byte ccnt = (byte)Integer.bitCount(v);
+            if (pcnt == ccnt) {
+                cmin = cmin > v ? (short)v : cmin;
+                cmax = cmax < v ? (short)v : cmax;
+            } else if (cmin < pmax) {
+                return false;
+            } else {
+                pmax = cmax;
+                cmin = cmax = (short)v;
+                pcnt = ccnt;
+            }
+        }
+        return cmin >= pmax;
+    }
+}
