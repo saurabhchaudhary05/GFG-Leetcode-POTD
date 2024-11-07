@@ -1,0 +1,29 @@
+Today’s problems involved determining the size of the largest subset with specific bitwise properties and dividing an array into equal sum subarrays.
+
+🔍 Largest Combination With Bitwise AND Greater Than Zero Problem Statement: Given an array candidates of positive integers, we need to find the largest combination (subset) of numbers for which the bitwise AND of all numbers in the subset is greater than zero. Each number can only be used once in each combination.
+
+Approach:
+1) Bit Position Tracking: I focused on each bit position (0 to 31 for integers in candidates) and checked how many numbers had that bit set.
+2) Maximizing Set Bit Count: For each bit position, the maximum number of candidates with that bit set gave the maximum size of a combination where that bit contributes to a non-zero AND.
+3) Final Result: I returned the highest count of numbers with a common bit set, as that represents the largest possible subset with a bitwise AND greater than zero.
+
+Key Takeaways:
+• Bitwise Operations: Using bitwise techniques is efficient for problems involving AND/OR operations over multiple combinations.
+• Optimal Subset Counting: Counting specific features (set bits) across elements helps optimize combination checks.
+
+🔄 Split Array in Three Equal Sum Subarrays 
+Problem Statement: Given an array arr[], determine if it can be split into three consecutive parts such that the sum of each part is equal. If possible, return indices (i, j) such that the sums arr[0..i], arr[i+1..j], and arr[j+1..n-1] are equal. If it’s not possible, return {-1, -1}.
+
+Approach:
+1) Total Sum Check: First, I checked if the array’s total sum is divisible by 3. If not, it’s impossible to split it as required.
+2) Partition Sum Identification: I calculated the target sum for each part as total_sum / 3.
+3) Index Tracking: I then iterated through arr, accumulating sums and marking the first and second indices (i and j) where these sums matched the target sum for each part.
+4) Verification: If I found valid indices (i, j) where the three parts’ sums were equal, I returned them. Otherwise, I returned {-1, -1}.
+
+Key Takeaways:
+• Sum Partitioning: When breaking down arrays into equal-sum subarrays, dividing the total sum is essential.
+• Single Pass Accumulation: Using cumulative sums allowed efficient tracking of partition points.
+
+📚 Reflections:
+• Both problems emphasized efficient subset selection and partitioning techniques.
+• Problems like these are helpful in reinforcing skills with bitwise operations, cumulative sums, and partition-based problem-solving.
