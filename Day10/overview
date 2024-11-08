@@ -1,0 +1,28 @@
+Today's problems dealt with finding the minimum repetition to form a substring and maximizing XOR values in queries.
+
+🔍 Minimum Repeat to Make Substring 
+Problem Statement: Given two strings s1 and s2, determine the minimum number of times s1 needs to be repeated so that s2 appears as a substring within the repeated string. If it’s impossible, return -1.
+
+Approach:
+1) Base Length Calculation: First, I calculated the minimum number of times s1 must be repeated to potentially contain s2, which is based on the lengths of s1 and s2.
+2) Checking Repeated Combinations: I repeated s1 the minimum number of times, then checked if s2 was a substring. If not, I added one more repetition to ensure coverage for cases where s2 partially overlaps across repetitions.
+3) Return Conditions: If s2 was found as a substring, I returned the number of repetitions. Otherwise, I returned -1.
+
+Key Takeaways:
+• Substring in Repetitions: Determining overlaps between repetitions can be tricky, especially if s2 spans across repetitions.
+• Length-Based Calculation: Aiming for a minimum repetition count based on lengths helps optimize early.
+
+🔄 Maximum XOR for Each Query Problem Statement: Given a sorted array nums of non-negative integers and an integer maximumBit, return an array where each element is the maximum XOR obtainable by selecting k less than 2^maximumBit for each successive query. The query reduces nums by removing the last element each time.
+
+Approach:
+1) Prefix XOR Calculation: I calculated the XOR of the entire array at the start, as XOR operations have a cumulative effect.
+2) Maximum K Determination: For each query, I used k = (1 << maximumBit) - 1 to maximize the XOR within the specified bit range.
+3) Iterative Updates: With each query, I removed the last element of nums from the prefix XOR, allowing each query to reflect the updated prefix XOR with the maximum k.
+
+Key Takeaways:
+• XOR Properties: Leveraging cumulative XORs was key in efficiently tracking results without recalculating from scratch each time.
+• Bit Masking with Power of 2: Using a bit mask of 2^maximumBit - 1 simplified finding the maximum XOR within the allowed range.
+
+📚 Reflections:
+• XOR-based problems often require creative use of cumulative properties.
+Today’s session highlighted efficient handling of cumulative operations and managing overlapping substrings in repeated strings.
