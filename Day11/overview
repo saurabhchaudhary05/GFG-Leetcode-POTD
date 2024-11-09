@@ -1,0 +1,31 @@
+
+
+Today’s problems were all about minimizing values, both by forming numbers and by bitwise operations with constraints.
+
+🔍 Minimum Sum Problem Statement: Given an array arr[] containing digits (0-9), find the minimum possible sum of two numbers formed by arranging these digits. Each digit in arr[] must be used, and the numbers formed should avoid leading zeroes.
+
+Approach:
+
+Sort the Digits: I started by sorting the array so that smaller digits could be placed first to minimize the sum.
+Divide Digits into Two Numbers: Alternately assigned digits to two numbers, ensuring they were built in increasing order for minimized summation.
+Sum and Format Output: Converted the numbers to integers, summed them, and formatted the result as a string without leading zeroes.
+Key Takeaways:
+
+Greedy Distribution: Alternating sorted digits minimizes the sum by keeping both numbers roughly balanced in terms of value.
+Edge Handling: Ensured no leading zeroes appeared in the output string.
+🔄 Minimum Array End with Bitwise AND Constraint Problem Statement: Given integers n and x, construct an increasing array nums of length n such that the bitwise AND of all elements equals x. Find the minimum possible value for the last element nums[n-1].
+
+Approach:
+
+Initialize with x: I started by setting nums[0] to x, ensuring that the AND of all elements would be anchored to x.
+Increasing Sequence Requirement: For each subsequent element, incremented values while checking they satisfied the increasing condition.
+Bitwise AND Validation: Ensured that each addition to the array maintained the bitwise AND result of x as specified, updating nums[n-1] accordingly to get the minimal possible maximum.
+Key Takeaways:
+
+Bitwise Constraints: Maintaining the AND operation constraint required careful selection of values.
+Incremental Build: Constructing elements incrementally allowed efficient satisfaction of both increasing order and AND constraints.
+📚 Reflections:
+
+Balancing two competing goals—minimum value and constraints on arrangement—was the core of today’s challenges.
+Both problems reinforced the value of sorting and structured iteration for optimal solution building.
+#GreedyAlgorithms | #BitwiseOperations | #ArrayConstruction
