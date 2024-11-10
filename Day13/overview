@@ -1,0 +1,29 @@
+Today's problems focused on finding the shortest subarray to satisfy a bitwise OR condition and merging sorted arrays with distinct elements.
+
+🔍 Shortest Subarray With OR at Least K II 
+Problem Statement: Given a non-negative integer array nums and an integer k, find the length of the shortest subarray where the bitwise OR of all elements is at least k. Return -1 if no such subarray exists.
+
+Approach:
+1) Sliding Window with OR Check: I used a sliding window technique to efficiently manage and calculate the OR of subarrays.
+2) Dynamic Window Adjustments: For each start index, extended the window to include elements until the OR result met or exceeded k.
+3) Track Minimum Length: Once a subarray met the OR condition, recorded the length and then attempted to minimize it further by adjusting the start of the window.
+
+Key Takeaways:
+• Bitwise Operations: Bitwise OR was used to check for the required condition across subarrays efficiently.
+• Window Adjustment: This method allowed optimal search for minimum-length subarrays without recalculating OR from scratch.
+
+🔗 Union of Two Sorted Arrays with Distinct Elements 
+Problem Statement: Given two sorted arrays a[] and b[] with distinct elements, return the union of both arrays in sorted order, ensuring each element appears only once.
+
+Approach:
+1) Two-Pointer Technique: Leveraged the fact that both arrays are sorted and distinct to use a two-pointer approach.
+2) Traverse and Compare: Compared elements at the current indices of both arrays and added the smaller to the union result, ensuring to advance pointers correctly.
+3) Append Remaining Elements: After reaching the end of one array, appended the rest of the elements from the other array.
+
+Key Takeaways:
+• Two-Pointer Efficiency: This approach minimized time complexity to linear in terms of array lengths, making it efficient.
+•Distinct Union in Sorted Order: Simplified the union task by working directly with sorted arrays, ensuring no duplicates in the final result.
+
+📚 Reflections:
+• Efficiency through Structure: Both problems relied on leveraging array properties (sorted/distinct in one, subarray OR property in the other) for efficient solutions.
+• Sliding Window and Two-Pointer Techniques: These are powerful methods when dealing with contiguous subarray problems and sorted array tasks.
