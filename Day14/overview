@@ -1,0 +1,27 @@
+Today's focus was on making arrays strictly increasing through prime-based transformations and ensuring unique array elements with minimal increments. 🚀
+
+🔍 Prime Subtraction Operation
+Problem Statement: Given a 0-indexed integer array, the task is to make it strictly increasing by repeatedly subtracting a prime number less than the current element.
+
+Approach:
+1) Prime Subtraction: For each element, I checked if it could be adjusted to create a strictly increasing sequence by subtracting an appropriate prime.
+2) Greedy Algorithm: By adjusting each element, I ensured a strictly increasing order was maintained from start to end.
+
+Key Takeaways:
+• Prime-Based Manipulation: This problem required a deep understanding of prime numbers and dynamic array adjustments.
+• Greedy Optimization: Applying this approach allowed the transformation while minimizing operations.
+
+🔗 Make Array Elements Unique
+Problem Statement: Given an array, ensure all elements are unique with the minimum number of increment operations.
+
+Approach:
+1) Sorting and Incrementing: After sorting the array, I incremented duplicate elements to make each value unique while tracking the minimum operations.
+2) Efficient Adjustments: By incrementing only where needed, I minimized the overall adjustments for uniqueness.
+
+Key Takeaways:
+• Greedy and Sorting: Sorting the array upfront enabled optimal adjustments in linear time.
+• Uniqueness through Increment: Efficiently handled duplicates by controlled increments.
+
+📚 Reflections:
+• Greedy Algorithms in Array Manipulation: Both problems required creative application of greedy techniques to meet unique conditions.
+• Prime Operations and Sorting Techniques: The structured approaches underscore the importance of understanding array manipulation methods.
