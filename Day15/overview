@@ -1,0 +1,27 @@
+Today's challenge was all about optimizing selections and scheduling – finding the most beautiful items based on price and checking if meeting schedules are feasible without conflicts. 🚀
+
+🔍 Most Beautiful Item for Each Query
+Problem Statement: Given a list of items, each with a price and beauty score, and a list of price queries, the task is to find the maximum beauty of an item priced at or below each query price.
+
+Approach:
+1) Sort and Prefix Max Array: I sorted items by price, then used a prefix array to maintain maximum beauty up to each price point.
+2) Binary Search: For each query, binary search allowed for fast lookups, ensuring efficient retrieval of maximum beauty within the query's price limit.
+
+Key Takeaways:
+• Prefix Arrays & Binary Search: Combining these methods enabled efficient solutions for range-based retrieval.
+• Sorting for Optimization: Sorting upfront simplified the complexity of multiple query evaluations.
+
+🔗 Meeting Rooms
+Problem Statement: Given an array of meeting time intervals, determine if a person can attend all meetings without overlap.
+
+Approach:
+1) Sort by Start Time: I sorted the meetings by start time to easily check for any overlap.
+2) Adjacent Comparison: By checking each meeting’s start time against the previous meeting’s end time, I confirmed if all meetings could be attended without conflict.
+
+Key Takeaways:
+• Scheduling & Sorting: Sorting and comparing adjacent intervals proved effective for detecting conflicts in scheduling.
+• Event Management Efficiency: This problem reinforced the importance of structured data for efficient scheduling.
+
+📚 Reflections:
+• Efficiency through Data Structuring: Both problems highlight how sorting and prefix-based solutions can greatly enhance performance.
+• Application of Binary Search: The use of binary search in dynamic querying scenarios was instrumental in achieving optimal results.
