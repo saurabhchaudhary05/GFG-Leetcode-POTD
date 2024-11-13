@@ -1,0 +1,27 @@
+Today's focus was on tackling pair-counting with range constraints and detecting intersections in linked lists. Let’s dive in!
+
+🔍 Count the Number of Fair Pairs
+Problem Statement: Given an array of integers and two bounds (lower and upper), the task is to find the number of pairs where the sum of elements lies within the specified bounds.
+
+Approach:
+1) Sorting & Two-Pointer Technique: I sorted the array, then used a two-pointer approach to efficiently count valid pairs within the range for each element.
+2) Binary Search for Range Checks: Using binary search helped to quickly identify valid bounds for pairs, making the solution more efficient.
+
+Key Takeaways:
+• Two-Pointer and Binary Search Combination: These techniques reduced the complexity of checking pair sums across all elements.
+• Efficient Range Counting: Sorting and targeted range search made the problem manageable for larger inputs.
+
+🔗 Intersection Point in Y-Shaped Linked Lists
+Problem Statement: Given two singly linked lists, find the intersection point where they merge into a Y-shape, or return -1 if no intersection exists.
+
+Approach:
+1) Length Difference Adjustment: Calculated the length difference between the lists to align their starting points.
+2) Two-Pointer Traversal: By moving pointers through the lists in tandem after alignment, I located the intersection point.
+
+Key Takeaways:
+• List Traversal Techniques: Aligning list lengths was essential for efficiently finding the intersection.
+• Pointer Synchronization: Using two pointers and aligning them improved readability and efficiency in handling linked lists.
+
+📚 Reflections:
+• Optimizing for Performance: Sorting, two-pointers, and pointer alignment in linked lists were essential to achieving efficient solutions.
+• Applicability of Data Structure Techniques: Both problems required specific data structure handling, highlighting the power of selecting the right approach for each structure.
