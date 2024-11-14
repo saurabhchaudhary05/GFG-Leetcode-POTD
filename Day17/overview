@@ -1,0 +1,25 @@
+Today, I focused on optimizing array sorting and product distribution across stores. Here’s a quick recap of my approach and takeaways!
+
+🔍 Nearly Sorted Array Problem Statement: Given an array where each element is at most k positions away from its target position, sort it without using a direct sorting function.
+
+Approach:
+1) Min-Heap for Local Sorting: I utilized a min-heap to handle the element placement within the k-bound. By maintaining a heap of size k+1, I ensured each element was extracted in order, optimizing for the limited disorder.
+2) Efficient Insertion & Extraction: By pushing and popping elements within the heap, I efficiently reordered elements without needing a full sort.
+
+Key Takeaways:
+• Heap Efficiency: The min-heap helped achieve an O(n log k) complexity, making this approach ideal for "nearly sorted" constraints.
+• Optimal Space Use: The sliding heap kept space usage low while maintaining order.
+
+🔗 Minimized Maximum of Products Distributed to Any Store Problem Statement: Given a number of products across different types and a fixed number of stores, distribute the products so that the maximum load of any store is minimized.
+
+Approach:
+1) Binary Search on Maximum Load: I set up a binary search on the possible maximum store load, calculating how many stores would be needed for each midpoint.
+2) Greedy Distribution: With each binary search step, I checked if the midpoint load was feasible by simulating store assignment, balancing load across stores.
+
+Key Takeaways:
+• Binary Search for Load Minimization: Binary search on the maximum load value allowed efficient constraint-based balancing.
+• Greedy Check Optimization: Simulating the distribution with midpoint checks ensured the minimum possible maximum load.
+
+📚 Reflections:
+• Heap Usage in Limited Disorder: Heaps are incredibly useful for scenarios where elements are close to sorted.
+• Binary Search in Allocation Problems: A valuable method for load balancing or allocation problems to find the optimal feasible solution quickly.
