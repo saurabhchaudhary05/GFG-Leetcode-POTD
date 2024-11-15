@@ -1,0 +1,66 @@
+
+
+Today’s problems focused on modifying arrays to meet specific criteria, including making one sorted by removing the fewest elements and finding the second largest distinct element. Here’s a breakdown of my approach and key takeaways!
+
+
+
+🔍 Shortest Subarray to be Removed to Make Array Sorted 
+
+Problem Statement: Given an integer array, find the shortest subarray (can be empty) to remove so that the remaining elements form a non-decreasing sequence.
+
+
+
+Approach:
+
+1) Two-Pointer Technique: First, I identified the longest non-decreasing subarrays from the left and right.
+
+2) Bridging Left and Right: Then, I calculated the minimum removal length by checking where elements from the right subarray could attach to the left, ensuring a non-decreasing order.
+
+3) Minimizing Removals: By considering various start and end points, I minimized the size of the removed subarray.
+
+
+
+Key Takeaways:
+
+• Efficiency with Two Pointers: The two-pointer approach allowed for a linear time solution, making it efficient even for larger arrays.
+
+• Handling Edge Cases: I accounted for cases where no removal was necessary or where a large portion of the array needed to be removed.
+
+
+
+🔗 Finding the Second Largest Element Problem Statement: Given an array of positive integers, find the second largest element that is distinct from the largest, or return -1 if it doesn’t exist.
+
+
+
+Approach:
+
+1) Tracking Max and Second Max: I traversed the array once, updating the largest and second-largest elements while ensuring they were distinct.
+
+2) Single-Pass Solution: This method achieved linear time complexity, as I only needed a single pass to identify the two largest unique elements.
+
+
+
+Key Takeaways:
+
+• Direct Approach for Efficiency: By simply keeping track of two variables, I was able to find the answer with minimal processing.
+
+• Distinctness Check: Ensuring that the second largest was distinct from the largest added a level of validation crucial for edge cases.
+
+
+
+📚 Reflections:
+
+• Array Manipulation Techniques: Efficiently identifying and removing subarrays can drastically reduce the need for full array traversals.
+
+• Distinct Element Tracking: Simple variables can be powerful for tracking the largest and second-largest elements while maintaining distinctions.
+
+#TwoPointers | #ArrayManipulation | #Optimization | #CodingJourney | #ProblemSolving
+
+
+
+
+
+
+
+
+
