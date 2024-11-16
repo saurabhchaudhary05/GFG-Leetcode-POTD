@@ -1,0 +1,28 @@
+Today’s challenges focused on subarray manipulation and efficient in-place array transformations. Here's how I approached them:
+
+🔍 Find the Power of K-Size Subarrays I
+Problem Statement: Given an integer array and a positive integer kkk, calculate the "power" of all subarrays of size kkk. A subarray has "power" if its elements are consecutive and sorted in ascending order.
+
+Approach:
+1) Sliding Window Technique: Used a sliding window to traverse through all subarrays of size kkk.
+2) Check Consecutiveness: For each subarray, verified if the elements were consecutive and sorted.
+3) Compute Power: If conditions were met, stored the maximum element; otherwise, stored −1-1−1.
+
+Key Takeaways:
+• Sliding Window Efficiency: This technique minimized redundant computations while checking consecutive subarrays.
+• Edge Case Handling: Carefully accounted for subarrays with duplicates or unordered elements.
+
+🔗 Move All Zeroes to End
+Problem Statement: Rearrange the given array in-place so that all zeroes move to the right while preserving the order of non-zero elements.
+
+Approach:
+1) Two-Pointer Technique: Used two pointers to iterate through the array: one for traversing and the other for tracking the position to insert non-zero elements.
+2) In-Place Transformation: Replaced zeroes with subsequent non-zero elements, followed by appending zeroes at the end.
+
+Key Takeaways:
+• Space Efficiency: Solved the problem in-place with O(1)O(1)O(1) additional space.
+• Order Preservation: Ensured non-zero elements retained their original order after transformation.
+
+📚 Reflections:
+• Sliding Window and Two-Pointer Synergy: These techniques are incredibly versatile for subarray and array transformation problems.
+• Optimization Focus: Striking the balance between space and time complexity is key to solving such problems efficiently.
