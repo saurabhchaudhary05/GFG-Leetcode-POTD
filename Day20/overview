@@ -1,0 +1,31 @@
+Today’s problem-solving journey tackled fundamental array operations and advanced sliding window techniques. Here's what I solved:
+
+🔍 Reverse an Array
+Problem Statement: Given an array, reverse its elements.
+
+Approach:
+1) Two-Pointer Technique: Swapped elements from both ends of the array moving inward until the pointers met.
+2) In-Place Operation: Solved the problem without using extra space, ensuring optimal space complexity of O(1)O(1)O(1).
+
+Key Takeaways:
+• Reinforced the importance of simple algorithms for foundational tasks.
+• Efficiency doesn't always require complexity; sometimes the basics are all you need!
+
+🔗 Shortest Subarray with Sum at Least K
+Problem Statement: Find the length of the shortest subarray with a sum of at least kkk. Return −1-1−1 if no such subarray exists.
+
+Approach:
+• Sliding Window with Monotonic Queue:
+• Maintained a deque to track indices and ensure the window sum was optimized.
+• Expanded the window to include elements until the sum met the condition.
+• Shrunk the window from the left while maintaining the sum to minimize its length.
+
+• Time Complexity: Achieved O(n)O(n)O(n) due to efficient deque operations.
+
+Key Takeaways:
+• Sliding Window Mastery: This problem highlighted the power of combining data structures like deque with sliding windows.
+• Edge Case Awareness: Carefully handled cases with negative numbers and the absence of valid subarrays.
+
+📚 Reflections:
+• From reversing arrays to optimizing subarray searches, today’s problems spanned the spectrum of complexity.
+• Reinforcing fundamentals alongside mastering advanced techniques ensures steady progress.
