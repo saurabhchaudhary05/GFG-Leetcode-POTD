@@ -1,0 +1,67 @@
+Today's problem-solving session revolved around array manipulation and circular data structures. Here's what I tackled:
+
+
+
+🔍 Rotate Array
+
+Problem Statement: Rotate an array counter-clockwise by ddd steps in place.
+
+
+
+Approach:
+
+1) Reverse-Based Rotation:
+
+2) Reversed the first ddd elements.
+
+3) Reversed the remaining n−dn-dn−d elements.
+
+4) Reversed the entire array to achieve the desired rotation.
+
+5) In-Place Operation: Avoided using extra space, keeping space complexity at O(1).
+
+
+
+Key Takeaways:
+
+• Learned the significance of reversing techniques for efficient rotations.
+
+• Reinforced understanding of modular arithmetic to handle rotations beyond the array's length.
+
+
+
+🔗 Defuse the Bomb
+
+Problem Statement: Decrypt a circular array by replacing each element based on the key kkk.
+
+
+
+Approach:
+
+1) Circular Sliding Window:
+
+For k>0k > 0k>0, calculated the sum of the next kkk elements using modular arithmetic for wrap-around.
+
+For k<0k < 0k<0, handled sums of previous kkk elements similarly.
+
+
+
+2) Used an auxiliary array to avoid overwriting during simultaneous updates.
+
+3) Edge Cases: Accounted for k=0k = 0k=0 by directly setting elements to 0.
+
+
+
+Key Takeaways:
+
+• Circular arrays require careful handling of indices, especially for wrap-around operations.
+
+• Leveraged sliding window techniques to efficiently compute segment sums.
+
+
+
+📚 Reflections:
+
+• Array manipulation problems deepen understanding of space-efficient solutions.
+
+• Circular structures introduce unique challenges, fostering innovative problem-solving approaches.
