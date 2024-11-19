@@ -1,0 +1,65 @@
+Today, I delved into subarray manipulations and permutations. Here's what I solved:
+
+
+
+🔍 Maximum Sum of Distinct Subarrays With Length K
+
+Problem Statement: Find the maximum sum of subarrays of size kkk where all elements are distinct.
+
+
+
+Approach:
+
+• Sliding Window with HashSet:
+
+1) Used a sliding window technique to traverse the array, keeping track of distinct elements with a HashSet.
+
+2) Maintained a running sum for the window and updated the maximum sum when conditions were met.
+
+• Adjusted the window dynamically when duplicate elements were encountered.
+
+• Edge Cases: Handled scenarios where no valid subarray exists (e.g., k>nk > nk>n).
+
+
+
+Key Takeaways:
+
+• Hashing and sliding window methods effectively solve subarray problems with constraints.
+
+• Reinforced understanding of balancing time and space efficiency.
+
+
+
+🔗 Next Permutation
+
+Problem Statement: Rearrange an array into its lexicographically next greater permutation.
+
+
+
+Approach:
+
+1) Reverse-Engineering Lexicographical Order:
+
+• Identified the first pair of indices iii and i+1i+1i+1 (from right to left) where arr[i]<arr[i+1]arr[i] < arr[i+1]arr[i]<arr[i+1].
+
+• Swapped arr[i]arr[i]arr[i] with the smallest element on the right that's greater than arr[i]arr[i]arr[i].
+
+2) Reversed the subarray to the right of iii to achieve the next permutation.
+
+3) Edge Cases: If no valid permutation exists (array is in descending order), returned the smallest permutation by sorting.
+
+
+
+Key Takeaways:
+
+• Learned to implement permutation algorithms systematically.
+
+• Gained insight into leveraging array properties for in-place modifications.
+
+
+
+📚 Reflections:
+
+• Subarray problems highlight the importance of efficient iteration and condition-checking.
+
+• Permutations demand attention to detail for proper index manipulations.
