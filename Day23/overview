@@ -1,0 +1,32 @@
+Today, I tackled two interesting challenges:
+🔹 Take K of Each Character From Left and Right
+Problem Statement: Given a string sss of characters 'a', 'b', and 'c', determine the minimum number of moves to collect at least kkk occurrences of each character, either from the leftmost or rightmost ends.
+
+Approach:
+• Sliding Window:
+1) Calculated the total occurrences of each character.
+2) Used a sliding window to find the smallest contiguous substring of sss that, when removed, leaves enough characters outside the window to meet the kkk requirement.
+• Returned the length of the remaining string minus the sliding window size.
+2) Edge Cases: Checked for infeasibility when any character's count was less than kkk.
+
+Key Insights:
+• Sliding window algorithms are powerful for problems with constraints involving substrings.
+• Precomputing character frequencies reduces complexity for real-time checks.
+
+🔹 Majority Element II
+Problem Statement: Find all elements in an array that appear more than n/3n/3n/3 times, where nnn is the array size.
+
+Approach:
+• Boyer-Moore Voting Algorithm:
+1) Identified up to two potential candidates for the majority element by iterating through the array while maintaining counts.
+2) Validated the candidates by counting their occurrences in a second pass.
+• Edge Cases: Managed cases where the array length was less than 3 or had no valid majority elements.
+
+Key Takeaways:
+• Boyer-Moore is a highly efficient algorithm for finding elements with frequency constraints.
+• Problem-solving often requires both candidate identification and validation steps.
+
+📖 Reflection:
+• Sliding window problems emphasize optimal substring handling.
+• Algorithms like Boyer-Moore demonstrate the elegance of linear solutions for otherwise challenging tasks.
+hashtag#SlidingWindow | hashtag#FrequencyAnalysis | hashtag#BoyerMoore | hashtag#ProblemSolving | hashtag#CodingJourney hashtag#gfg160 hashtag#geekstreak2024
