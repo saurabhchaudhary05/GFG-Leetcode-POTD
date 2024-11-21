@@ -1,0 +1,47 @@
+Today’s journey involved tackling two interesting problems that required a blend of grid traversal and dynamic programming. Here's what I learned:
+
+🔹 Problem 1: Count Unguarded Cells in the Grid
+Problem Statement:
+Given a m×nm \times nm×n grid, some cells are occupied by guards, and others by walls. A guard can monitor cells in all cardinal directions (north, east, south, west) until obstructed by a wall or another guard. The task is to determine the number of unoccupied cells that are not under surveillance by any guard.
+
+Approach:
+1) Mark Guarded Cells:
+• Use the positions of guards to simulate their vision.
+• Traverse in each direction (up, down, left, right) from every guard's position, marking cells as guarded until a wall or another guard is encountered.
+
+2) Avoid Redundant Traversal:
+• Use auxiliary matrices or flags to mark cells as guarded during the traversal to avoid revisiting.
+
+3) Count Unguarded Cells:
+• After processing guards and walls, count the unoccupied cells that remain unguarded.
+
+Challenges Faced:
+1) Efficiently simulating the vision of guards without redundant computations.
+2) Handling edge cases where the grid was heavily populated with walls or guards.
+
+• Key Takeaway: Simulation problems on grids are greatly optimized using directional traversal techniques, coupled with clear boundary conditions.
+
+🔹 Problem 2: Stock Buy and Sell – Multiple Transactions Allowed
+Problem Statement:
+Given the prices of a stock over nnn days, find the maximum profit obtainable by performing as many transactions as desired (buying and selling the stock). You can only sell after buying, and you cannot hold multiple stocks at the same time.
+
+Approach:
+1) Greedy Strategy:
+• Whenever a price dip is followed by a rise, calculate the profit for that transaction (buy at the dip, sell at the peak).
+• Iterate through the price array and accumulate the profit for each profitable transaction.
+
+2) Dynamic Programming (For Further Optimization):
+• Maintain two states: hold (maximum profit holding a stock) and no_hold (maximum profit without holding a stock).
+• Update these states iteratively based on whether you buy, sell, or skip on a given day.
+
+Challenges Faced:
+• Understanding and optimizing the transition between holding and not holding states.
+• Avoiding over-complication of the problem with unnecessary conditions.
+
+• Key Takeaway: The greedy approach simplifies the problem when transactions are unrestricted, but understanding DP transitions helps in scenarios with added constraints.
+
+🎯 What I Learned Today:
+• Grid-based problems often require robust simulation techniques and efficient traversal mechanisms.
+• Greedy methods are invaluable for profit maximization problems when constraints are minimal.
+•Transition states DP problems need clear definitions to avoid missteps in implementation.
+hashtag#GridTraversal | hashtag#DynamicProgramming | hashtag#ProblemSolving | hashtag#CodingJourney | hashtag#DSA hashtag#gfg160 hashtag#geekstreak2024
