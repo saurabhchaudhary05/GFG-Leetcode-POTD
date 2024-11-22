@@ -1,0 +1,93 @@
+Today was a mix of simple optimization and a slightly tricky matrix manipulation problem. Here’s what I tackled:
+
+
+
+🔹 Problem 1: Stock Buy and Sell – Max One Transaction Allowed
+
+Problem Statement:
+
+Given an array prices[] representing stock prices on different days, find the maximum profit possible with at most one transaction (1 buy + 1 sell). If no profit is possible, return 0.
+
+
+
+Approach:
+
+1) Track Minimum Price:
+
+•  Traverse the array while keeping track of the minimum stock price seen so far.
+
+2) Calculate Profit:
+
+• For each day, calculate the potential profit by subtracting the minimum price from the current price.
+
+• Update the maximum profit if the calculated profit exceeds the current maximum.
+
+3) Edge Case:
+
+• If prices are non-increasing, return 0 as no profit is possible.
+
+4) Challenges Faced:
+
+• Ensuring that the buy operation always precedes the sell.
+
+
+
+Key Takeaway: 
+
+• Efficient tracking of minimum prices during traversal simplifies profit calculation for single transactions.
+
+
+
+🔹 Problem 2: Flip Columns for Maximum Number of Equal Rows
+
+Problem Statement:
+
+Given an m×n
+
+m×n binary matrix, flip any number of columns to maximize the number of rows with all equal values (all 0s or all 1s). Return the maximum number of such rows.
+
+
+
+Approach:
+
+1) Pattern Identification:
+
+• Rows that are identical or complementary (e.g., [0,1,1] and [1,0,0]) can be made equal by flipping the corresponding columns.
+
+• Represent each row as a pattern, and normalize it to a "base form" by considering its complementary representation.
+
+2) Hashing for Row Count:
+
+• Use a hash map to count the frequency of each normalized row pattern.
+
+• The row pattern with the maximum count determines the answer.
+
+3) Optimization:
+
+• Normalize rows instead of flipping columns directly to improve time complexity.
+
+4) Challenges Faced:
+
+• Deriving the normalization step for complementary rows.
+
+
+
+Key Takeaway: 
+
+• Problems involving flipping often boil down to identifying equivalent patterns. Hash maps are a powerful tool for counting such patterns efficiently.
+
+
+
+🎯 What I Learned Today:
+
+• In profit calculation problems, focus on minimizing auxiliary space and maximizing traversal efficiency.
+
+• For matrix problems, understanding equivalency relationships (rows, columns, etc.) can drastically simplify the solution.
+
+
+
+💡 Reflection: 
+
+• Every problem teaches a new perspective, whether it's tracking patterns or optimizing traversal. The key is breaking problems into digestible pieces.
+
+#ArrayManipulation | #MatrixProblems | #ProblemSolving | #CodingJourney | #DSA #gfg160  #geekstreak2024
