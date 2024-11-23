@@ -1,0 +1,88 @@
+Today was all about tackling problems with diverse concepts: matrix manipulation and greedy optimization. Here's what I solved:
+
+
+
+🔹 Problem 1: Rotating the Box
+
+Problem Statement:
+
+Given an m×n \times nm×n matrix box representing a side-view of a box with:# (stones),* (stationary obstacles), and. (empty spaces),rotate the box 90° clockwise and simulate gravity, letting the stones fall until they land on obstacles, other stones, or the bottom. Return the rotated matrix.
+
+
+
+Approach:
+
+1) Simulate Gravity:
+
+• For each row, move stones (#) down to fill empty spaces (.), stopping at obstacles (*) or the edge.
+
+• Use a two-pointer approach to efficiently simulate the stone movement within rows.
+
+2) Rotate the Box:
+
+• After gravity adjustment, rotate the matrix clockwise by transforming rows into columns.
+
+3) Edge Case:
+
+• Handle rows or columns with only obstacles or empty spaces.
+
+4) Challenges Faced:
+
+• Simultaneously handling gravity simulation and rotation.
+
+• Ensuring stones align correctly post-rotation.
+
+
+
+Key Takeaway:
+
+• Breaking the problem into two independent steps (gravity simulation and rotation) simplifies complex transformations in matrix problems.
+
+
+
+🔹 Problem 2: Minimize the Heights I
+
+Problem Statement:
+
+Given a positive integer kkk and an array arr[]arr[]arr[] of tower heights, modify each tower's height by either increasing or decreasing it by kkk exactly once. Find the possible minimum difference between the shortest and tallest towers after modification.
+
+
+
+Approach:
+
+1) Sort the Array:
+
+• Sorting simplifies the task of finding the tallest and shortest towers after modifications.
+
+2) Adjust Extremes:
+
+• For each tower, try increasing the smallest tower and decreasing the largest tower, keeping track of the new height ranges.
+
+• Calculate the difference between the new tallest and shortest towers for each modification.
+
+3) Return the Minimum Difference:
+
+• Minimize the difference obtained across all possible scenarios.
+
+4) Challenges Faced:
+
+• Balancing the increase and decrease operations to minimize the range effectively.
+
+
+
+Key Takeaway:
+
+• Greedy strategies often shine in optimization problems where localized changes affect the global outcome. Sorting is frequently the first step to unlock these strategies.
+
+
+
+🎯 What I Learned Today:
+
+• Matrix Problems: Transformations like rotations can be simplified when treated as separate operations (e.g., gravity simulation + transpose).
+
+• Greedy Optimization: Sorting often leads to clarity when balancing multiple operations like increasing/decreasing values.
+
+💡 Reflection: Tackling diverse problems broadens your problem-solving mindset. Every problem is an opportunity to discover new techniques or reinforce existing ones.
+
+#MatrixManipulation | #GreedyAlgorithms | #ProblemSolving | #CodingJourney | #DSA  #gfg160  #geekstreak2024
+
