@@ -1,0 +1,46 @@
+Today, I focused on problems involving arrays and matrix manipulation, with an emphasis on optimization techniques. Here's what I tackled:
+
+🔹 Problem 1: Kadane's Algorithm
+Given an integer array arr[]arr[]arr[], find the maximum sum of a subarray. A subarray is a contiguous portion of the array.
+
+Approach:
+1) Iterative DP Approach:
+• Use a variable current_sum to track the running sum of the current subarray.
+• Update current_sum as \text{current_sum} = \max(\text{arr}[i], \text{current_sum} + \text{arr}[i]).
+T• rack the maximum sum encountered so far with a variable max_sum.
+2) Result:
+• The value of max_sum at the end of the iteration is the answer.
+2) Edge Case:
+• Handle arrays with all negative numbers by returning the largest element.
+3) Challenges Faced:
+• Understanding why the algorithm works so efficiently with just two variables.
+
+Key Takeaway:
+• Kadane’s Algorithm is a powerful tool for maximum subarray problems, offering linear-time complexity while requiring no additional space.
+
+🔹 Problem 2: Maximum Matrix Sum
+Given an n×n \times n×n integer matrix, you can perform an operation on any two adjacent elements (sharing a border) where both are multiplied by −1-1−1. The goal is to maximize the summation of all elements after performing the operations.
+
+Approach:
+1) Key Insight:
+• Operations allow flipping signs of adjacent elements, but the overall sum depends on the number of negative elements in the matrix and the smallest absolute value.
+2) Steps:
+• Count the total number of negative numbers in the matrix.
+• Calculate the sum of absolute values of all elements.
+• If the count of negatives is even, no extra adjustment is needed; the maximum sum is the sum of absolute values.
+• If the count of negatives is odd, flip the smallest absolute value (minimum element) to achieve the highest possible sum.
+
+3) Result:
+• Return the computed maximum sum.
+4) Challenges Faced:
+• Balancing the mathematical reasoning with the constraints of adjacent-element operations.
+
+Key Takeaway:
+• Greedy strategies that focus on the parity of negatives and minimal adjustments often lead to optimal solutions for matrix problems.
+
+🎯 What I Learned Today:
+• Dynamic Programming: Kadane’s algorithm is not just efficient but intuitive for identifying subarray patterns.
+• Matrix Optimization: Understanding matrix properties, like adjacency and parity, is essential for designing operations effectively.
+
+💡 Reflection: Revisiting fundamental algorithms and applying mathematical reasoning to new problems is a great way to build confidence and reinforce concepts.
+hashtag#DynamicProgramming | hashtag#MatrixManipulation | hashtag#GreedyAlgorithms | hashtag#ProblemSolving | hashtag#DSA hashtag#gfg160 hashtag#geekstreak2024
