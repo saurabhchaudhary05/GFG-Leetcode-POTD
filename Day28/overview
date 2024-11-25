@@ -1,0 +1,95 @@
+Today, I focused on solving problems involving arrays and puzzles, which required dynamic programming and breadth-first search. Here's what I worked on:
+
+
+
+🔹 Problem 1: Maximum Product Subarray
+
+Problem Statement:
+
+Given an array arr[]arr[]arr[] containing positive, negative, and zero integers, find the maximum product that can be obtained from a subarray.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• A product of subarray elements can drastically change due to the presence of zeros or negative numbers.
+
+• To handle this, track both the maximum and minimum product at each index since a negative value multiplied by another negative can result in a new maximum.
+
+2) Steps:
+
+• Initialize max_product, min_product, and result as the first element of the array.
+
+3) Result:
+
+• Return the value of result.
+
+4) Challenges Faced:
+
+• Managing transitions when encountering zeros or alternating signs.
+
+
+
+Key Takeaway:
+
+• Tracking both maximum and minimum products simultaneously ensures the algorithm handles negative numbers effectively in O(n)O(n)O(n) time.
+
+
+
+🔹 Problem 2: Sliding Puzzle
+
+Problem Statement:
+
+Given a 2×3 \times 3×3 puzzle board containing tiles labeled 111 to 555 and a blank space represented by 000, determine the minimum number of moves to solve the board (i.e., reach the state [[1,2,3],[4,5,0]][ [1,2,3],[4,5,0] ][[1,2,3],[4,5,0]]). Return −1-1−1 if it is impossible to solve.
+
+
+
+Approach:
+
+1) Graph Representation:
+
+• Treat each board state as a node in a graph.
+
+• Transitions between states occur by swapping the blank space (000) with adjacent tiles.
+
+2) Algorithm:
+
+• Use BFS to explore all possible states starting from the initial board.
+
+• For each state, generate new states by swapping 000 with adjacent tiles and check if the goal state is reached.
+
+• Track visited states to avoid redundant computations.
+
+3) Implementation Details:
+
+• Flatten the 2D board into a 1D string for easier manipulation.
+
+• Use a queue to store the current state and depth (number of moves so far).
+
+• If the queue is empty and the goal state is not reached, return −1-1−1.
+
+3) Result:
+
+• Return the depth at which the goal state is reached.
+
+4) Challenges Faced:
+
+• Efficiently managing transitions between states while keeping the solution space small.
+
+
+
+Key Takeaway:
+
+• Graph traversal techniques like BFS are highly effective for solving combinatorial optimization problems like puzzles.
+
+
+
+🎯 What I Learned Today:
+
+• Dynamic Programming: Handling products requires careful tracking of both maximum and minimum values at each step.
+
+• BFS in Problem-Solving: Representing states as nodes and exploring all possibilities systematically is key to solving puzzles efficiently.
+
+#DynamicProgramming | #GraphTraversal | #SlidingPuzzle | #ProblemSolving | #DSA #gfg160  #geekstreak2024
