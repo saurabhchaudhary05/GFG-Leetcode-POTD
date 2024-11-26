@@ -1,0 +1,125 @@
+
+
+Today's problems were focused on circular arrays and graph-based tournament structures, blending dynamic programming and graph traversal techniques. Here's a detailed breakdown:
+
+
+
+🔹 Problem 1: Max Circular Subarray Sum
+
+Problem Statement:
+
+Given an integer array arr[]arr[]arr[] arranged circularly, find the maximum subarray sum considering both linear and circular configurations of the array.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• For a circular array, the maximum sum could either:
+
+a. Be entirely contained within the array (like in a normal array).
+
+b. Wrap around, excluding a contiguous subarray with the minimum sum.
+
+
+
+2) Steps:
+
+• Use Kadane's algorithm to find:
+
+                  • max_subarray: Maximum sum for the non-circular case.
+
+                  • min_subarray: Minimum sum of a subarray.
+
+• Calculate total_sum as the sum of all elements.
+
+• If all elements are negative, return max_subarray (to handle edge cases).
+
+• Otherwise, return the maximum of max_subarray
+
+
+
+3) Result:
+
+• Return the computed maximum sum.
+
+
+
+4) Challenges Faced:
+
+• Managing edge cases like arrays with all negative values, where the wraparound sum is invalid.
+
+
+
+5) Key Takeaway:
+
+• Combining Kadane’s algorithm with strategic observation about wrapping conditions helps solve circular array problems efficiently.
+
+
+
+🔹 Problem 2: Find Champion II
+
+Problem Statement:
+
+Given nnn teams in a tournament represented as nodes in a DAG, and edges indicating that team uuu is stronger than team vvv, determine the champion team. A team aaa is a champion if no other team bbb is stronger than aaa. If there is no unique champion, return −1-1−1.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• In a DAG, the team with the highest ranking is the one with no incoming edges (in-degree = 0).
+
+• If multiple nodes have in-degree = 0, or if there is no node with in-degree = 0, no unique champion exists.
+
+
+
+2) Algorithm:
+
+• Build an adjacency list and compute the in-degree for all nodes.
+
+• Identify nodes with in-degree = 0.
+
+• If there is exactly one such node, return it as the champion. Otherwise, return −1-1−1.
+
+
+
+3) Implementation Steps:
+
+• Use BFS or a queue to track in-degrees efficiently.
+
+• Verify the uniqueness of the champion by ensuring only one node meets the criteria.
+
+
+
+4) Result:
+
+• Return the champion node index or −1-1−1.
+
+
+
+5) Challenges Faced:
+
+• Handling graphs with no champion or multiple champions.
+
+• Ensuring the graph remains a valid DAG (no cycles).
+
+
+
+6) Key Takeaway:
+
+• Understanding in-degree properties in DAGs simplifies identifying nodes with unique hierarchical dominance.
+
+
+
+🎯 What I Learned Today:
+
+• Circular Subarrays: Observing the relationship between minimum subarray sums and total sums is crucial for circular problems.
+
+• DAG Characteristics: Leveraging in-degree properties is efficient for determining champions in tournaments represented as DAGs.
+
+
+
+#KadaneAlgorithm | #GraphTheory | #DAG | #DynamicProgramming | #ProblemSolving | #DSA #gfg160  #geekstreak2024
