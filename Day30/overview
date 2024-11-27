@@ -1,0 +1,105 @@
+🌟 #Day 149 of Problem-Solving with #GFG potd and #leetcode 🌟
+
+Today's challenges revolved around finding missing positive numbers in arrays and handling dynamic shortest path computations after updates in graphs. Here's a detailed breakdown:
+
+
+
+🔹 Problem 1: Smallest Positive Missing Number
+
+Problem Statement:
+
+Given an array arr[], find the smallest positive integer missing from the array. The array may include negative integers. The missing number must be ≥1.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• Negative numbers and numbers greater than nnn (size of the array) are irrelevant since the smallest missing positive number must lie in the range [1, n+1].
+
+2) Algorithm:
+
+• Step 1: Modify the array by replacing numbers outside the range [1, nnn] with n+1n+1n+1.
+
+• Step 2: Use indices of the array to mark the presence of numbers in the range [1, nnn] by converting the values at corresponding indices to negative.
+
+• Step 3: Traverse the array to find the first positive index, which represents the missing number.
+
+3) Result:
+
+• If no index is positive, the missing number is n+1.
+
+4) Complexity:
+
+• Time: O(n)
+
+• Space: O(1)O(1)O(1) (In-place modification)
+
+5) Challenges Faced:
+
+• Efficiently handling large arrays while maintaining constant space usage.
+
+• Edge cases like arrays with all negative numbers or consecutive positive integers.
+
+
+
+Key Takeaway:
+
+• Optimizing in-place hashing techniques simplifies missing element problems significantly.
+
+
+
+🔹 Problem 2: Shortest Distance After Road Addition Queries I
+
+Problem Statement:
+
+Given n cities (0 to n−1) connected by a chain of unidirectional roads (from i→i+1), and an array of queries, where each query adds a road [ui,vi] determine the shortest path from city 0 to city n−1 after processing each query sequentially.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• Initially, the graph is a simple path.
+
+• Adding a road might create multiple alternative paths, and the shortest path must be recomputed after each addition.
+
+2) Algorithm:
+
+• Represent the cities as a graph.
+
+• Use Dijkstra’s algorithm to compute the shortest path from 0 to n−1 dynamically after each road addition.
+
+• Update the graph incrementally by adding the new edges from the queries.
+
+3) Optimizations:
+
+• Reuse the graph structure for each query to avoid recomputation.
+
+• For dense graphs, consider an adjacency matrix; for sparse graphs, an adjacency list.
+
+4) Result:
+
+• Return an array of shortest path lengths corresponding to the state of the graph after each query.
+
+5) Complexity:
+
+• Time: O(q⋅(nlog⁡n))for  queries using Dijkstra’s algorithm.
+
+6) Challenges Faced:
+
+• Handling queries that introduce redundant edges or cycles.
+
+• Ensuring that the graph structure remains valid throughout updates.
+
+
+
+Key Takeaway:
+
+• Incremental graph updates require dynamic shortest path algorithms like Dijkstra or Bellman-Ford for efficient computation.
+
+#ArrayManipulation | #ShortestPath | #DynamicGraphs | #DSA
+
+#gfg160  #geekstreak2024
