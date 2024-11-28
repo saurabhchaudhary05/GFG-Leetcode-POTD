@@ -1,0 +1,43 @@
+Today's problem-solving journey involved two exciting challenges: one focusing on string manipulation and another on graph traversal. Here's a detailed breakdown:
+
+Problem 1: Implement Atoi
+Problem Description
+Convert a given string s into a 32-bit signed integer without using built-in conversion functions. This involves handling leading whitespaces, optional signs, invalid characters, and overflow conditions.
+
+Approach
+1) Trimming Whitespaces:
+• Skip all leading whitespaces to locate the numeric part of the string.
+2) Checking for Sign:
+• Detect a '+' or '-' sign at the start to determine the polarity. Default to positive if no sign is present.
+3) Extracting Digits:
+• Parse the string, extracting digits until a non-numeric character is encountered. Ignore leading zeros.
+4) Handling Overflow:
+• Compare the number being formed against the 32-bit integer limits:
+• If it exceeds 2^31 - 1 (2147483647), return 2147483647.
+• If it drops below -2^31 (-2147483648), return -2147483648.
+5) Key Takeaways
+• This problem taught me the importance of robust edge-case handling, especially with special conditions like invalid characters, signs, and overflow scenarios.
+
+Problem 2: Minimum Obstacle Removal to Reach Corner
+Given an m x n grid containing 0s (empty cells) and 1s (obstacles), find the minimum number of obstacles to remove to travel from the top-left corner to the bottom-right corner, using four-directional movement.
+
+Approach
+1) Graph Representation:
+• Treat the grid as a graph, where each cell is a node.
+• 0-1 BFS Algorithm:
+• Use a double-ended queue (deque) to manage nodes efficiently.
+• Add cells with no obstacles (weight 0) to the front of the deque.
+• Add cells with obstacles (weight 1) to the back of the deque.
+
+2) Pathfinding:
+• Use BFS to explore all possible paths to the destination while minimizing the number of obstacles removed.
+• Keep a visited matrix to avoid redundant calculations and ensure optimal traversal.
+
+3) Key Takeaways
+• The problem enhanced my understanding of BFS variations and demonstrated the real-world application of pathfinding in weighted grids. 
+• Implementing the 0-1 BFS algorithm was particularly insightful.
+
+Reflection
+• Both problems were excellent exercises in algorithm design and edge-case handling. While Atoi reinforced precision in string processing, the obstacle removal problem highlighted the efficiency of specialized graph traversal techniques like 0-1 BFS. Today’s session added valuable skills to my problem-solving arsenal.
+hashtag#GFGPOTD hashtag#LeetCodeChallenge hashtag#StringManipulation hashtag#gfg160 hashtag#geekstreak2024
+
