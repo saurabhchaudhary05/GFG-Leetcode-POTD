@@ -1,0 +1,49 @@
+Today's coding challenges involved working with grids and binary strings. Here's a detailed walkthrough of the problems I tackled:
+
+Problem 1: Minimum Time to Visit a Cell in a Grid
+Problem Description
+Given an m x n matrix grid, where each cell represents the minimum time required to visit it, determine the minimum time needed to travel from the top-left to the bottom-right cell.
+• Movement is allowed in four directions (up, down, left, right).
+• Each move takes 1 second.
+• You can visit a cell only if your arrival time is greater than or equal to the cell's value.
+• Return -1 if it's impossible to reach the bottom-right cell.
+
+Approach
+1) Priority Queue (Dijkstra's Algorithm):
+• Treat the grid as a weighted graph, where the cell values act as weights.
+• Use a priority queue to process cells based on their minimum visit time.
+2) Conditions for Visiting Cells:
+• Only process cells when the current time exceeds or equals the cell's value.
+• Add a wait time if your arrival time does not satisfy the condition.
+3) Efficient Traversal:
+• Explore all possible paths to the destination while minimizing the time using Dijkstra’s greedy approach.
+• Maintain a visited matrix to track already processed cells.
+
+Key Takeaways
+• This problem honed my skills in adapting Dijkstra's algorithm to non-traditional weighted graphs and managing edge conditions effectively.
+
+Problem 2: Add Binary Strings
+Problem Description
+Given two binary strings s1 and s2, return their sum as a binary string.
+The output string should not contain leading zeros.
+
+Approach
+1) Initialization:
+• Start from the least significant bit (rightmost) of both strings.
+• Use a carry variable to handle overflow during addition.
+2) Bitwise Addition:
+• Add corresponding bits of s1 and s2 along with the carry.
+• Update the carry for the next position.
+3) Handling Remaining Carry:
+• Append the carry to the result if it’s still non-zero after processing all bits.
+4) Edge Cases:
+• Handle input strings with different lengths by padding the shorter string with zeros.
+• Ensure the result has no leading zeros except when the result is 0.
+
+Key Takeaways
+• This problem reinforced my understanding of binary arithmetic and taught me to manage string manipulations efficiently while considering edge cases like leading zeros and varying string lengths.
+
+Reflection
+Today’s problems were a mix of pathfinding and bit manipulation, which required clear logic and attention to detail. While the grid problem strengthened my graph traversal techniques, the binary addition problem was an excellent refresher on bitwise operations.
+hashtag#GFGPOTD hashtag#LeetCodeChallenge hashtag#GraphTraversal hashtag#BinaryArithmetic
+hashtag#gfg160 hashtag#geekstreak2024
