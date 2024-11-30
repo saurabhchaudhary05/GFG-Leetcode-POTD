@@ -1,0 +1,45 @@
+Today’s challenges covered the concepts of graph traversal and string manipulation. Here's an overview of the problems and their solutions:
+
+Problem 1: Valid Arrangement of Pairs
+Given a 2D integer array pairs, where each pair[i] = [startᵢ, endᵢ], the task is to arrange the pairs such that:
+For every index i (1 ≤ i < pairs.length), endᵢ₋₁ == startᵢ.
+The input is guaranteed to have at least one valid arrangement.
+
+Approach
+1) Graph Representation:
+• Treat each pair [startᵢ, endᵢ] as a directed edge in a graph.
+• Use the startᵢ as the source and endᵢ as the destination.
+2) Eulerian Path:
+• A valid arrangement corresponds to finding an Eulerian path in the directed graph.
+• Use in-degree and out-degree checks to identify the starting node for the path.
+
+3) Hierholzer’s Algorithm:
+• Use Hierholzer’s algorithm to construct the Eulerian path.
+• Maintain a stack to backtrack and construct the arrangement.
+4) Result Construction:
+• Reverse the constructed Eulerian path to obtain the correct order of pairs.
+
+5) Key Takeaways
+This problem was an excellent exercise in graph theory, specifically Eulerian paths, and it emphasized how to handle connectivity and degree conditions efficiently.
+
+Problem 2: Anagram
+Problem Description
+Given two strings s1 and s2, check whether they are anagrams.
+An anagram means both strings contain the same characters with the same frequency, irrespective of order.
+
+Approach
+1) Frequency Counting:
+• Use a hash table or array to count character frequencies for both strings.
+• Compare the frequency tables to check for equality.
+• Sorting (Alternative Approach):
+• Sort both strings and compare their sorted forms.
+• If equal, the strings are anagrams.
+
+2) Edge Cases:
+• Strings of different lengths cannot be anagrams.
+• Handle all lowercase alphabets efficiently.
+3) Key Takeaways
+• This problem reinforced the importance of efficient frequency counting and the utility of sorting for comparison tasks.
+
+Reflection
+Today's problems were a mix of advanced graph concepts and foundational string manipulation. While the "Valid Arrangement of Pairs" problem required a deeper understanding of Eulerian paths, the "Anagram" problem provided a simpler yet essential review of frequency counting techniques.
