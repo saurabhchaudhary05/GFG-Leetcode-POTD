@@ -1,0 +1,47 @@
+Today, I tackled two problems involving character frequency and array analysis. Here's a summary of my learning and approach:
+
+Problem 1: Non-Repeating Character
+Problem Description
+Given a string s of lowercase Latin letters, find the first non-repeating character in the string. If there is no such character, return '$' (output is shown as -1 in the driver code).
+
+Approach
+1) Frequency Count:
+• Use a hash map or an array of size 26 to count the frequency of each character in the string.
+• Traverse the string again to find the first character with a frequency of 1.
+
+2) Edge Cases:
+• If the string is empty, return '$'.
+• If all characters are repeating, return '$'.
+3) Complexity:
+• Time: O(n) for traversal and frequency count.
+• Space: O(1) (fixed size of 26 for lowercase Latin letters).
+4) Key Takeaways:
+• This problem reinforced the use of frequency maps and the importance of a two-pass approach for problems involving order-sensitive data.
+
+Problem 2: Check If N and Its Double Exist
+Problem Description
+Given an integer array arr, determine if there exist two indices i and j such that: i != j
+arr[i] == 2 * arr[j]
+
+Approach
+1) Hash Set:
+• Use a hash set to store elements of the array.
+• For each element x in the array:
+• Check if 2 * x exists in the set.
+• Check if x / 2 exists (and is an integer).
+
+2) Edge Cases:
+• Arrays with fewer than two elements.
+• Special handling for zero (to avoid self-matching).
+
+3) Complexity:
+• Time: O(n), as each lookup in the hash set is O(1).
+• Space: O(n) for the hash set.
+
+4) Key Takeaways:
+• This problem highlighted efficient use of hash sets to achieve linear time complexity and avoid nested loops.
+
+5) Reflection:
+• These problems provided valuable insights into frequency counting, hash maps, and set-based lookups. Both problems, though categorized as "Easy," required careful consideration of edge cases.
+hashtag#GFGPOTD hashtag#LeetCodeChallenge hashtag#HashMaps hashtag#FrequencyCounting
+hashtag#gfg160 hashtag#geekstreak2024
