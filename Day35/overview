@@ -1,0 +1,97 @@
+#Day 154 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Search Pattern (KMP-Algorithm)
+
+Problem Description
+
+Given a text string txt and a pattern string pat, the task is to find all occurrences of the pattern within the text using the KMP (Knuth-Morris-Pratt) algorithm. Return the 0-based indices where the pattern occurs. If no occurrences are found, return an empty list.
+
+
+
+Approach
+
+1) KMP Algorithm:
+
+• The KMP algorithm helps improve the efficiency of pattern searching by avoiding redundant comparisons using a preprocessing step to create a "longest prefix suffix" (LPS) array.
+
+• The LPS array stores the length of the longest proper prefix of the pattern that is also a suffix, which helps skip unnecessary comparisons when a mismatch occurs.
+
+
+
+2) Steps:
+
+• Preprocessing: Create the LPS array for the pattern.
+
+• Pattern Search: Traverse the text string while matching the pattern using the information from the LPS array to skip over already checked characters.
+
+
+
+3) Edge Cases:
+
+• If the pattern length is greater than the text length, return an empty list.
+
+• Handle cases where no match is found, and return an empty list.
+
+
+
+4) Time Complexity:
+
+• Time: O(n + m), where n is the length of the text and m is the length of the pattern.
+
+• Space: O(m) for the LPS array.
+
+
+
+5) Key Takeaways:
+
+• The KMP algorithm is highly efficient for pattern matching, reducing the time complexity significantly compared to brute force methods. This problem strengthened my understanding of how string matching algorithms can optimize searches.
+
+
+
+Problem 2: Check If a Word Occurs As a Prefix of Any Word in a Sentence
+
+Problem Description
+
+Given a sentence and a searchWord, check if searchWord is a prefix of any word in the sentence. Return the 1-indexed position of the first word where the searchWord occurs as a prefix. If no such word exists, return -1.
+
+
+
+Approach
+
+1) Split the Sentence:
+
+• Split the sentence into individual words.
+
+• Check each word to see if it starts with the searchWord.
+
+• If a match is found, return the 1-based index of the word.
+
+
+
+2) Edge Cases:
+
+• If the sentence is empty or no words match, return -1.
+
+• Handle cases where the searchWord matches only part of the word or is exactly a word itself.
+
+
+
+3) Time Complexity:
+
+• Time: O(n), where n is the length of the sentence (since splitting and checking prefixes is linear).
+
+• Space: O(m) for storing the split words, where m is the number of words in the sentence.
+
+
+
+4) Key Takeaways:
+
+• This problem demonstrated the importance of simple string manipulation techniques such as splitting and prefix checking. It reinforced the use of  Python's built-in string functions like startswith().
+
+
+
+#GFGPOTD #LeetCodeChallenge #KMPAlgorithm #StringMatching  #gfg160  #geekstreak2024
