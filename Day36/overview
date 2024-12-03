@@ -1,0 +1,119 @@
+Today, I tackled two fascinating string manipulation problems. Here's my breakdown of the challenges, approaches, and key insights:
+
+
+
+Problem 1: Adding Spaces to a String
+
+Problem Description
+
+Given a string s and an array spaces representing indices where spaces need to be added, return the modified string after inserting spaces at the specified positions.
+
+
+
+For example:
+
+Input: s = "EnjoyYourCoffee", spaces = [5, 9]
+
+Output: "Enjoy Your Coffee"
+
+
+
+Approach
+
+1) Iterative Construction:
+
+• Initialize an empty result string.
+
+• Use a pointer to traverse the string s.
+
+• As you encounter indices matching the spaces array, append a space before the corresponding character.
+
+
+
+2) Optimized Approach:
+
+• Use Python string slicing to build the result efficiently.
+
+• Iterate through the spaces array and partition the string into substrings divided by space indices.
+
+
+
+3) Edge Cases:
+
+• No spaces in the spaces array → Return the original string.
+
+• Empty string s → Return an empty string.
+
+
+
+4) Complexity:
+
+• Time: O(n), where n is the length of s.
+
+• Space: O(n) for storing the modified string.
+
+
+
+5) Key Takeaway:
+
+• This problem demonstrates how to efficiently handle string manipulations using slicing and indexing. Python’s built-in methods make these operations intuitive and fast.
+
+
+
+Problem 2: Min Chars to Add for Palindrome
+
+Problem Description
+
+Given a string s, determine the minimum number of characters needed to be added to the front of the string to make it a palindrome.
+
+
+
+For example:
+
+Input: s = "abc",
+
+Output: 2 (Add "ba" at the front to form "cbabc").
+
+
+
+Approach
+
+1) Palindrome Check with Longest Prefix Suffix (LPS):
+
+• Append the reverse of s to itself with a delimiter in between: temp = s + '#' + reverse(s).
+
+• Compute the LPS array for temp.
+
+• The value of the last element in the LPS array gives the length of the longest palindromic prefix of s.
+
+
+
+2) Calculate Characters to Add:
+
+• Subtract the length of the longest palindromic prefix from the total length of s.
+
+
+
+3) Steps:
+
+• Generate the LPS array for efficient prefix-suffix matching.
+
+• Use the result to determine the minimum characters to add.
+
+
+
+4) Complexity:
+
+• Time: O(n), where n is the length of the string (due to the LPS computation).
+
+• Space: O(n) for storing the LPS array.
+
+
+
+5) Key Takeaway:
+
+• The use of the KMP algorithm for LPS array computation proves its versatility beyond pattern matching, showcasing how foundational algorithms can be adapted to solve diverse problems.
+
+#LeetCodeChallenge #StringManipulation #Palindrome #KMPAlgorithm
+
+#ProblemSolving 
