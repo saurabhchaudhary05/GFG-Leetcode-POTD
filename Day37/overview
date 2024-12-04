@@ -1,0 +1,123 @@
+#Day 156 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two interesting problems involving string manipulation and sequence transformations. Here's an overview of the challenges, approaches, and insights:
+
+
+
+Problem 1: Strings Rotations of Each Other
+
+Problem Description
+
+Given two strings s1 and s2 of equal length, check if s2 is a rotation of s1.
+
+
+
+Example:
+
+Input: s1 = "abcd", s2 = "dabc"
+
+Output: Yes (as "dabc" is a rotation of "abcd").
+
+
+
+Approach
+
+1) Key Observation:
+
+• If s2 is a rotation of s1, then s2 must be a substring of s1 + s1.
+
+
+
+2) Steps:
+
+• Concatenate s1 with itself: concat = s1 + s1.
+
+• Check if s2 exists as a substring in concat.
+
+
+
+3) Edge Cases:
+
+• Strings of unequal length → Output No.
+
+• Empty strings → Output Yes.
+
+
+
+4) Complexity:
+
+• Time: O(n), where n is the length of the string.
+
+• Space: O(n) for the concatenated string.
+
+
+
+5) Key Takeaway:
+
+• This problem showcases how a simple observation can reduce a seemingly complex problem to a straightforward substring check.
+
+
+
+Problem 2: Make String a Subsequence Using Cyclic Increments
+
+Problem Description
+
+Given two strings str1 and str2, determine if str2 can become a subsequence of str1 by cyclically incrementing characters in str1 at most once.
+
+
+
+Example:
+
+Input: str1 = "abc", str2 = "acd"
+
+Output: True
+
+Explanation: Increment the 'b' in str1 to 'c'. Now str2 is a subsequence of str1.
+
+
+
+Approach
+
+1) Traverse str1 and str2:
+
+• Use two pointers: one for str1 and one for str2.
+
+• Check if str2[i] matches str1[j] or can be reached by cyclic increments.
+
+
+
+2) Handling Cyclic Increment:
+
+• Calculate the difference between str2[i] and str1[j] (mod 26) to determine if a single cyclic increment suffices.
+
+
+
+3) Edge Cases:
+
+• Empty str2 → Always return True.
+
+• str2 longer than str1 → Return False.
+
+
+
+4) Complexity:
+
+• Time: O(n), where n is the length of str1.
+
+• Space: O(1), as no extra space is used.
+
+
+
+5) Key Takeaway:
+
+• This problem emphasizes the importance of understanding subsequences and modular arithmetic for cyclic transformations.
+
+
+
+6) Reflection:
+
+• Both problems today were string-based but explored different aspects: rotations and cyclic transformations. The first problem demonstrated the power of string manipulation tricks, while the second required careful analysis of subsequences with modular logic.
+
+#GFGPOTD #LeetCodeChallenge #StringManipulation #Subsequence
+
+#CyclicIncrements #ProblemSolving #CodingJourney 
