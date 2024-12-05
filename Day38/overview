@@ -1,0 +1,117 @@
+
+
+Today's journey involved solving two diverse problems, each emphasizing unique concepts: piece movement constraints and array sorting. Here's an in-depth look at the challenges, approaches, and learnings:
+
+
+
+Problem 1: Move Pieces to Obtain a String
+
+Problem Description
+
+Given two strings start and target of equal length consisting of characters 'L', 'R', and '_', determine if it's possible to transform start into target by moving the pieces:
+
+'L' can only move left into an adjacent _.
+
+'R' can only move right into an adjacent _.
+
+
+
+Example:
+
+Input: start = "_L__R__R_", target = "L____R__R"
+
+Output: True
+
+
+
+Approach
+
+1) Remove _ from both strings:
+
+• Check if the remaining characters in start and target match in order. If not, return False.
+
+2) Two-Pointer Traversal:
+
+• Traverse both strings simultaneously to validate moves:
+
+• For 'L': Ensure the index in start is greater or equal to the index in target (can only move left).
+
+• For 'R': Ensure the index in start is less or equal to the index in target (can only move right).
+
+3) Edge Cases:
+
+• Strings with mismatched counts of 'L' and 'R'.
+
+• Completely blank strings.
+
+4) Complexity:
+
+• Time: O(n), where n is the length of the string.
+
+• Space: O(1), as we use in-place checks.
+
+5) Key Takeaway:
+
+• The problem highlights constraints-based transformations and efficient validation using two-pointer techniques.
+
+
+
+Problem 2: Sort 0s, 1s, and 2s
+
+Problem Description
+
+Given an array containing only 0s, 1s, and 2s, sort the array in ascending order without using inbuilt sorting functions.
+
+
+
+Example:
+
+Input: arr = [0, 1, 2, 0, 1, 2]
+
+Output: [0, 0, 1, 1, 2, 2]
+
+
+
+Approach
+
+1) Dutch National Flag Algorithm (Three-Way Partitioning):
+
+• Maintain three pointers:
+
+• low for 0s, mid for 1s, and high for 2s.
+
+2) Traverse the array:
+
+• Swap elements to their correct partitions based on their value.
+
+• Adjust pointers accordingly.
+
+3) Steps:
+
+• If arr[mid] == 0, swap with low, and increment both low and mid.
+
+• If arr[mid] == 1, increment mid.
+
+• If arr[mid] == 2, swap with high and decrement high.
+
+4) Edge Cases:
+
+• Arrays with only one type of element.
+
+• Empty arrays.
+
+5) Complexity:
+
+• Time: O(n), as we traverse the array once.
+
+• Space: O(1), as no extra space is used.
+
+
+
+Key Takeaway:
+
+• This problem reinforces efficient sorting techniques for arrays with limited distinct elements.
+
+#LeetCodeChallenge #GFGPOTD #StringTransformation #ArraySorting
+
+#TwoPointerTechnique #ProblemSolving #CodingJourney
