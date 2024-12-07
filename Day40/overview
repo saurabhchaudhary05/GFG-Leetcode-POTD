@@ -1,0 +1,61 @@
+hashtag#Day 159 Problem-Solving with hashtag#GFG POTD and hashtag#Leetcode
+Today's challenges involved optimizing operations on arrays and leveraging efficient algorithms to count inversions. Here's an overview of the problems, solutions, and insights:
+
+Problem 1: Minimum Limit of Balls in a Bag
+Problem Description
+Given an array nums where nums[i] represents the number of balls in the ith bag and an integer maxOperations, divide the balls into new bags such that the penalty (maximum balls in any bag) is minimized.
+
+Example:
+Input:
+nums = [9, 7, 5], maxOperations = 3
+Output:
+5
+
+Approach
+1) Binary Search on Penalty:
+• Define the range of penalties from 1 to max(nums).
+• For each potential penalty, check if it’s feasible to achieve using at most maxOperations.
+
+2) Feasibility Check:
+• For each bag in nums, calculate the number of splits needed to ensure the number of balls in each bag is ≤ current penalty.
+• Sum the splits and ensure they don’t exceed maxOperations.
+
+3) Steps:
+• Perform binary search on penalties.
+• Use the feasibility check to adjust the search range.
+
+4) Complexity:
+• Time: O(n * log(max(nums))) for binary search and feasibility check.
+• Space: O(1).
+
+5) Key Takeaway:
+• The problem highlights the power of binary search in minimizing or maximizing constraints in optimization problems.
+
+Problem 2: Count Inversions
+Problem Description
+Find the inversion count in an array, where an inversion is defined as a pair (i, j) such that arr[i] > arr[j] and i < j.
+
+Example:
+Input:
+arr = [2, 4, 1, 3, 5]
+Output:
+3
+
+Approach
+1) Divide and Conquer (Merge Sort):
+• During the merge process of merge sort, count the number of inversions.
+• If arr[i] > arr[j] and i < j, then all remaining elements in the left subarray are also greater than arr[j].
+
+2) Steps:
+• Split the array recursively.
+• Count inversions during the merge step by comparing elements from the two halves.
+
+3) Complexity:
+• Time: O(n log n) due to merge sort.
+• Space: O(n) for temporary arrays used in merging.
+
+Key Takeaway:
+• Using merge sort not only sorts the array efficiently but also enables counting inversions during the merge step, demonstrating the versatility of divide-and-conquer algorithms.
+hashtag#BinarySearch hashtag#DivideAndConquer hashtag#Optimization hashtag#ProblemSolving
+hashtag#LeetCodeChallenge hashtag#GFGPOTD hashtag#gfg160 hashtag#geekstreak2024
+
