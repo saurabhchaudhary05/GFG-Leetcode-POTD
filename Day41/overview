@@ -1,0 +1,137 @@
+#Day 160 Problem-Solving with #GFG POTD and #Leetcode
+
+Today's challenges revolved around maximizing value from non-overlapping intervals and merging overlapping intervals in a 2D space. Here's an analysis of the problems and their solutions:
+
+
+
+Problem 1: Two Best Non-Overlapping Events
+
+Problem Description
+
+Given a 2D array events, where events[i] = [startTimei, endTimei, valuei], find the maximum sum of values you can achieve by attending at most two non-overlapping events.
+
+
+
+Example:
+
+Input:
+
+events = [[1, 3, 4], [2, 4, 6], [5, 6, 8]]
+
+Output:
+
+12
+
+Explanation:
+
+Attend the second and third events for a total value of 6 + 8 = 12.
+
+
+
+Approach:
+
+1) Sort Events by End Time:
+
+• Sorting helps ensure efficient comparison of overlapping intervals.
+
+
+
+2) Binary Search for Non-Overlapping Events:
+
+• Use a binary search (on start times) to find the last event that does not overlap with the current event.
+
+
+
+3) Dynamic Programming:
+
+• Use a DP-like approach to maintain the maximum value achievable with one event up to each point.
+
+• Iterate through the sorted list and update the result by considering the current event and a non-overlapping prior event.
+
+
+
+4) Steps:
+
+• Sort events based on their end times.
+
+• Iterate through each event, and for each, use binary search to find the best non-overlapping event.
+
+• Track the maximum sum using dynamic programming.
+
+
+
+Complexity:
+
+• Time: O(n log n) (Sorting + Binary Search for each event).
+
+• Space: O(n) for storing DP values.
+
+
+
+Key Takeaway:
+
+• Efficiently combining sorting and binary search enables solving interval-based problems within optimal time complexity.
+
+
+
+Problem 2: Overlapping Intervals
+
+Problem Description
+
+Given an array arr[][], where arr[i] = [starti, endi], merge all overlapping intervals into one.
+
+Example:
+
+Input:
+
+arr = [[1, 3], [2, 4], [6, 8], [7, 9]]
+
+Output:
+
+[[1, 4], [6, 9]]
+
+
+
+Approach:
+
+1) Sort by Start Time:
+
+• Sorting ensures intervals are considered in increasing order of start times.
+
+
+
+2) Merge Intervals:
+
+• Iterate through the sorted list and compare each interval with the last merged interval.
+
+• If they overlap, merge them; otherwise, add the new interval to the result.
+
+
+
+3) Steps:
+
+• Sort the intervals by their start times.
+
+• Initialize a result array with the first interval.
+
+• Iterate through the remaining intervals, checking for overlaps and merging where necessary.
+
+
+
+Complexity:
+
+• Time: O(n log n) (Sorting + Iteration).
+
+• Space: O(n) for storing merged intervals.
+
+
+
+Key Takeaway:
+
+• Sorting intervals by their start times simplifies the logic for merging overlapping ranges.
+
+#BinarySearch #IntervalManipulation #DynamicProgramming
+
+#GreedyAlgorithm #ProblemSolving #gfg160 #geekstreak2024
+
+﻿
