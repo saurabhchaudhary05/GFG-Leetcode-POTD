@@ -1,0 +1,153 @@
+#Day 161 Problem-Solving with #GFG POTD and #Leetcode
+
+Today’s challenges revolved around checking the parity property of subarrays and manipulating intervals while maintaining constraints. Here's the breakdown:
+
+
+
+Problem 1: Special Array II
+
+Problem Description
+
+An array is special if every pair of adjacent elements has different parity (one is odd, the other is even). Given an array nums and a list of queries queries[i] = [fromi, toi], check if the subarray nums[fromi..toi] is special for each query.
+
+
+
+Example:
+
+Input:
+
+nums = [2, 3, 5, 8]
+
+queries = [[0, 1], [1, 3], [0, 2]]
+
+Output:
+
+[True, False, True]
+
+
+
+Explanation:
+
+Subarray [2, 3] is special: even and odd.
+
+Subarray [3, 5, 8] is not special: odd and odd at [3, 5].
+
+Subarray [2, 3, 5] is special: even, odd, odd.
+
+
+
+Approach:
+
+1) Parity Checking:
+
+• Check adjacent elements in the subarray to ensure alternating parity.
+
+
+
+2) Efficient Iteration with Queries:
+
+• For each query range [fromi, toi], loop through the subarray and check parity conditions.
+
+
+
+3) Steps:
+
+• For each query, extract the subarray using slicing.
+
+• Iterate through the subarray, checking adjacent elements for alternating parity.
+
+• Return True if all pairs satisfy the condition; otherwise, return False.
+
+
+
+Complexity:
+
+• Time: O(m * k), where m is the number of queries and k is the average subarray length.
+
+• Space: O(m) for storing results.
+
+
+
+Key Takeaway:
+
+• This problem highlighted the importance of breaking down a global property into checks on adjacent pairs, especially in subarray-based challenges.
+
+
+
+Problem 2: Insert Interval
+
+Problem Description
+
+Given a sorted array of non-overlapping intervals intervals, insert a new interval newInterval such that:
+
+The array remains sorted by start time.
+
+There are no overlapping intervals.
+
+
+
+Example:
+
+Input:
+
+intervals = [[1, 3], [6, 9]]
+
+newInterval = [2, 5]
+
+Output:
+
+[[1, 5], [6, 9]]
+
+Explanation:
+
+The new interval [2, 5] overlaps with [1, 3]. Merge to form [1, 5].
+
+
+
+Approach:
+
+1) Insert the Interval:
+
+• Find the correct position to insert newInterval while maintaining sorted order.
+
+
+
+2) Merge Overlapping Intervals:
+
+• Traverse the intervals, merging any overlapping intervals into one.
+
+
+
+3) Steps:
+
+• Iterate through intervals, appending all intervals that end before newInterval starts.
+
+• Merge overlapping intervals with newInterval.
+
+• Append all intervals that start after newInterval ends.
+
+
+
+4) Edge Cases:
+
+• newInterval is outside the range of all intervals.
+
+• intervals is empty.
+
+
+
+Complexity:
+
+• Time: O(n) for traversal and merging.
+
+• Space: O(n) for the result.
+
+
+
+Key Takeaway:
+
+• Efficiently handling overlapping intervals by maintaining sorted order simplifies merging logic significantly.
+
+#ArrayManipulation #IntervalMerging #SubarrayProperties #gfg160 #geekstreak2024
+
+﻿
