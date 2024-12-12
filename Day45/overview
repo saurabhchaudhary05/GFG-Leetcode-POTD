@@ -1,0 +1,141 @@
+#Day 164 Problem-Solving with #GFG POTD and #Leetcode
+
+Today's challenges involved prioritizing operations on arrays and efficiently counting occurrences of a target element in sorted data. Here's an overview:
+
+
+
+Problem 1: Take Gifts From the Richest Pile
+
+Problem Description
+
+You are given an array gifts, where each element represents the number of gifts in a pile. Every second, you:
+
+Select the pile with the maximum number of gifts.
+
+Take all but the floor of the square root of the number of gifts in that pile.
+
+Return the total number of gifts remaining after k seconds.
+
+
+
+Example:
+
+Input:
+
+gifts = [25, 64, 9, 4, 100], k = 4
+
+Output:
+
+29
+
+
+
+Explanation:
+
+Initial piles: [25, 64, 9, 4, 100]
+
+Step 1: Take gifts from 100 → Remaining: [25, 64, 9, 4, 10]
+
+Step 2: Take gifts from 64 → Remaining: [25, 8, 9, 4, 10]
+
+Step 3: Take gifts from 25 → Remaining: [5, 8, 9, 4, 10]
+
+Step 4: Take gifts from 10 → Remaining: [5, 8, 9, 4, 3]
+
+Total: 29 gifts remaining.
+
+
+
+Approach:
+
+1) Use a Max Heap:
+
+• Push all gift piles into a max heap (negative values for max priority).
+
+• Repeat the operation k times:
+
+               • Extract the max pile.
+
+               • Compute the remaining gifts (floor(sqrt(max))) and push it back.
+
+• Sum up the elements in the heap after k operations.
+
+
+
+Complexity:
+
+• Time: O(k log n), where n is the number of piles (heap operations).
+
+• Space: O(n) for the heap.
+
+
+
+Problem 2: Number of Occurrences
+
+Problem Description
+
+Given a sorted array arr[] and a target value x, find the number of occurrences of x in arr[].
+
+
+
+Example:
+
+Input:
+
+arr = [1, 1, 2, 2, 2, 3, 3], x = 2
+
+Output:
+
+3
+
+
+
+Explanation:
+
+x = 2 occurs three times in the array.
+
+
+
+Approach:
+
+1) Binary Search for First and Last Occurrences:
+
+• Use binary search to find the first occurrence of x.
+
+• Use binary search again to find the last occurrence of x.
+
+• Compute the count as last - first + 1.
+
+
+
+2) Edge Case:
+
+• If x is not found, return 0.
+
+
+
+Complexity:
+
+• Time: O(log n) for binary search.
+
+• Space: O(1).
+
+
+
+Implementation:
+
+• Binary search ensures the solution is efficient, leveraging the sorted property of the array.
+
+
+
+Reflection
+
+Today's problems highlighted efficient data processing techniques:
+
+• Priority-based operations using heaps for problem 1.
+
+• Leveraging sorted properties with binary search for problem 2.
+
+#MaxHeap #BinarySearch #ArrayOperations #gfg160 #geekstreak2024
+
+﻿
