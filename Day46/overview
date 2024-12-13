@@ -1,0 +1,64 @@
+hashtag#Day 165 Problem-Solving with hashtag#GFG POTD and hashtag#Leetcode
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+Problem 1: Sorted and Rotated Minimum
+Problem Description
+You are given a sorted array that has been rotated at some unknown pivot. The task is to find the minimum element in the array.
+
+Example:
+Input:
+arr = [5, 6, 1, 2, 3, 4]
+Output:
+1
+
+Approach:
+1) Binary Search:
+• The minimum element is the pivot point where the rotation occurs.
+• In a rotated sorted array:
+ • If arr[mid] > arr[high], the minimum lies in the right half.
+ • If arr[mid] < arr[high], the minimum lies in the left half (including mid).
+• Continue the search until the subarray reduces to a single element.
+
+Complexity:
+• Time: O(log n), due to binary search.
+• Space: O(1).
+
+Edge Case:
+1) If the array is not rotated (e.g., [1, 2, 3, 4]), the first element is the minimum.
+
+Problem 2: Find Score of an Array After Marking All Elements
+Problem Description
+1) You are given an array nums of positive integers. Follow these steps to calculate the score:
+2) Start with score = 0.
+3) Pick the smallest unmarked element. If there is a tie, pick the one with the smallest index.
+4) Add its value to the score.
+5) Mark the chosen element and its two adjacent elements (if they exist).
+6) Repeat until all elements are marked.
+7) Return the final score.
+
+Example:
+Input:
+nums = [2, 4, 1, 6, 5]
+Output:
+7
+
+Explanation:
+• Step 1: Pick 1 → Score = 1, Mark: [2, X, 1, X, 5].
+• Step 2: Pick 2 → Score = 3, Mark: [X, X, 1, X, 5].
+• Step 3: Pick 5 → Score = 7, Mark: [X, X, X, X, X].
+
+Approach:
+1) Priority Queue (Min Heap):
+• Store all elements of nums with their indices in a min heap.
+• Process elements in ascending order of value.
+• If an element is unmarked, add its value to the score and mark itself and its neighbors.
+
+Complexity:
+• Time: O(n log n) due to heap operations.
+• Space: O(n) for the heap and marking array.
+
+Reflection
+• Both problems today emphasized optimization:
+• Binary Search for logarithmic complexity in finding pivots.
+• Heap-based processing for greedy selection in the scoring problem.
+hashtag#BinarySearch hashtag#GreedyAlgorithm hashtag#HeapOptimization hashtag#gfg160 hashtag#geekstreak2024
