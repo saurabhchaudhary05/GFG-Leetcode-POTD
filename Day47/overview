@@ -1,0 +1,118 @@
+#Day 166 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Search in Rotated Sorted Array
+
+Problem Description
+
+You are given a sorted array that has been rotated at some unknown pivot. The task is to find the index of a target key. Return -1 if the key is not found.
+
+
+
+Example:
+
+Input:
+
+arr = [4, 5, 6, 7, 0, 1, 2], target = 0
+
+Output:
+
+4
+
+
+
+Approach:
+
+1) Binary Search:
+
+• The rotated array can be split into two sorted halves.
+
+• Compare the mid value to the target:
+
+• If the left half is sorted and target lies within this range, search the left half.
+
+• Otherwise, search the right half.
+
+• Adjust search range iteratively until target is found or low > high.
+
+
+
+Complexity:
+
+• Time: O(log n) due to binary search.
+
+• Space: O(1).
+
+
+
+Edge Cases:
+
+• Single-element array.
+
+• If target is not present, return -1.
+
+
+
+Problem 2: Continuous Subarrays
+
+Problem Description
+
+You are given a 0-indexed integer array nums. A subarray is called continuous if for every pair of indices in the subarray, the difference between the corresponding elements is at most 2. The task is to count all such continuous subarrays.
+
+
+
+Example:
+
+Input:
+
+nums = [5, 4, 2, 3]
+
+Output:
+
+8
+
+
+
+Explanation:
+
+Continuous subarrays: [5], [4], [2], [3], [5, 4], [4, 2], [2, 3], [4, 2, 3].
+
+
+
+Approach:
+
+1) Sliding Window Technique:
+
+• Use two pointers (start, end) to define the current subarray.
+
+• Maintain a min and max value for the current window:
+
+• If max - min > 2, increment the start pointer to shrink the window.
+
+• Count valid subarrays as end - start + 1 for each valid end.
+
+
+
+Complexity:
+
+• Time: O(n) because each element is processed once.
+
+• Space: O(1) for constant auxiliary variables.
+
+
+
+Reflection
+
+• Both problems required leveraging binary search and two-pointer techniques to achieve optimal solutions:
+
+• Efficient search in rotated arrays by understanding sorted properties.
+
+• Counting subarrays using a sliding window to handle constraints dynamically.
+
+#BinarySearch #SlidingWindow #Array #gfg160 #geekstreak2024
+
+﻿
+
