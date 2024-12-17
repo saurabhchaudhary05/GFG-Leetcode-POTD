@@ -1,0 +1,134 @@
+#Day 169: Problem-Solving with #GFG POTD and #LeetCode
+
+Today, I tackled two interesting problems involving binary search and string manipulation. Here's a quick overview of the solutions and approaches:
+
+
+
+Problem 1: Aggressive Cows
+
+Problem Description
+
+You are given an array stalls[] representing the positions of stalls. You need to place k cows such that the minimum distance between any two cows is maximized.
+
+
+
+Example:
+
+Input:
+
+stalls = [1, 2, 4, 8, 9], k = 3
+
+Output:
+
+3
+
+
+
+Approach:
+
+1) Binary Search on Distance:
+
+• Define a range for the possible minimum distance between cows: from 1 to the difference between the maximum and minimum stall positions.
+
+• Use binary search to determine the maximum possible minimum distance.
+
+
+
+2) Greedy Placement:
+
+• Check if it's possible to place k cows such that the minimum distance between cows is at least midmidmid.
+
+• If yes, increase the distance; otherwise, reduce it.
+
+
+
+Steps:
+
+• Sort the stalls[] array.
+
+• Apply binary search to find the largest minimum distance:
+
+• Place cows greedily using the mid distance.
+
+• Verify if all cows can be placed.
+
+
+
+Complexity:
+
+• Time: O(nlog⁡d) where d is the range of distances.
+
+• Space: O(1).
+
+
+
+Problem 2: Construct String With Repeat Limit
+
+Problem Description
+
+Given a string s and an integer repeatLimit, construct the lexicographically largest string using the characters of s such that no letter appears more than repeatLimit times consecutively.
+
+
+
+Example:
+
+Input:
+
+s = "cczazcc", repeatLimit = 2
+
+Output:
+
+"zzccac"
+
+
+
+Approach:
+
+1) Character Frequency Map:
+
+• Count the occurrences of each character.
+
+• Greedy Lexicographical Construction:
+
+• Sort characters in descending order based on their lexicographical order.
+
+• Append characters to the result string while respecting the repeatLimit.
+
+
+
+2) Handling Excess Characters:
+
+• If a character exceeds the repeatLimit, insert a smaller character in between to break the sequence.
+
+
+
+Steps:
+
+• Create a frequency map for all characters in s.
+
+• Use a max-heap to maintain characters in descending order.
+
+• Build the string greedily while adhering to the repeat limit condition.
+
+
+
+Complexity:
+
+• Time: O(nlog26), where n is the length of s.
+
+• Space: O(26) for the frequency map.
+
+
+
+Reflection:
+
+• Both problems required binary search and greedy techniques for optimization:
+
+• Aggressive Cows: Demonstrates binary search on answers, a powerful approach for range-based problems.
+
+• Construct String: Showcases a greedy algorithm leveraging heaps and lexicographical order to satisfy constraints.
+
+• These methods are key for balancing efficiency and correctness in problem-solving.
+
+#BinarySearch #GreedyAlgorithm #Heap #StringManipulation #GFGPOTD #LeetCodeDaily #geekstreak2024 🚀
+
