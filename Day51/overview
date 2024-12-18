@@ -1,0 +1,67 @@
+Today, I tackled two interesting problems involving stack-based optimization and binary search for allocation. Here's an overview of the approaches and solutions:
+
+Problem 1: Final Prices With a Special Discount in a Shop
+Problem Description
+Given an integer array prices, each element represents the price of an item. For each item, find the final price after applying a special discount:
+The discount is the price of the next smaller or equal element to the right of the current item.
+If no such element exists, the item receives no discount.
+
+Example:
+Input:
+prices = [8, 4, 6, 2, 3]
+Output:
+[4, 2, 4, 2, 3]
+
+Approach:
+1) Stack-Based Optimization:
+• Use a monotonic stack to keep track of indices where discounts haven't been applied.
+• Traverse the array from left to right and compute discounts based on the next smaller/equal element.
+
+Steps:
+• Initialize an empty stack.
+• Iterate through the array:
+• While the stack is not empty and the current price is less than or equal to the price at the top of the stack, calculate the discount.
+• Push the current index to the stack.
+• For indices left in the stack, no discounts are available.
+
+Complexity:
+• Time: O(n), as each element is pushed and popped from the stack once.
+• Space: O(n), for the stack.
+
+Problem 2: Allocate Minimum Pages
+Problem Description
+You are given an array arr[] representing the number of pages in books, and an integer kkk representing the number of students.
+Allocate books to kkk students such that each student gets at least one book, and all books assigned to a student are contiguous.
+Minimize the maximum number of pages assigned to a single student.
+
+Example:
+Input:
+arr = [12, 34, 67, 90], k = 2
+Output:
+113
+
+Approach:
+1) Binary Search on Answer:
+• The problem involves minimizing the maximum number of pages assigned.
+2) Check Feasibility:
+• Use a helper function to check if it's possible to allocate books with a given maximum limit.
+• Iterate through the array, assigning books to students while respecting the limit.
+
+Steps:
+• Initialize lowlowlow and highhighhigh.
+• Apply binary search:
+• Calculate midmidmid.
+• Check if allocation is possible with midmidmid as the maximum number of pages.
+• If yes, reduce the limit by setting high=mid−1; otherwise, increase it by setting low=mid+1.
+• Return lowlowlow as the result.
+
+Complexity:
+• Time: O(nlog⁡∑(arr)), where nnn is the number of books.
+• Space: O(1).
+
+Reflection:
+• Final Prices: Showcases the power of monotonic stacks for solving range-based problems efficiently.
+• Allocate Minimum Pages: Highlights the versatility of binary search for problems involving optimization and allocation.
+• These problems emphasized the importance of leveraging optimal data structures and algorithmic techniques for efficiency.
+hashtag#BinarySearch hashtag#MonotonicStack hashtag#ArrayManipulation hashtag#GreedyAlgorithm hashtag#GFGPOTD hashtag#LeetCodeDaily hashtag#geekstreak2024 🚀
+
