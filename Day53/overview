@@ -1,0 +1,147 @@
+#Day 173 Problem-Solving with #GFG POTD and #Leetcode
+
+
+
+Today, I tackled two distinct problems: one involving tree graph manipulation with complex constraints, and another focused on in-place matrix transformations. Here's the breakdown:
+
+
+
+Problem 1: Maximum Number of K-Divisible Components
+
+Problem Description
+
+Given a tree of nnn nodes and an array values[] of node values, determine the maximum number of connected components that can be formed by removing edges, such that the sum of values in each component is divisible by k.
+
+
+
+Example:
+
+Input:
+
+n = 5  
+
+edges = [[0, 1], [1, 2], [1, 3], [3, 4]]  
+
+values = [5, 10, 15, 20, 25]  
+
+k = 5  
+
+Output:
+
+5
+
+
+
+Approach:
+
+1) Tree DFS with Backtracking:
+
+• Perform a DFS starting from the root node.
+
+• Calculate the cumulative sum of node values for each subtree.
+
+• If the subtree sum is divisible by kkk, remove the edge leading to that subtree and count it as a valid component.
+
+• Return the remainder of the subtree sum modulo kkk to the parent node for further computations.
+
+
+
+2) Edge Removal and Component Count:
+
+• During DFS, keep track of the number of valid splits by counting edges that can be removed.
+
+• The total number of components is the number of removed edges plus one (for the root component).
+
+
+
+Steps:
+
+• Build an adjacency list representation of the tree.
+
+• Use DFS to calculate subtree sums and check divisibility by kkk.
+
+• Count valid splits and return the total number of components.
+
+
+
+Complexity:
+
+• Time: O(n), as we perform a single DFS traversal.
+
+• Space: O(n) for the adjacency list and recursion stack.
+
+
+
+Problem 2: Rotate by 90 Degrees (Anti-clockwise)
+
+Problem Description
+
+Given an n×ntimes n×n square matrix mat[], rotate it 90 degrees anti-clockwise in-place.
+
+
+
+Example:
+
+Input:
+
+mat = [[1, 2, 3],  
+
+       [4, 5, 6],  
+
+       [7, 8, 9]]  
+
+Output:
+
+mat = [[3, 6, 9],  
+
+       [2, 5, 8],  
+
+       [1, 4, 7]]  
+
+
+
+Approach:
+
+1) Transpose the Matrix:
+
+• Swap elements symmetrically across the main diagonal (mat[i][j] and mat[j][i]).
+
+2) Reverse Each Column:
+
+• Reverse the elements of each column to achieve a 90-degree anti-clockwise rotation.
+
+
+
+Steps:
+
+• Traverse the upper triangle of the matrix and perform the transpose operation.
+
+• For each column, reverse the elements to complete the rotation.
+
+
+
+Complexity:
+
+• Time: O(n2), as every element is visited once.
+
+• Space: O(1), since the transformation is done in-place.
+
+
+
+Reflection:
+
+Maximum Number of K-Divisible Components:
+
+• A challenging problem that combined graph traversal and mathematical reasoning. Handling subtree sums efficiently and leveraging modular arithmetic was key to solving this.
+
+
+
+Rotate by 90 Degrees:
+
+• This problem reinforced the concept of in-place matrix manipulation and the importance of systematic element swapping.
+
+• Both problems provided excellent practice in recursive thinking and array manipulation.
+
+#Graphs #Trees #MatrixRotation #LeetCodeHard #GFGMatrixChallenge 🚀
+
+ #gfg160 #geekstreak2024
