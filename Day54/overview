@@ -1,0 +1,144 @@
+#Day 175 Problems solving with #GFGPOTD and #leetcode
+
+
+
+Problem 1: Minimum Number of Operations to Sort a Binary Tree by Level
+
+Problem Description
+
+Given the root of a binary tree with unique values, determine the minimum number of swaps required to make the values at each level sorted in strictly increasing order.
+
+You can swap values of any two nodes at the same level.
+
+The goal is to perform the minimum number of operations.
+
+
+
+Example:
+
+Input:
+
+      1  
+
+     / \  
+
+    3   2  
+
+   / \ / \  
+
+  7  6 5  4  
+
+Output:
+
+3
+
+
+
+Approach:
+
+1) Level Order Traversal:
+
+• Perform a level-order traversal to extract node values level by level.
+
+• For each level, record the values in an array.
+
+
+
+2) Sort with Minimum Swaps:
+
+• For each level, count the minimum swaps needed to sort the array using a cycle detection method in a graph:
+
+• Create an array of pairs (value,index)(value, index)(value,index) and sort it by value.
+
+• Use visited nodes to detect cycles and count the number of swaps for each cycle.
+
+
+
+3) Sum Up Operations:
+
+• Add the number of swaps across all levels.
+
+
+
+Complexity:
+
+• Time: O(n⋅log⁡n) where n is the total number of nodes.
+
+• Space: O(n)O(n)O(n) for storing levels and visited nodes.
+
+
+
+Problem 2: Search in a Row-Wise Sorted Matrix
+
+Problem Description
+
+Given a row-wise sorted matrix mat[][]mat[][]mat[][] of size n×mn \times, determine if an integer x exists in the matrix.
+
+Example:
+
+Input:
+
+mat = [[1, 3, 5, 7],  
+
+       [10, 11, 16, 20],  
+
+       [23, 30, 34, 50]]  
+
+x = 3  
+
+
+
+Output:
+
+True
+
+
+
+Approach:
+
+1) Binary Search in Rows:
+
+• Iterate through each row and apply binary search to find xxx.
+
+
+
+2) Optimized Search (Skip Rows):
+
+• Use the sorted property:
+
+• Start at the beginning of the row and check if xxx lies within the range of the current row's minimum and maximum.
+
+
+
+3) Apply binary search on the identified row.
+
+• Alternative Search from Top-Right Corner:
+
+• Start at the top-right element:
+
+
+
+Complexity:
+
+• Binary Search Approach: O(n⋅log⁡m), where n is the number of rows and m is the number of columns.
+
+• Optimized Search: O(n+m), since each row or column is traversed at most once.
+
+
+
+Reflection:
+
+1) Binary Tree Level Sorting:
+
+• It was interesting to apply cycle detection for determining minimum swaps, which is typically used in permutation problems.
+
+2) Matrix Search:
+
+• Reinforced understanding of matrix traversal techniques and the importance of exploiting structure (sorted rows).
+
+• Both problems offered a mix of graph-based techniques and matrix manipulation.
+
+#TreeSorting #MatrixSearch #GraphCycles #EfficientAlgorithms 🚀
+
+#gfg160 #geekstreak2024
+
