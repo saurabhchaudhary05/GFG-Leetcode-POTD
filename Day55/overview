@@ -1,0 +1,47 @@
+Problem 1: Search in a Strictly Sorted Matrix
+Problem Description
+Given a strictly sorted 2D matrix mat[][] of size n×m and a number x, determine if x is present in the matrix.
+A strictly sorted matrix means:
+Each row is sorted in strictly increasing order.
+The first element of a row is greater than the last element of the previous row.
+
+Approach:
+1) Flatten the Matrix into a Virtual 1D Array:
+2) Treat the matrix as a single sorted 1D array.
+3) Use binary search to find the element:
+4) Binary Search on Rows:
+• Use binary search to determine which row xxx might belong to.
+• Perform binary search on the identified row.
+
+Complexity:
+• Time: O(log⁡(n×m)) for the virtual array approach.
+• Space: O(1).
+
+Problem 2: Minimum Diameter After Merging Two Trees
+Problem Description
+Given two undirected trees T1 with nnn nodes and T2 with m nodes, you must connect one node from T1 to another node from T2 to form a single tree.
+The goal is to minimize the diameter of the resulting tree.
+Tree Diameter: The length of the longest path between any two nodes in the tree.
+
+Approach:
+1) Diameter of Individual Trees:
+• Compute the diameter of both trees using a two-pass BFS or DFS:
+• Start from an arbitrary node and find the farthest node u.
+• Start from u and find the farthest node v.
+• The path from uuu to v is the diameter.
+2) Identify Maximum Heights:
+• For both trees, identify the nodes with the maximum height using BFS or DFS.
+3) Merge Strategy:
+• Connect the tallest nodes of T1 and T2.
+
+Complexity:
+• Time: O(n+m), as we compute heights and diameters for both trees.
+• Space: O(n+m) for storing adjacency lists and BFS/DFS stacks.
+
+Reflection:
+1) Matrix Search:
+• Reinforced understanding of binary search in a virtual 1D array. This approach highlights the power of conceptual transformations in matrix problems.
+
+2) Tree Diameter Reduction:
+• This problem demonstrates the importance of understanding tree properties and combining them creatively. It required a mix of diameter computation, height analysis, and a strategic merge to minimize the result.
+Both problems were intellectually stimulating, combining foundational concepts with optimization.
