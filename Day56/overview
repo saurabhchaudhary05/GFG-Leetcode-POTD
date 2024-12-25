@@ -1,0 +1,96 @@
+#Day 177 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Find Largest Value in Each Tree Row
+
+Problem Description
+
+Given the root of a binary tree, return an array of the largest value in each row of the tree.
+
+
+
+Approach:
+
+1) Level Order Traversal (BFS):
+
+• Perform a breadth-first search (BFS) on the tree.
+
+• Traverse the tree level by level and find the maximum value at each level.
+
+• Use a queue to keep track of nodes at the current level.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the number of nodes in the tree.
+
+• Space: O(w), where w is the maximum width of the tree (the largest number of nodes at any level).
+
+
+
+Problem 2: Set Matrix Zeroes
+
+Problem Description
+
+Given a n×n \times m×m matrix mat[][], modify the matrix such that if mat[i][j]=0, then all elements in the i-th row and j-th column are set to 0, while doing so in constant space complexity.
+
+
+
+Approach:
+
+1) Marking Rows and Columns Using First Row and Column:
+
+• Use the first row and first column as markers for which rows and columns need to be zeroed.
+
+2) Traverse the matrix:
+
+• If mat[i][j]=0, set mat[i][0]=0and mat[0][j]=0.
+
+3) Zero Out the Matrix Using Markers:
+
+• Iterate through the matrix (excluding the first row and column):
+
+• If mat[i][0]=0 or mat[0][j]=0, set mat[i][j]=0.
+
+4) Handle the First Row and Column Separately:
+
+• After processing the rest of the matrix, handle the first row and column based on their original values.
+
+
+
+Complexity:
+
+• Time: O(n×m).
+
+• Space: O(1), as we use the matrix itself for marking.
+
+
+
+Reflection:
+
+1) Tree Row Maximum:
+
+• Solidified BFS traversal skills. Managing data at each level during traversal was crucial.
+
+2) Matrix Zeroing:
+
+• This problem highlights how to cleverly reuse space (first row and column) for marking while adhering to space constraints.
+
+• Both problems were satisfying and strengthened concepts of tree traversal and matrix manipulation.
+
+#TreeTraversal #BFS #MatrixManipulation #ProblemSolving 🚀
+
+ #gfg160 #geekstreak2024
+
+﻿
+
+4o
+
+
+
+
+
