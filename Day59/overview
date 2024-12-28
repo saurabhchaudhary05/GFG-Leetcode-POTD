@@ -1,0 +1,88 @@
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Maximum Sum of 3 Non-Overlapping Subarrays
+
+Problem Description:
+
+Given an array nums and an integer k, find three non-overlapping subarrays of length k with the maximum sum. Return the starting indices of these subarrays. In case of ties, return the lexicographically smallest result.
+
+
+
+Approach:
+
+1) Sliding Window for Prefix Sums:
+
+• Calculate the sum of each subarray of size k and store it in an array window_sums.
+
+• Use a sliding window to compute \text{window_sums}[i] = \text{nums}[i] + \text{nums}[i+1]  \text{nums}[i+k-1].
+
+
+
+2) Precompute Max Left and Right Indices:
+
+• Compute left_max[i] which stores the index of the maximum sum subarray in window_sums\text{window\_sums}window_sums up to index iii.
+
+• Compute right_max[i] which stores the index of the maximum sum subarray in window_sums\text{window\_sums}window_sums from index iii to the end.
+
+Iterate for Middle Subarray:
+
+• Track the combination with the maximum sum and update the result indices accordingly.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the size of nums.
+
+• Space: O(n) for window_sums, left_max, and right_max.
+
+
+
+Problem 2: Find All Triplets with Zero Sum
+
+Problem Description:
+
+Given an array arr[]\text{arr}[]arr[], find all unique triplets (i,j,k) such that arr[i]+arr[j]+arr[k]=0.
+
+
+
+Approach:
+
+1) Sorting and Two-Pointer Technique:
+
+• Sort the array.
+
+• For each element x at index i, find pairs (j,k) such that arr[j]+arr[k]=−x
+
+
+
+2) Avoid Duplicates:
+
+• Skip duplicate elements for i, j, and k to ensure unique triplets.
+
+
+
+Complexity:
+
+• Time: O(n2), where n is the size of the array.
+
+• Space: O(1), excluding the output storage.
+
+
+
+Reflection:
+
+1) Maximum Sum of 3 Non-Overlapping Subarrays:
+
+• This problem strengthened my understanding of dynamic programming and the sliding window technique for complex optimizations.
+
+2) Find All Triplets with Zero Sum:
+
+• Reinforced the use of sorting and two-pointer strategies to efficiently solve problems involving combinations and constraints.
+
+These problems were both challenging and rewarding to solve! 🚀
+
+#SlidingWindow #TwoPointers #Optimization #ProblemSolving #gfg160 #geekstreak2024
+
