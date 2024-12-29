@@ -1,0 +1,99 @@
+#Day 180 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Number of Ways to Form a Target String Given a Dictionary
+
+Problem Description:
+
+You are given a list of strings words[] of equal length and a string target. Your task is to find the number of ways to form target\text{target}target using characters from words[], following these rules:
+
+target is formed from left to right.
+
+To form the i-th character of target, you can choose the k-th character of the j-th string in words, provided target[i]=words[j][k].
+
+Once a character from a specific column k is used, all characters in columns ≤k in all strings become unavailable.
+
+Calculate the result modulo 109+710^9 + 7109+7.
+
+
+
+Approach:
+
+1) Character Frequency Calculation:
+
+• Precompute the frequency of each character in words\text{words}words at every column.
+
+
+
+2) Dynamic Programming:
+
+• Use a DP array dp[i][j] where i represents the position in target and j represents the position in words.
+
+dp[i][j] stores the number of ways to form the first iii characters of target using the first j columns of words.
+
+
+
+Recursive Relation:
+
+If target[i] matches a character in words\text{words}words, calculate dp[i][j] as the sum of ways to form target[i−1] using previous columns.
+
+
+
+Complexity:
+
+• Time: O(m×n×l), where mmm is the length of target, n is the number of strings in words, and l is their length.
+
+• Space: O(m×l).
+
+
+
+Problem 2: Intersection of Two Arrays with Duplicate Elements
+
+Problem Description:
+
+Find the intersection of two arrays a[], defined as the elements that appear in both arrays. The result should not include duplicates.
+
+
+
+Approach:
+
+1) Frequency Count Using Hash Maps:
+
+• Use two hash maps to count the occurrences of elements in a[].
+
+2) Find Common Elements:
+
+• For each key in one hash map, check if it exists in the other. Take the minimum of the counts to determine how many times the element appears in the intersection.
+
+3) Unique Result:
+
+Use a set to ensure the result has unique elements.
+
+
+
+Complexity:
+
+• Time: O(n+m), where n and m are the sizes of a[] and b[].
+
+• Space: O(n+m).
+
+
+
+Reflection:
+
+1) Number of Ways to Form a Target String Given a Dictionary:
+
+• This problem was challenging, involving advanced string manipulation and dynamic programming. It reinforced my ability to tackle problems with layered constraints.
+
+
+
+2) Intersection of Two Arrays:
+
+• Although easier, this problem provided insight into efficiently using hash maps to handle frequency-based tasks.
+
+• Both problems offered valuable lessons in data structure and algorithm optimization! 🚀
+
+#DynamicProgramming #HashMaps #ProblemSolving #gfg160 #geekstreak2024
