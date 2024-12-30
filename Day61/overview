@@ -1,1 +1,105 @@
+#Day 181 Problem-Solving with #GFG POTD and #Leetcode
 
+Today, I solved two problems related to string matching and prefix searching. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Count Ways To Build Good Strings
+
+Problem Description:
+
+You are given four integers:
+
+zero: the number of times you can append '0'.
+
+one: the number of times you can append '1'.
+
+low: the minimum length of the good string.
+
+high: the maximum length of the good string.
+
+A good string satisfies:
+
+Its length lies between low and high.
+
+It is formed by appending '0' zero-times or '1' one-times repeatedly.
+
+Return: The number of distinct good strings modulo 10^9+7.
+
+
+
+Approach:
+
+1) Dynamic Programming:
+
+• Use dp[i] where i represents the number of ways to form strings of length i.
+
+2) Recursive Relation:
+
+• For each i, calculate the total number of ways by considering the number of ways to append '0' or '1'.
+
+If i−zero≥0, add dp[i−zero].
+
+If i−one≥0, add dp[i−one].
+
+
+
+Summation:
+
+• Sum dp[i] for low≤i≤high .
+
+
+
+Complexity:
+
+• Time: O(high).
+
+• Space: O(high).
+
+
+
+Problem 2: Union of Arrays with Duplicates
+
+Problem Description:
+
+Find the number of elements in the union of two arrays a[] and b[].
+
+The Union of two arrays is defined as the set containing distinct elements from both arrays. If elements are repeated, only one occurrence should be considered.
+
+
+
+Approach:
+
+1) Set-based Union:
+
+• Use sets to store distinct elements from a[]a[]a[] and b[]b[]b[].
+
+
+
+Union Operation:
+
+• Combine both sets to get the union and count the number of distinct elements.
+
+
+
+Complexity:
+
+• Time: O(n+m), where n and m are the lengths of a[] and b[], respectively.
+
+• Space: O(n+m).
+
+
+
+Reflection:
+
+1) Count Ways To Build Good Strings:
+
+• This problem tested my ability to optimize recursive problems using dynamic programming. It was a great exercise in modular arithmetic and bounded constraints.
+
+2) Union of Arrays:
+
+• Although simple, this problem reinforced the importance of using sets to handle distinct elements efficiently.
+
+#DynamicProgramming #UnionOfArrays #Optimization #gfg160 #geekstreak2024🚀
+
+﻿
