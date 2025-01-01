@@ -1,0 +1,89 @@
+#Day 183 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I tackled two interesting problems involving strings and optimization. Here's a summary of my approach and solutions:
+
+
+
+Problem 1: Print Anagrams Together
+
+Problem Description:
+
+Given an array of strings, return all groups of strings that are anagrams. Groups must maintain the order of their first appearance in the array, and the output should be in lexicographic order within each group.
+
+
+
+Approach:
+
+1) Grouping by Sorted Characters:
+
+• Create a dictionary where the key is the sorted version of each string, and the value is a list of all strings matching that key (anagrams).
+
+
+
+2) Lexicographic Sorting:
+
+• For each key in the dictionary, sort the corresponding list of anagrams.
+
+
+
+3) Result Construction:
+
+• Maintain the order of keys as they appear in the array. Append each sorted list to the result.
+
+
+
+Complexity:
+
+• Time: O(n⋅mlog⁡m), where n is the number of strings and mmm is the maximum string length (sorting strings).
+
+• Space: O(n⋅m), for the dictionary and result storage.
+
+
+
+Problem 2: Maximum Score After Splitting a String
+
+Problem Description:
+
+Given a binary string s, split it into two non-empty substrings such that the score (zeros in the left substring + ones in the right substring) is maximized.
+
+
+
+Approach:
+
+1) Prefix and Suffix Counts:
+
+• Calculate the number of zeros in the left substring and ones in the right substring at each split point.
+
+
+
+2) Iterative Score Calculation:
+
+• Traverse the string while maintaining cumulative counts of zeros and ones.
+
+• At each split, compute the score and update the maximum score.
+
+
+
+Complexity:
+
+• Time: O(n), where nnn is the length of the string sss.
+
+• Space: O(1), as the solution requires constant space.
+
+
+
+Reflection:
+
+1) Print Anagrams Together:
+
+• Grouping by sorted characters ensures efficient and structured identification of anagrams.
+
+
+
+2) Maximum Score After Splitting a String:
+
+• Using cumulative counts for prefix and suffix calculations provides an optimal solution with linear complexity.
+
+#Strings #Hashing #Optimization #GFGAnagrams #LeetcodeSplitScore  #gfg160 #geekstreak2024🚀
+
+﻿
