@@ -1,0 +1,101 @@
+#Day 185 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I worked on two interesting problems involving array splitting and subarray analysis. Here's my summary:
+
+
+
+Problem 1: Number of Ways to Split Array
+
+Problem Description:
+
+Given an array nums, find the number of valid split indices iii where:
+
+The sum of the first i+1 elements is greater than or equal to the sum of the remaining elements.
+
+i must satisfy 0≤i<n−1.
+
+
+
+Approach:
+
+1) Compute Total Sum:
+
+• Start by calculating the total sum of the array.
+
+
+
+2) Iterative Prefix Sum Calculation:
+
+• Use a prefix sum to calculate the sum of the first i+1 elements dynamically.
+
+For each index i, check if prefix_sum≥total_sum−prefix_sum.
+
+
+
+3) Count Valid Splits:
+
+• Increment the count for each valid i.
+
+
+
+Complexity:
+
+• Time: O(n), for a single pass through the array.
+
+• Space: O(1), using variables for prefix sum and total sum.
+
+
+
+Problem 2: Count Subarrays with Given XOR
+
+Problem Description:
+
+Given an array arr and a number k, count the number of subarrays whose XOR equals k.
+
+
+
+Approach:
+
+1) Using Hash Map for Prefix XOR:
+
+• Use a hash map to store the frequency of prefix XOR values encountered so far.
+
+
+
+2) Iterative Calculation:
+
+• For each element in arr, calculate the running XOR.
+
+• Check if prefix_XOR⊕k exists in the hash map, which indicates a subarray with XOR equal to k.
+
+• Increment the count by the frequency of prefix_XOR⊕k.
+
+
+
+3) Update Hash Map:
+
+• Add the current prefix XOR to the hash map for future subarray checks.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the size of the array.
+
+• Space: O(n), for the hash map.
+
+
+
+Reflection:
+
+1) Number of Ways to Split Array:
+
+• Leveraging prefix sums for cumulative checks allowed for an efficient O(n) solution.
+
+
+
+2) Count Subarrays with Given XOR:
+
+• The hash map technique is an elegant way to solve XOR-based problems in linear time, avoiding nested loops.
+
+#PrefixSum #XOR #HashMap #EfficientAlgorithms #LeetCodeSplits #GFGSubarrays 🚀
