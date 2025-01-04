@@ -1,0 +1,99 @@
+#Day 186 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I tackled two fascinating problems involving arrays and strings. Here's the breakdown:
+
+
+
+Problem 1: Count All Triplets with Given Sum in Sorted Array
+
+Problem Description:
+
+Given a sorted array arr[] and a target value, count the number of triplets (i,j,k) such that:
+
+arr[i]+arr[j]+arr[k]=targetarr[i] + arr[j] + arr[k] 
+
+i<j<k.
+
+
+
+Approach:
+
+1) Two-Pointer Technique:
+
+• For each element arr[i]arr[i]arr[i], use two pointers j and k to find pairs (j,k) such that arr[i]+arr[j]+arr[k]=targetarr[i] + arr[j] + arr[k] .
+
+Initialize j=i+1 and k=n−1, then adjust pointers based on the sum.
+
+
+
+2) Count Triplets:
+
+• If the sum matches the target, increment the triplet count and adjust both pointers.
+
+• If the sum is less than the target, increment jjj to increase the sum.
+
+• If the sum is greater than the target, decrement kkk to reduce the sum.
+
+
+
+Complexity:
+
+• Time: O(n2), iterating over the array with nested two-pointer logic.
+
+• Space: O(1), no additional space used.
+
+
+
+Problem 2: Unique Length-3 Palindromic Subsequences
+
+Problem Description:
+
+Given a string s, count the number of unique palindromes of length 3 that are subsequences of s.
+
+
+
+Approach:
+
+1) Track Character Occurrences:
+
+• Use a hash map or set to record the first and last occurrences of each character in the string.
+
+
+
+
+
+2) Middle Character Iteration:
+
+• For each character as a middle character in the palindrome, check if there are unique characters on both sides that form palindromes.
+
+• Use sets to ensure uniqueness of subsequences.
+
+
+
+3) Count Palindromes:
+
+• For each valid middle character, count the distinct pairs of characters on either side that form palindromes.
+
+
+
+Complexity:
+
+• Time: O(26⋅n), where 26 is the number of unique lowercase letters.
+
+• Space: O(26⋅n), for storing occurrences.
+
+
+
+Reflection:
+
+1) Count All Triplets with Given Sum:
+
+• The two-pointer technique is highly efficient for sorted arrays and avoids the brute-force O(n3) approach.
+
+
+
+2) Unique Length-3 Palindromic Subsequences:
+
+• Leveraging hash maps and sets ensures efficient counting of unique subsequences, reducing unnecessary recomputations.
+
+#TwoPointerTechnique #HashMap #SubsequencePalindromes #EfficientAlgorithms #GFGTriplets #LeetCodeStrings 🚀
