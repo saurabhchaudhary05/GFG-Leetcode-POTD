@@ -1,0 +1,111 @@
+#Day 187 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I worked on two interesting problems involving string manipulation and pair counting. Here's the summary:
+
+
+
+Problem 1: Shifting Letters II
+
+Problem Description:
+
+You are given:
+
+A string s of lowercase English letters.
+
+A 2D integer array shifts, where shifts[i]=[starti,endi,directioni].
+
+For every i, shift the characters in sss from index starti​ to endi:
+
+Forward if directioni=1.
+
+Backward if directioni=0.
+
+Return the final string after applying all the shifts.
+
+
+
+Approach:
+
+1) Difference Array for Efficient Shifting:
+
+• Use a difference array to mark the net shifts for each index in s.
+
+• For each shift range [starti,endi]increment the start index and decrement the index after the end.
+
+
+
+2) Cumulative Shifting:
+
+• Calculate the cumulative shifts to determine the net shift at each position.
+
+
+
+3) Apply Shifts to the String:
+
+• For each character in s, adjust it using the net shift, taking care of wrapping around ('z' → 'a' and 'a' → 'z').
+
+
+
+Complexity:
+
+• Time: O(n+m), where nnn is the length of sss and mmm is the number of shifts.
+
+• Space: O(n), for the difference array.
+
+
+
+Problem 2: Count Pairs Whose Sum is Less than Target
+
+Problem Description:
+
+Given an array arr[] and an integer target, count the number of pairs (i,j) such that: arr[i]+arr[j]<target.
+
+
+
+Approach:
+
+1) Two-Pointer Technique:
+
+• Sort the array.
+
+• Initialize two pointers: left=0 and right=n−1.
+
+
+
+2) For each pair (arr[i],arr[j]):
+
+• If arr[i]+arr[j]<target
+
+• Add right−left to the count (all pairs between left right are valid).
+
+• Move left forward.
+
+• Otherwise, move right.
+
+
+
+Complexity:
+
+• Time: O(nlog⁡n) for sorting and O(n), for two-pointer traversal.
+
+• Space: O(1), no extra space used.
+
+
+
+Reflection:
+
+1) Shifting Letters II:
+
+• The difference array was key to optimizing multiple range updates, avoiding redundant operations.
+
+• A clever approach for handling circular shifts of characters.
+
+
+
+2) Count Pairs Whose Sum is Less than Target:
+
+• The two-pointer method is highly efficient and avoids O(n2) brute-force.
+
+• Sorting upfront simplifies the pair counting.
+
+#DifferenceArray #TwoPointers #OptimizedSolutions #StringManipulation #ArrayPairs 🚀
