@@ -1,0 +1,106 @@
+#Day 188 Problem-Solving with #GFG and #LeetCode
+
+Problem 1: Minimum Number of Operations to Move All Balls to Each Box
+
+Problem Description:
+
+You are given:
+
+n boxes represented as a binary string boxes, where boxes[i]=′0′ if the box is empty, and boxes[i]=′1′′ if it contains a ball.
+
+You can move a ball from one box to an adjacent box in one operation. The task is to return an array answer\text{answer}answer of size n, where answer[i] is the minimum number of operations needed to move all the balls to the i-th box.
+
+
+
+Approach:
+
+1) Brute Force:
+
+• For each box i, calculate the total number of operations required to move all balls to this box by summing the absolute distances from all other boxes with balls.
+
+
+
+Complexity: O(n2).
+
+
+
+2) Optimized Approach (Prefix and Suffix Sums):
+
+• Use a left-to-right pass to calculate the prefix operations and a right-to-left pass to calculate the suffix operations.
+
+• Combine these to get the minimum operations for each box.
+
+
+
+Complexity:
+
+• Time: O(n), with one left-to-right and one right-to-left pass.
+
+• Space: O(n), for the result array.
+
+
+
+Problem 2: Sum Pair Closest to Target
+
+Problem Description:
+
+Given an array arr[] and a number target, find a pair (a,b):
+
+a≤b.
+
+Their sum is closest to target.
+
+If multiple pairs have the same closest sum, return the pair with the maximum absolute difference.
+
+If no such pair exists, return an empty array.
+
+
+
+Approach:
+
+1) Sort and Two-Pointer Technique:
+
+• Sort the array.
+
+
+
+2) Use two pointers: one starting at the beginning and the other at the end of the array.
+
+
+
+3) For each pair (arr[i],arr[j]):
+
+• Calculate their sum and update the closest sum if it is closer to the target.
+
+• Move the pointers based on the sum comparison with the target.
+
+• Track the pair with the maximum absolute difference if sums are tied.
+
+
+
+Complexity:
+
+• Time: O(nlog⁡n), for sorting and O(n), for the two-pointer traversal.
+
+• Space: O(1) no extra space used.
+
+
+
+Reflection:
+
+1) Minimum Operations to Move Balls:
+
+• The prefix-suffix sum optimization ensures a linear-time solution, avoiding O(n2) brute force.
+
+• It was challenging to figure out the dynamic updates while iterating, but it worked well in the end.
+
+
+
+2) Sum Pair Closest to Target:
+
+• Sorting simplifies the search, and the two-pointer technique ensures we don't miss any valid pairs.
+
+• The additional constraint of the maximum absolute difference added an extra layer of complexity.
+
+#PrefixSuffixOptimization #TwoPointers #GreedyApproach 🚀
+
