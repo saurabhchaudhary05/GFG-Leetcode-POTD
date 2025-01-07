@@ -1,0 +1,91 @@
+#Day 189 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two problems related to string matching and array-based operations. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: String Matching in an Array
+
+Problem Description:
+
+Given an array of strings words, return all strings in words that are a substring of another word in the array.
+
+
+
+Approach:
+
+1) Iterate Over Each Word:
+
+• For each word in the array, check if it is a substring of any other word using the in operator in Python or equivalent in other languages.
+
+
+
+2) Optimization via Sorting:
+
+• Sort the array by string length to limit comparisons to longer words.
+
+
+
+3) Store Results:
+
+• Use a set or list to store all valid substrings to avoid duplicates.
+
+
+
+Complexity:
+
+• Time: O(n2⋅m), where n is the number of words and mmm is the average length of words.
+
+• Space: O(k), where k is the number of valid substrings.
+
+
+
+Problem 2: Pair with Given Sum in a Sorted Array
+
+Problem Description:
+
+Given a sorted array  and an integer target, find the number of pairs of distinct indices (i,j) such that arr[i]+arr[j]=target.
+
+
+
+Approach:
+
+1) Two-Pointer Technique:
+
+• Initialize two pointers, left = 0 and right = n-1.
+
+• If the sum of arr[left] and arr[right] equals the target, increment the count and move both pointers inward.
+
+• If the sum is less than the target, move the left pointer to the right.
+
+• If the sum is greater than the target, move the right pointer to the left.
+
+
+
+2) Edge Case Handling:
+
+• Skip duplicate pairs using additional checks (if required).
+
+
+
+Complexity:
+
+• Time: O(n).
+
+• Space: O(1).
+
+
+
+Reflection:
+
+1) String Matching in an Array:
+
+• Sorting by length reduced unnecessary comparisons and made the solution cleaner.
+
+
+
+2) Pair with Given Sum:
+
+• The two-pointer method is optimal for sorted arrays and avoids the need for additional space.
+
+#StringManipulation #TwoPointerTechnique #GFG160 #GeekStreak2024 🚀
