@@ -1,0 +1,104 @@
+#Day 190 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I tackled two problems related to string prefix-suffix pairs and triangle formation. Here's a detailed breakdown of my approach and solutions:
+
+
+
+Problem 1: Count Prefix and Suffix Pairs
+
+Problem Description:
+
+Given a string array words, find the number of index pairs (i,j) where i<j and words[i] is both a prefix and suffix of words[j].
+
+
+
+Approach:
+
+1) Iterate Over All Pairs:
+
+• For every pair of indices (i,j) with i<j, check if words[i] is a prefix and suffix of words[j].
+
+
+
+2) Prefix and Suffix Check:
+
+• Use string slicing or built-in methods to verify:
+
+words[j].startswith(words[i])
+
+words[j].endswith(words[i]).
+
+
+
+3) Count Valid Pairs:
+
+• Increment the count for every pair that satisfies the condition.
+
+
+
+Complexity:
+
+• Time: O(n2⋅m), where n is the number of words and mmm is the average length of the words.
+
+• Space: O(1).
+
+
+
+Problem 2: Count the Number of Possible Triangles
+
+Problem Description:
+
+Given an array arr[], find the number of triangles that can be formed using three different elements such that the sum of any two sides is greater than the third side.
+
+
+
+Approach:
+
+1) Sort the Array:
+
+• Sorting ensures we can efficiently verify the triangle inequality.
+
+
+
+2) Two-Pointer Technique:
+
+• For each element arr[k] (the largest side of the triangle), use two pointers i and j (starting from the beginning and just before k, respectively).
+
+
+
+3) Check if arr[i]+arr[j]>arr[k]:
+
+• If true, all pairs between i and j form valid triangles. Increment the count and move j inward.
+
+If false, increment i.
+
+
+
+4) Count Valid Triplets:
+
+• Repeat for all possible k values.
+
+
+
+Complexity:
+
+• Time: O(n2), where n is the number of elements in the array.
+
+• Space: O(1).
+
+
+
+Reflection:
+
+1) Count Prefix and Suffix Pairs:
+
+• The prefix-suffix problem emphasized string slicing and efficient pair enumeration.
+
+
+
+2) Count the Number of Possible Triangles:
+
+• Sorting and two-pointer techniques provided an optimal solution for a seemingly brute-force problem.
+
+#StringManipulation #TwoPointerTechnique #PrefixSuffix #GFG160 #GeekStreak2024 🚀
+
