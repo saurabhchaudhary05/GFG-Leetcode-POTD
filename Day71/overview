@@ -1,0 +1,104 @@
+#Day 191 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two interesting problems involving prefix matching and subarray sums. Here's how I approached them:
+
+
+
+Problem 1: Counting Words With a Given Prefix
+
+Problem Description:
+
+Given an array of strings words and a string pref, count the number of strings in words that start with pref.
+
+
+
+Approach:
+
+1) Iterate Through the Array:
+
+• For each word in words, check if it starts with pref.
+
+
+
+2) Use Built-In Methods:
+
+• Leverage Python’s startswith method for simplicity and efficiency.
+
+
+
+3) Count Matches:
+
+• Increment the count for every word that satisfies the condition.
+
+
+
+Complexity:
+
+• Time: O(n⋅m), where n is the number of words and m is the length of pref.
+
+• Space: O(1).
+
+
+
+Problem 2: Indexes of Subarray Sum
+
+Problem Description:
+
+Given an array arr[] of non-negative integers, find the leftmost subarray whose sum equals target. Return the 1-based indices of the leftmost and rightmost elements of the subarray. If no such subarray exists, return [-1].
+
+
+
+Approach:
+
+1) Sliding Window Technique:
+
+• Maintain a window of elements with a running sum.
+
+
+
+2) Expand and Contract the Window:
+
+
+
+3) Use two pointers, start and end:
+
+• Increment end to add elements to the sum.
+
+• Increment start to reduce the sum when it exceeds target.
+
+
+
+4) Check for Match:
+
+• If the sum equals target, return the 1-based indices as [start+1,end+1].
+
+
+
+5) Edge Case:
+
+• If no subarray is found, return [-1].
+
+
+
+Complexity:
+
+• Time: O(n), where nnn is the number of elements in arr.
+
+• Space: O(1).
+
+
+
+Reflection:
+
+1) Counting Words With a Given Prefix:
+
+• Straightforward implementation using built-in methods made it easy to solve.
+
+
+
+2) Indexes of Subarray Sum:
+
+• The sliding window approach ensured an efficient solution for a potentially large input array.
+
+#PrefixMatching #SlidingWindow #SubarraySum #GFG160 #GeekStreak2024 🚀
+
