@@ -1,0 +1,96 @@
+#Day 192 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I tackled two engaging problems that revolved around string manipulation. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Construct K Palindrome Strings
+
+Problem Description:
+
+Given a string s and an integer k, determine if it's possible to construct k palindrome strings using all the characters of s.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• A palindrome requires pairs of characters. Characters that appear an odd number of times can only form the middle of a palindrome.
+
+• The number of odd-frequency characters in s must not exceed k.
+
+
+
+Steps:
+
+• Count the frequency of each character in s using a hashmap or Counter.
+
+• Calculate the number of characters with odd frequencies.
+
+• Return true if the number of odd-frequency characters is less than or equal to k and the length of s is at least k.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the length of the string.
+
+• Space: O(1) (constant space for frequency count).
+
+
+
+Problem 2: Longest Substring with Distinct Characters
+
+Problem Description:
+
+Given a string s, find the length of the longest substring that contains only distinct characters.
+
+
+
+Approach:
+
+1) Sliding Window Technique:
+
+• Use a sliding window to maintain a substring with all unique characters.
+
+• Use a set or hashmap to track characters in the current window.
+
+
+
+2) Expand and Shrink the Window:
+
+• Expand the window by adding characters to the set.
+
+• If a duplicate is found, shrink the window from the left until all characters in the window are unique again.
+
+
+
+3) Track Maximum Length:
+
+• Keep updating the maximum length of the substring during the process.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the length of the string.
+
+• Space: O(k), where k is the size of the character set.
+
+
+
+Reflection:
+
+1) Construct K Palindrome Strings:
+
+• The problem's core was analyzing character frequencies, which made it intuitive to solve with a greedy approach.
+
+
+
+2) Longest Substring with Distinct Characters:
+
+• The sliding window technique efficiently solved the problem, avoiding the need for nested loops.
+
+#StringManipulation #SlidingWindow #Palindromes #GFG160 #GeekStreak2024 🚀
+
