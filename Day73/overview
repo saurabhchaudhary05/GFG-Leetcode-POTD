@@ -1,0 +1,51 @@
+Today's problems focused on parentheses validation and rainwater trapping. Here's how I approached them:
+
+Problem 1: Check if a Parentheses String Can Be Valid
+Problem Description:
+You are given a parentheses string s and a binary string locked of the same length. If locked[i] = '1', the character s[i] cannot be changed; otherwise, it can be replaced with either '(' or ')'. Determine if s can be modified into a valid parentheses string.
+
+Approach:
+1) Key Observations:
+• A valid parentheses string must balance the number of open and close brackets.
+• Replaceable positions (locked[i] = '0') can be adjusted to balance the string.
+
+2) Two-Pass Validation:
+• Left-to-Right Check: Ensure that open brackets ( can cover close brackets ) up to each index.
+• Right-to-Left Check: Ensure that close brackets ) can cover open brackets ( up to each index.
+
+3) Conditions for Validity:
+• If both checks pass, the string can be made valid; otherwise, it cannot.
+
+Complexity:
+• Time: O(n), where n is the length of the string.
+• Space: O(1), as no additional data structures are used.
+
+Problem 2: Trapping Rain Water
+Problem Description:
+Given an array arr[] representing block heights, calculate the amount of water that can be trapped between the blocks after raining.
+
+Approach:
+1) Key Observations:
+• The water trapped above a block depends on the minimum of the tallest blocks to its left and right, minus the height of the block itself.
+
+2) Two-Pointer Technique:
+• Use two pointers (left and right) to traverse the array.
+• Maintain the maximum heights seen so far from both ends (left_max and right_max).
+• Calculate trapped water at each step based on the smaller of left_max and right_max.
+
+Steps:
+• If left_max is smaller, calculate water trapped at left and increment left.
+• Otherwise, calculate water trapped at right and decrement right.
+
+Complexity:
+• Time: O(n), where n is the size of the array.
+• Space: O(1), as the solution uses constant space.
+
+Reflection:
+1) Check if a Parentheses String Can Be Valid:
+• The two-pass method effectively handled locked characters while maintaining balance, showcasing the importance of directional checks.
+
+Trapping Rain Water:
+• The two-pointer approach minimized space usage while maintaining linear complexity, making it optimal for large inputs.
+hashtag#Greedy hashtag#TwoPointers hashtag#ParenthesesValidation hashtag#RainWaterTrapping hashtag#GFG160 hashtag#GeekStreak2024 🚀
+
