@@ -1,0 +1,97 @@
+#Day 194 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I tackled two interesting problems involving string reduction and maximizing area. Here's how I solved them:
+
+
+
+Problem 1: Minimum Length of String After Operations
+
+Problem Description:
+
+Given a string s, perform a reduction operation where:
+
+For any index i, if a character to the left and right of i equals s[i], remove the closest matching characters from both sides.
+
+Return the minimum length of the string after all possible operations.
+
+
+
+Approach:
+
+1) Two-Pointer Method:
+
+• Use two pointers to iterate through the string.
+
+• Track pairs of identical characters on either side of each character and remove them until no such pairs exist.
+
+
+
+2) Stack for Simplification:
+
+• Use a stack to simulate the process:
+
+• Push characters onto the stack if they can't form a valid pair for removal.
+
+• Pop characters when a valid triplet is found.
+
+• The remaining elements in the stack form the reduced string.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the length of the string, as each character is processed once.
+
+• Space: O(n), for the stack used in the process.
+
+
+
+Problem 2: Container With Most Water
+
+Problem Description:
+
+Given an array arr[] where each element represents the height of a vertical line, find the maximum water that can be contained between any two lines.
+
+
+
+Approach:
+
+1) Two-Pointer Technique:
+
+• Place two pointers at the start and end of the array.
+
+• Calculate the area using the shorter of the two lines as the height and the distance between the lines as the width.
+
+• Move the pointer pointing to the shorter line inward to potentially find a taller line.
+
+
+
+2) Optimization:
+
+• The area is maximized by adjusting the width (distance between pointers) and height (smaller of the two lines).
+
+• This approach avoids unnecessary iterations compared to a brute-force solution.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the length of the array, as each pointer is moved at most n times.
+
+• Space: O(1), as no additional space is used.
+
+
+
+Reflection:
+
+1) Minimum Length of String After Operations:
+
+• The stack-based approach was efficient and intuitive for handling the removal operations.
+
+
+
+2) Container With Most Water:
+
+• The two-pointer strategy balanced time efficiency and simplicity, making it a classic example of greedy optimization.
+
+#Stack #TwoPointers #StringReduction #MaxWaterContainer #GFG160 #GeekStreak2024 🚀
