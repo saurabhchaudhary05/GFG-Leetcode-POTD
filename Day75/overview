@@ -1,0 +1,100 @@
+#Day 195 Problem-Solving #GFG POTD and #leetcode
+
+Today's challenges involved arrays and understanding cumulative operations efficiently.
+
+Problem 1: Find the Prefix Common Array of Two Arrays
+
+Problem Description:
+
+Given two integer permutations A and B of length nnn:
+
+The prefix common array C is defined such that C[i] is the count of numbers present at or before index iii in both A and B.
+
+The task is to return C.
+
+
+
+Approach:
+
+1) Hash Set for Tracking Common Elements:
+
+• Use two sets to track the elements seen so far in A and B.
+
+• Iterate through both arrays simultaneously and check for common elements.
+
+
+
+Steps:
+
+1) Traverse the arrays up to index iii.
+
+• Update the sets for A[i] and B[i].
+
+• Count the intersection of the two sets at each step to populate C[i].
+
+
+
+Complexity:
+
+• Time: O(n), where n is the length of the arrays, as each element is processed once.
+
+• Space: O(n), for the sets used to store seen elements.
+
+
+
+Problem 2: First Equilibrium Point in an Array
+
+Problem Description:
+
+Given an integer array arr[], find the first equilibrium point such that:
+
+The sum of elements to the left equals the sum of elements to the right of the index.
+
+If no such index exists, return -1.
+
+
+
+Approach:
+
+1) Cumulative Sum Calculation:
+
+• Compute the total sum of the array.
+
+• Use a variable to track the left sum as you iterate through the array.
+
+
+
+Steps:
+
+1) For each element arr[i]:
+
+• Calculate the right sum as total_sum−left_sum−arr[i].
+
+• Check if left_sum==right_sum.
+
+• Update the left sum by adding arr[i]arr[i]arr[i].
+
+
+
+Complexity:
+
+• Time: O(n), as the array is traversed once.
+
+• Space: O(1), since no additional data structures are used.
+
+
+
+Reflection:
+
+1) Find the Prefix Common Array of Two Arrays:
+
+• Leveraging sets ensured efficiency and clarity when calculating the prefix common counts.
+
+
+
+2) First Equilibrium Point:
+
+• Using a cumulative sum approach reduced space complexity significantly compared to other methods.
+
+#Arrays #PrefixSum #Hashing #EquilibriumPoint #EfficientAlgorithms 🚀
+
