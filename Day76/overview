@@ -1,0 +1,110 @@
+#Day 196 Problem-Solving #GFG potd and #leetcode
+
+Today's challenges focused on bitwise operations and subarray sum techniques.
+
+
+
+Problem 1: Minimize XOR
+
+Problem Description:
+
+Given two positive integers num1 and num2, find the positive integer x such that:
+
+x has the same number of set bits as num2.
+
+x XOR num1x  is minimized.
+
+
+
+Approach:
+
+1) Count the Set Bits in num2:
+
+• Use bit manipulation or Python's built-in functions to count the set bits in num2.
+
+• Construct x to Minimize XOR:
+
+• Start with num1 since it influences the XOR result.
+
+• Set the most significant bits in num1\text{num1}num1 to 1 until the desired number of set bits is reached.
+
+
+
+2) If More Set Bits Are Needed:
+
+• Set the remaining bits starting from the least significant bit (LSB).
+
+
+
+Complexity:
+
+• Time: O(number of bits), since we iterate through the bits of num1 to construct x.
+
+• Space: O(1), as no additional data structures are used.
+
+
+
+Problem 2: Longest Subarray with Sum k
+
+Problem Description:
+
+Given an array arr[] and an integer k, find the length of the longest subarray where the sum of its elements equals k.
+
+
+
+Approach:
+
+1) Prefix Sum with HashMap:
+
+• Maintain a cumulative sum while iterating through the array.
+
+• Use a hashmap to store the first occurrence of each cumulative sum.
+
+
+
+Steps:
+
+1) For each index i:
+
+• Compute the cumulative sum curr_sum.
+
+• Check if curr_sum==k; if true, update the maximum length.
+
+• Check if curr_sum−k exists in the hashmap.
+
+• If it exists, calculate the length of the subarray and update the maximum length.
+
+• Store curr_sum in the hashmap if it’s not already present.
+
+
+
+Complexity:
+
+• Time: O(n), as we traverse the array once.
+
+• Space: O(n), for the hashmap to store cumulative sums.
+
+
+
+Reflection:
+
+1) Minimize XOR:
+
+• The bitwise logic was fun and a good reminder of the importance of understanding binary representation.
+
+
+
+2) Longest Subarray with Sum kkk:
+
+• The prefix sum and hashmap technique is a powerful tool for subarray problems, making this problem straightforward and efficient.
+
+#BitManipulation #SubarraySum #PrefixSum #Hashing 🚀
+
+
+
+4o
+
+
+
+
+
