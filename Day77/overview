@@ -1,0 +1,102 @@
+#Day 196 Problem-Solving #GFG potd and #leetcode
+
+Today's problems involved XOR computations and prefix sum applications for finding subarray lengths.
+
+
+
+Problem 1: Bitwise XOR of All Pairings
+
+Problem Description:
+
+Given two arrays nums1 and nums2, every integer in nums1 pairs with every integer in nums2 to form nums3, which contains the bitwise XOR of these pairs. Return the XOR of all elements in nums3.
+
+
+
+Key Insight:
+
+The XOR operation is both associative and commutative.
+
+XORing all elements of nums3 is equivalent to XORing all possible combinations of nums1[i] ⊕nums2[j].
+
+
+
+1) Optimization Using XOR Properties:
+
+• XOR all elements in nums1 into a single value x1.
+
+• XOR all elements in nums2 into a single value x2.
+
+• Since every element in nums1 pairs with every element in nums2, the XOR of all pairings becomes: x1×len(nums2) ⊕ x2×len(nums1).
+
+
+
+Complexity:
+
+• Time: O(n+m), where n and m are the lengths of nums1 and nums2, respectively.
+
+
+
+• Space: O(1)
+
+.
+
+Problem 2: Largest Subarray of 0's and 1's
+
+Problem Description:
+
+Given an array of 0's and 1's, find the length of the longest subarray with an equal number of 0's and 1's.
+
+
+
+Approach:
+
+1) Transform the Array:
+
+• Convert 0's to -1's so that the problem reduces to finding the longest subarray with a sum of 0.
+
+2) Use Prefix Sum and HashMap:
+
+• Maintain a running sum while iterating through the array.
+
+• Use a hashmap to store the first occurrence of each cumulative sum.
+
+• If the cumulative sum reappears, calculate the length of the subarray and update the maximum length.
+
+
+
+Steps:
+
+1) Initialize a hashmap to store cumulative sums.
+
+2) Traverse the array and compute the cumulative sum.
+
+3) If the cumulative sum becomes 0, update the maximum length (indicating a valid subarray from the start).
+
+4) Check if the cumulative sum exists in the hashmap; if it does, calculate the subarray length.
+
+5) Store the cumulative sum in the hashmap if it hasn’t been recorded before.
+
+
+
+Complexity:
+
+1) Time: O(n), for a single traversal of the array.
+
+2) Space: O(n), for the hashmap.
+
+
+
+Reflection:
+
+1) Bitwise XOR of All Pairings:
+
+• Understanding the properties of XOR (e.g., a⊕a=0) was essential for optimizing the problem.
+
+
+
+2) Largest Subarray of 0's and 1's:
+
+• The prefix sum and hashmap approach is versatile and an efficient solution for problems involving cumulative sums.
+
+#BitManipulation #PrefixSum #HashMap #Optimization 🚀
+
