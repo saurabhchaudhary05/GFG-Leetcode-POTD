@@ -1,0 +1,98 @@
+#Day 198 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two exciting problems related to bitwise operations and array-based manipulations. Here's a breakdown of my approach and solutions:
+
+
+
+Problem 1: Neighboring Bitwise XOR
+
+Problem Description:
+
+Given a derived array, determine if there exists a valid binary array (only 0s and 1s) such that the derived array is obtained by XORing adjacent elements (with wrap-around) in the binary array.
+
+
+
+Approach:
+
+1) XOR Properties:
+
+• The derived array elements are calculated using original[i]⊕original[(i+1)mod  n].
+
+• To reverse the process, deduce possible values for the original array based on XOR consistency.
+
+
+
+2) Circular Dependency:
+
+• Since the XOR operation wraps around, ensure consistency by trying both possible starting values for original[0].
+
+
+
+3) Validation:
+
+• Assume original[0] = 0 and construct the array.
+
+• Assume original[0] = 1 and construct again.
+
+• Check if either assumption fully satisfies the derived array.
+
+
+
+Complexity:
+
+• Time: O(n), as the array is processed twice.
+
+• Space: O(1), since no extra storage is used.
+
+
+
+Problem 2: Product Array Puzzle
+
+Problem Description:
+
+Given an array, construct a product array where each element is the product of all elements in the input array except itself. Avoid division operations.
+
+
+
+Approach:
+
+1) Prefix and Suffix Products:
+
+• Compute the prefix product for every element.
+
+• Compute the suffix product for every element.
+
+• For each index i, calculate the result as res[i]=prefix[i−1]×suffix[i+1].
+
+
+
+2) Optimized Space Usage:
+
+• Avoid explicit prefix/suffix arrays by using cumulative products stored in variables.
+
+
+
+Complexity:
+
+• Time: O(n), as we compute prefix and suffix products in single traversals.
+
+• Space: O(1), only variables are used for computation.
+
+
+
+Reflection:
+
+1) Neighboring Bitwise XOR:
+
+• XOR-based problems are fascinating as they require understanding both properties and reversing computations effectively.
+
+Handling circular dependencies was key to the solution.
+
+
+
+2) Product Array Puzzle:
+
+• Avoiding division and utilizing prefix-suffix products was an efficient approach that minimized space usage.
+
+#BitwiseOperations #PrefixSuffix #GFG160 #GeekStreak2024 🚀
+
