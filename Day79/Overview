@@ -1,0 +1,96 @@
+#Day 199 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I solved two interesting problems, one involving grid traversal with cost optimization and the other focusing on linked list reversal. Here's a summary of the problems and my approaches:
+
+
+
+Problem 1: Minimum Cost to Make at Least One Valid Path in a Grid
+
+Problem Description:
+
+Given a grid where each cell has a direction sign, determine the minimum cost to modify the grid so that a valid path exists from the top-left to the bottom-right corner.
+
+
+
+Approach:
+
+1) Priority-Based Pathfinding:
+
+• Use a 0-1 BFS (Breadth-First Search with deque).
+
+• Traverse the grid using the current cell's direction with zero cost.
+
+
+
+2) Modify the Path:
+
+• If moving in the given direction isn't feasible, push the modified cell to the back of the deque with a cost of 1.
+
+
+
+3) Optimization with Deque:
+
+• The deque ensures that zero-cost moves are processed before costlier moves.
+
+
+
+Complexity:
+
+• Time: O(m×n), where m and n are the dimensions of the grid.
+
+• Space: O(m×n), for the visited array and deque.
+
+
+
+Problem 2: Reverse a Linked List
+
+Problem Description:
+
+Given the head of a linked list, reverse the list and return the new head.
+
+
+
+Approach:
+
+1) Iterative Approach:
+
+• Maintain three pointers: prev, current, and next.
+
+• Traverse the list, reversing the direction of current.next to point to prev.
+
+
+
+2) Recursive Approach:
+
+• Use recursion to reverse the rest of the list and adjust the pointers accordingly.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the number of nodes in the linked list.
+
+
+
+Space:
+
+• Iterative: O(1), in-place reversal.
+
+• Recursive: O(n), due to the recursion stack.
+
+
+
+Reflection:
+
+1) Minimum Cost to Make at Least One Valid Path in a Grid:
+
+• Leveraging 0-1 BFS effectively minimized costs and ensured optimal pathfinding.
+
+
+
+2) Reverse a Linked List:
+
+• This classic problem reinforces fundamental concepts of pointer manipulation and recursion.
+
+#GridTraversal #LinkedList #BFS #GFG160 #GeekStreak2024 🚀
+
