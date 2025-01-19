@@ -1,0 +1,102 @@
+#Day 200 Problem-Solving with #GFG POTD and #Leetcode
+
+Today, I worked on two challenging problems, one involving linked list rotation and the other dealing with water trapping in a 2D elevation map. Here's a detailed breakdown of the problems and solutions:
+
+
+
+Problem 1: Rotate a Linked List
+
+Problem Description:
+
+Given the head of a singly linked list, rotate the list to the left by k positions.
+
+
+
+Approach:
+
+1) Calculate the Length:
+
+• Traverse the list to determine its length, nnn.
+
+
+
+2) Normalize Rotations:
+
+• Since rotating by nnn results in the same list, reduce k modulo n (k=k%n).
+
+
+
+3) Find the Rotation Point:
+
+• Traverse the list to the (n−k)th node and update the links accordingly.
+
+
+
+4) Adjust Pointers:
+
+• Make the (n−k)th node the new head and link the last node to the old head to form a rotated list.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the number of nodes in the list.
+
+• Space: O(1), in-place rotation.
+
+
+
+Problem 2: Trapping Rain Water II
+
+Problem Description:
+
+Given a 2D elevation map represented by an m×nm \times nm×n height matrix, calculate the total volume of water trapped after raining.
+
+
+
+Approach:
+
+1) Priority Queue (Min-Heap):
+
+• Store the boundary cells in a min-heap.
+
+
+
+2) Iterative Flooding:
+
+• Pop the smallest height from the heap, and for each neighboring cell:
+
+• Calculate the trapped water (max(0,height of current cell−height of neighbor)).
+
+• Update the neighbor's height and push it into the heap if it's lower than the boundary.
+
+
+
+3) Boundary Update:
+
+• Ensure all updates propagate inward to calculate the trapped water accurately.
+
+
+
+Complexity:
+
+• Time: O(m×nlog⁡(m×n)), for heap operations.
+
+• Space: O(m×n), for the heap and visited matrix.
+
+
+
+Reflection:
+
+1) Rotate a Linked List:
+
+• Understanding the structure of the list and the effective kkk-rotations was critical.
+
+
+
+2) Trapping Rain Water II:
+
+• Leveraging a priority queue for efficient boundary updates highlighted the importance of algorithmic optimization for grid-based problems.
+
+#LinkedList #Heap #GridTraversal #TwoPointers #GFG160 #GeekStreak2024 🚀
+
