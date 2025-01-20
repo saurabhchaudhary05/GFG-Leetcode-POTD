@@ -1,0 +1,99 @@
+#Day 201 Problem-Solving with #GFG POTD and #Leetcode
+
+Today's challenges included solving a problem on merging two sorted linked lists and determining the first completely painted row or column in a matrix. Here's a detailed breakdown:
+
+
+
+Problem 1: Merge Two Sorted Linked Lists
+
+Problem Description:
+
+Given the heads of two sorted linked lists, merge them into one sorted linked list and return the merged list's head.
+
+
+
+Approach:
+
+1) Iterative Merge:
+
+• Use a dummy node to simplify merging logic.
+
+• Compare the values of the current nodes from both lists and append the smaller one to the result list.
+
+• Move the pointer of the appended list forward.
+
+
+
+2) Handle Remaining Nodes:
+
+• Once one list is fully traversed, append the remaining nodes from the other list.
+
+
+
+3) Edge Cases:
+
+• If either list is initially empty, return the other list.
+
+
+
+Complexity:
+
+• Time: O(n+m), where n and m are the lengths of the two lists.
+
+• Space: O(1), in-place merging.
+
+
+
+Problem 2: First Completely Painted Row or Column
+
+Problem Description:
+
+Given a 0-indexed array arr and a matrix mat, paint cells in mat based on the order in arr. Return the smallest index iii where a row or column is completely painted.
+
+
+
+Approach:
+
+1) Mapping Positions:
+
+• Use a dictionary to store the positions of each number in mat for O(1) access.
+
+
+
+2) Painting Process:
+
+• Traverse arr and mark cells in mat as painted.
+
+• Maintain counters for the number of painted cells in each row and column.
+
+
+
+3) Check Completion:
+
+• After each painting operation, check if any row or column has all its cells painted.
+
+• Return the current index if a row or column is complete.
+
+
+
+Complexity:
+
+• Time: O(m×n+k), where m and n are matrix dimensions, and k is the length of arr.
+
+• Space: O(m+n), for row and column counters.
+
+
+
+Reflection:
+
+1) Merge Two Sorted Linked Lists:
+
+• Using a dummy node simplifies the merging logic and avoids handling edge cases separately.
+
+
+
+2) First Completely Painted Row or Column:
+
+• Mapping positions and using counters effectively optimize the solution for larger matrices.
+
+#LinkedList #MatrixTraversal #HashMap #GFG160 #GeekStreak2024 🚀
