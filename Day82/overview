@@ -1,0 +1,103 @@
+#Day 202 Problem-Solving with #GFG POTD and #Leetcode
+
+Today's challenges included solving a grid-based game optimization problem and implementing group reversal in a linked list. Here's an overview of the solutions:
+
+
+
+Problem 1: Grid Game
+
+Problem Description:
+
+Given a 2xn grid, two robots traverse the grid from (0,0) to (1,n−1). The first robot collects points on its path, and those cells are then set to zero. The second robot follows, attempting to maximize its score while the first robot minimizes it. Return the points collected by the second robot when both play optimally.
+
+
+
+Approach:
+
+1) Calculate Prefix Sums:
+
+• Compute prefix sums for the top and bottom rows to quickly determine the sum of points collected along any path.
+
+
+
+2) Minimize Maximum Score:
+
+• For each column i, consider the two possible paths for the second robot:
+
+• Collect remaining points on the top row from (0,i+1) to (0,n−1).
+
+• Collect points on the bottom row from (1,0) to (1,i−1).
+
+• Track the maximum points the second robot can collect for each split point i.
+
+
+
+3) Iterate Through Split Points:
+
+• Compute the maximum score for the second robot at each split point and return the minimum of these values as the result.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the number of columns.
+
+• Space: O(n), for prefix sums.
+
+
+
+Problem 2: Linked List Group Reverse
+
+Problem Description:
+
+Given the head of a linked list, reverse every k nodes in the list. If the total number of nodes is not a multiple of k, reverse the remaining nodes as a single group.
+
+
+
+Approach:
+
+1) Iterative Reversal:
+
+• Traverse the list and reverse the first k nodes using a loop.
+
+• Connect the reversed segment with the next part of the list.
+
+
+
+2) Handle Edge Cases:
+
+• If the list has fewer than k nodes left, reverse them as a single group.
+
+
+
+3) Pointers for Linking:
+
+• Use a dummy node to simplify linking the reversed groups with the rest of the list.
+
+• Maintain pointers for the previous group’s end and the current group’s head.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the length of the linked list.
+
+• Space: O(1), in-place reversal.
+
+
+
+Reflection:
+
+1) Grid Game:
+
+• Prefix sums significantly reduced computation time for path evaluation.
+
+• Optimal splitting logic was key to solving the problem efficiently.
+
+
+
+2) Linked List Group Reverse:
+
+• Breaking the problem into smaller steps (reversing a segment and linking it back) made the solution more manageable.
+
+#GridOptimization #PrefixSums #LinkedListReversal #GFG160 #GeekStreak2024 🚀
