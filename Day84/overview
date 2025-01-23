@@ -1,0 +1,111 @@
+#Day 204 Problem-Solving Recap
+
+Today's problem-solving involved an interesting combination of matrix-based logic and complex linked list manipulation. Here's the breakdown:
+
+
+
+Problem 1: Count Servers that Communicate
+
+Problem Description:
+
+Given a matrix grid of size m×nm \times nm×n, where 1 represents a server and 0 represents no server, find the number of servers that can communicate with at least one other server. Two servers communicate if they are in the same row or column.
+
+
+
+Approach:
+
+1) Count Servers Per Row and Column:
+
+• Use two arrays, rowCount and colCount, to store the count of servers in each row and column.
+
+
+
+2) Traverse the Grid:
+
+• For each cell (i, j) in the grid:
+
+• If grid[i][j] == 1, increment rowCount[i] and colCount[j].
+
+
+
+3) Calculate the Result:
+
+• Traverse the grid again, and for each server (grid[i][j] == 1):
+
+• Check if rowCount[i] > 1 or colCount[j] > 1. If true, it can communicate.
+
+
+
+4) Output the Count:
+
+• Return the total number of such servers.
+
+
+
+Complexity:
+
+• Time: O(m×n) — One pass for counting rows/columns, and one pass for checking communicable servers.
+
+• Space: O(m+n) — Space for rowCount and colCount.
+
+
+
+Problem 2: Clone List with Next and Random
+
+Problem Description:
+
+Given a linked list where each node has two pointers (next and random), create a deep copy of the list such that:
+
+The copied list maintains the same structure.
+
+None of the pointers in the copied list point to the original list.
+
+
+
+Approach:
+
+1_ Insert Cloned Nodes:
+
+• Traverse the original list and insert a cloned node after each original node.
+
+• For example, convert A -> B -> C to A -> A' -> B -> B' -> C -> C'.
+
+
+
+2) Assign Random Pointers:
+
+• Traverse the list again and assign the random pointer of each cloned node.
+
+• If original.random exists, set original.next.random = original.random.next.
+
+
+
+3) Separate the Lists:
+
+• Split the interwoven list into the original and the cloned list.
+
+• Restore the original list's structure.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the number of nodes in the list.
+
+• Space: O(1) additional space (besides the output list), as the solution modifies the list in-place during copying.
+
+
+
+Reflection:
+
+1) Count Servers that Communicate:
+
+• Using row and column counts simplified the problem significantly, avoiding the need for complex connectivity checks.
+
+
+
+2) Clone List with Next and Random:
+
+• The in-place node insertion trick minimized extra space usage, which is a key optimization for problems involving linked lists with additional pointers.
+
+#Matrix #LinkedList #DeepCopy #BFSLogic #GFGCodingPOTD #ProblemSolvingJourney 🚀
