@@ -1,0 +1,127 @@
+#Day 205 Problem-Solving Recap
+
+Today's problems spanned graph theory and linked list detection, both emphasizing foundational and applied concepts in algorithms. Here's the summary:
+
+
+
+Problem 1: Find Eventual Safe States
+
+Problem Description:
+
+Given a directed graph, determine the "safe nodes." A safe node is one where all paths starting from it lead to a terminal node or another safe node. Return the list of all safe nodes in ascending order.
+
+
+
+Approach:
+
+1) Key Observations:
+
+• Nodes in cycles or connected to cycles are not safe.
+
+• Reverse thinking: A node is safe if all its neighbors lead to terminal or safe nodes.
+
+
+
+2) Reverse Graph:
+
+• Construct a reverse graph where edges point to their source nodes.
+
+• This helps process nodes starting from terminal nodes.
+
+
+
+3) Topological Sort (Kahn's Algorithm):
+
+• Compute in-degrees for the reversed graph.
+
+• Add nodes with 0 in-degree (terminal nodes) to a queue.
+
+• Process the queue, marking nodes as safe and reducing in-degrees of their neighbors.
+
+
+
+4) Sort and Return:
+
+• Safe nodes are collected during processing and can be sorted before returning.
+
+
+
+Complexity:
+
+• Time: O(V+E), where V is the number of nodes and E is the number of edges.
+
+• Space: O(V+E) for storing the graph and reverse graph.
+
+
+
+Problem 2: Detect Loop in Linked List
+
+Problem Description:
+
+Given the head of a singly linked list, determine if it contains a loop. A loop exists if the next pointer of a node eventually points to an earlier node.
+
+
+
+Approach 1: Floyd’s Cycle Detection (Tortoise and Hare)
+
+1) Two Pointers:
+
+• Use two pointers, slow and fast.
+
+• slow moves one step, while fast moves two steps at a time.
+
+
+
+2) Detect Cycle:
+
+• If there’s a cycle, slow and fast will eventually meet.
+
+• If fast reaches the end of the list (null), there’s no loop.
+
+
+
+Approach 2: Hashing Method
+
+1) Visited Nodes:
+
+• Use a hash set to track visited nodes.
+
+• Traverse the list and check if the current node already exists in the set.
+
+• If yes, a cycle is detected; otherwise, add the node to the set.
+
+
+
+Complexity:
+
+1) Floyd’s Cycle Detection:
+
+• Time: O(n), where n is the number of nodes.
+
+• Space: O(1) (constant space).
+
+
+
+Hashing Method:
+
+1) Time: O(n).
+
+• Space: O(n) for the hash set.
+
+
+
+Reflection:
+
+1) Find Eventual Safe States:
+
+• Utilizing the reverse graph and topological sorting provides a clean and efficient way to determine safe nodes.
+
+• This problem highlights how thinking in reverse simplifies complex graph traversal.
+
+
+
+2) Detect Loop in Linked List:
+
+• Floyd’s Cycle Detection remains an elegant solution for cycle-related problems, showcasing the power of two-pointer techniques.
+
+#GraphTheory #LinkedList #CycleDetection #TopologicalSort #ProblemSolvingJourney 🚀
