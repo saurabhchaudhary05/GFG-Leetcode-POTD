@@ -1,0 +1,121 @@
+#Day 207 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Remove Loop in Linked List
+
+Problem Description:
+
+Given the head of a singly linked list, determine if there is a loop. If a loop exists, remove it so that the list becomes a simple linked list. Return true if the loop was successfully removed and the list is unchanged; otherwise, return false.
+
+
+
+Approach: Floyd’s Cycle Detection Algorithm (Tortoise and Hare):
+
+1) Detect the Loop:
+
+• Use the two-pointer technique (slow and fast).
+
+• If there’s a loop, slow and fast will meet at some point.
+
+
+
+2) Find the Start of the Loop:
+
+• Once slow and fast meet, reset one pointer to the head of the list.
+
+• Traverse until the two pointers meet again, which will be the start of the loop.
+
+
+
+3) Remove the Loop:
+
+• To remove the loop, iterate through the loop until you find the last node.
+
+• Update the next pointer of the last node to null.
+
+
+
+Complexity:
+
+• Time: O(n), where n is the number of nodes in the linked list.
+
+• Space: O(1), as no additional data structures are used.
+
+
+
+Problem 2: Maximum Employees to Be Invited to a Meeting
+
+Problem Description:
+
+You are tasked with maximizing the number of employees that can be invited to a meeting around a circular table. Employees will only attend if they can sit next to their favorite person.
+
+
+
+Approach:
+
+1) Graph Representation:
+
+• Treat the problem as a directed graph, where each employee represents a node, and a directed edge exists from node i to favorite[i].
+
+
+
+2) Cycle Detection:
+
+• Identify all cycles in the graph. The size of each cycle represents the maximum number of employees who can attend due to that cycle.
+
+
+
+3) Longest Chains:
+
+• For any two-node cycles, compute the longest chain (path) leading to each cycle.
+
+• The sum of these chains and the cycle size gives the number of employees who can be invited.
+
+
+
+4) Final Answer:
+
+• The result is the maximum of:
+
+• The size of the largest cycle.
+
+• The sum of contributions from two-node cycles and their chains.
+
+
+
+Steps:
+
+1) Build the graph based on the favorite array.
+
+2) Use DFS or a similar algorithm to detect cycles and find their sizes.
+
+3) For two-node cycles, compute the maximum chain lengths leading into each cycle.
+
+4) Return the maximum number of employees as the sum of the above results.
+
+
+
+Complexity:
+
+• Time: O(n), where n i s the number of employees (nodes).
+
+• Space: O(n), due to the graph representation and recursive calls in DFS.
+
+
+
+Reflection:
+
+1) Remove Loop in Linked List:
+
+• Strengthened understanding of cycle detection and manipulation of linked lists.
+
+• Important edge case: handling single-node loops.
+
+
+
+2) Maximum Employees to Be Invited to a Meeting:
+
+• A blend of graph theory and problem-solving strategies.
+
+• Showcased the importance of understanding cycles and longest paths in directed graphs.
+
+#LinkedList #CycleDetection #GraphTheory #DFS #MeetingsOptimization 🚀
