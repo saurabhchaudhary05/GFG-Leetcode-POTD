@@ -1,0 +1,121 @@
+#Day 208 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: LRU Cache
+
+Problem Description:
+
+You need to design a data structure that implements an LRU Cache (Least Recently Used Cache). The cache supports the following operations:
+
+GET(key):
+
+If the key exists in the cache, return its value and mark it as recently used.
+
+If the key does not exist, return -1.
+
+PUT(key, value):
+
+Insert or update the key-value pair in the cache.
+
+If the cache is at full capacity, remove the least recently used (LRU) key to make space for the new entry.
+
+The cache should be initialized with a capacity cap, and the operations should be optimized to run in O(1) time.
+
+
+
+Approach:
+
+1) To implement an LRU Cache with O(1)O(1)O(1) operations, use:
+
+• HashMap (Dictionary):
+
+• Store the key-value pairs for quick access.
+
+
+
+2) Doubly Linked List:
+
+• Maintain the order of keys, where the most recently used (MRU) key is at the head, and the least recently used (LRU) key is at the tail.
+
+
+
+Complexity:
+
+• Time Complexity: O(1) for both GET and PUT.
+
+• Space Complexity: O(cap) for storing up to cap key-value pairs.
+
+
+
+Problem 2: Course Schedule IV
+
+Problem Description:
+
+You are tasked with determining course prerequisites for a given number of courses (numCourses). Each course may have direct or indirect prerequisites specified in a prerequisites array, where prerequisites[i] = [a, b] means you must take course a before course b.
+
+You are also given a queries array where queries[j] = [u, v]. For each query, determine if course u is a prerequisite of course v.
+
+
+
+Approach:
+
+1) This problem involves processing a directed graph and efficiently answering reachability queries.
+
+
+
+2) Graph Representation:
+
+• Represent the courses and their dependencies using an adjacency list.
+
+3) Floyd-Warshall Algorithm:
+
+• Use this algorithm to precompute transitive closure of the graph.
+
+The transitive closure provides reachability information: if course a is a prerequisite of course b (directly or indirectly), mark it.
+
+
+
+4) Query Processing:
+
+• After precomputing reachability, simply look up the result for each query in O(1).
+
+
+
+5) Steps:
+
+• Create an adjacency matrix reachable where reachable[i][j] = true if course i is a prerequisite of course j.
+
+• Initialize the adjacency matrix based on the prerequisites.
+
+• Use the Floyd-Warshall algorithm to compute transitive closure.
+
+• For each query, return reachable[u][v].
+
+
+
+Complexity:
+
+• Preprocessing Time Complexity: O(n3), where n is the number of courses.
+
+• Query Time Complexity: O(1) per query.
+
+• Space Complexity: O(n2) for the adjacency matrix.
+
+
+
+Reflection:
+
+1) LRU Cache:
+
+• Strengthened understanding of HashMap and Doubly Linked List usage.
+
+• This is a classic design problem and excellent for system design preparation.
+
+
+
+2) Course Schedule IV:
+
+• Reinforced graph theory concepts like transitive closure and reachability.
+
+Efficiently precomputing results for multiple queries was a key takeaway.
+
+#LRUCache #DoublyLinkedList #HashMap #GraphTheory #TransitiveClosure #FloydWarshall 🚀
