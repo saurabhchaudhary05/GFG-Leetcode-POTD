@@ -1,0 +1,112 @@
+#Day 209 Problem-Solving #GFG potd and #leetcode solving
+
+Problem 1: Permutations of a String
+
+Problem Description:
+
+Given a string s that may contain duplicate characters, the task is to generate all unique permutations of the string. Return these permutations in any order.
+
+
+
+Approach:
+
+1) Recursive Backtracking with Pruning:
+
+• Use recursion to generate all permutations of the string.
+
+• To avoid duplicates, keep track of the characters that have already been used at a particular level of recursion.
+
+
+
+Steps:
+
+• Convert the string into a sorted list of characters. Sorting ensures that duplicate characters are adjacent, which helps in pruning.
+
+• Use a boolean array to mark visited characters during the recursion.
+
+• At each recursion level, iterate through the characters. If a character has already been used or it is a duplicate of the previous character (and the previous character has not been used in this branch), skip it.
+
+• Add the generated permutation to the result when all characters are used.
+
+
+
+Complexity:
+
+• Time Complexity: O(n×n!) because there are n! permutations, and generating each permutation takes O(n).
+
+• Space Complexity: O(n!) for storing the permutations.
+
+
+
+Problem 2: Maximum Number of Fish in a Grid
+
+Problem Description:
+
+Given an m x n 2D grid where:
+
+A cell contains water and some number of fish if grid[r][c] > 0.
+
+A cell is land if grid[r][c] = 0.
+
+A fisher can start at any water cell and move to adjacent water cells to catch fish. The goal is to find the maximum number of fish that can be caught if the fisher starts at the optimal cell.
+
+
+
+Approach:
+
+1) This problem can be solved using Depth-First Search (DFS) or Breadth-First Search (BFS) to explore connected water cells.
+
+
+
+Steps:
+
+• Iterate through all the cells in the grid.
+
+• If a cell contains fish (grid[r][c]>0, start a DFS or BFS to calculate the total number of fish in the connected component of water cells.
+
+• Track the maximum sum of fish among all components.
+
+
+
+3) DFS Implementation:
+
+• Use recursion to explore all adjacent cells that are valid (within bounds and containing fish).
+
+• Add the number of fish in the current cell to the total and mark the cell as visited by setting it to 0 (or using a visited array).
+
+
+
+Edge Cases:
+
+1) If there are no water cells, return 0.
+
+• Handle grids with irregular sizes (m=1 or n=1).
+
+
+
+Complexity:
+
+• Time Complexity: O(m×n), as each cell is visited once.
+
+• Space Complexity: O(m×n)for the recursion stack (DFS) or queue (BFS).
+
+
+
+Reflection:
+
+1) Permutations of a String:
+
+• Reinforced the importance of pruning in recursive backtracking to handle duplicate elements effectively.
+
+• Sorting the input and maintaining a visited array were key optimizations.
+
+
+
+2) Maximum Number of Fish in a Grid:
+
+• Strengthened DFS/BFS concepts for exploring connected components.
+
+• Gained insights into handling grid-based problems with traversal techniques.
+
+#Backtracking #StringPermutations #DFS #BFS #GridTraversal 🚀
+
