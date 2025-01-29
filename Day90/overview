@@ -1,0 +1,110 @@
+#Day 210 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Implement Pow (b, e)
+
+Problem Description:
+
+Implement the function power(b, e), which calculates beb^ebe (b raised to the power of e).
+
+
+
+Approach:
+
+1) Iterative Approach (Brute Force):
+
+• Multiply b by itself e times.
+
+• Time Complexity: O(e).
+
+
+
+2) Recursive Approach:
+
+• Use recursion to divide the problem into smaller subproblems.
+
+• Time Complexity: O(e)(Not optimal for large e).
+
+• Optimized Approach (Binary Exponentiation - Divide & Conquer):
+
+
+
+3) Key Idea:
+
+• If e is even, be=(be/2)×(be/2).
+
+• If e is odd, be=b×(b(e−1)/2)×(b(e−1)/2).
+
+This reduces the number of multiplications significantly.
+
+
+
+• Time Complexity: O(log⁡e).
+
+• Space Complexity: O(1) for the iterative version, O(log⁡e) for the recursive version.
+
+
+
+Problem 2: Redundant Connection
+
+Problem Description:
+
+Given a graph that started as a tree with n nodes labeled from 1 to n, an additional edge was added. The task is to find and remove this extra edge so that the graph remains a tree.
+
+
+
+Approach:
+
+1) Union-Find (Disjoint Set Union - DSU):
+
+• A tree has exactly n-1 edges for n nodes.
+
+• When adding an edge, if it forms a cycle, that edge is redundant.
+
+• Use the Union-Find (DSU) with Path Compression to detect cycles efficiently.
+
+• Traverse through edges[] and try to union them.
+
+• If a union is not possible (nodes already belong to the same set), that edge is the redundant one.
+
+
+
+Steps:
+
+1) Initialize a parent array where parent[i] = i (each node is its own parent initially).
+
+• For each edge [a, b], check if a and b have the same parent using Find.
+
+• If yes, return [a, b] as the redundant edge.
+
+• Otherwise, union them by making one the parent of the other.
+
+
+
+Complexity:
+
+• Time Complexity: O(n) (using path compression in DSU).
+
+• Space Complexity: O(n).
+
+
+
+Reflection:
+
+1) Implement Pow (b, e):
+
+• Binary exponentiation is significantly faster for large e.
+
+• Good reinforcement of divide and conquer.
+
+
+
+2) Redundant Connection:
+
+• Strengthened Union-Find (DSU) concept.
+
+• Reinforced cycle detection in graphs using DSU.
+
+#BinaryExponentiation #DivideAndConquer #UnionFind #CycleDetection #GraphTheory 🚀
+
+
+
