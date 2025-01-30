@@ -1,0 +1,118 @@
+#Day 211 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: N-Queens Problem
+
+Problem Description:
+
+Given an n × n chessboard, place n queens such that:
+
+No two queens can attack each other.
+
+Queens cannot share the same row, column, or diagonal.
+
+Return all distinct valid solutions, where each solution is represented as a permutation of [1, 2, ..., n], denoting the row positions of queens in each column.
+
+
+
+Approach:
+
+1) Backtracking Approach:
+
+• Use a recursive function to place queens column-wise.
+
+
+
+2) Maintain:
+
+• cols[] to track used columns.
+
+• diag1[] to track primary diagonals (row + col).
+
+• diag2[] to track secondary diagonals (row - col).
+
+• If a queen is safely placed, move to the next column.
+
+• If all n queens are placed, add the valid configuration to the result.
+
+• Backtrack and remove the placed queen to explore other possibilities.
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(N!)(exponential, as we try all possible placements).
+
+• Space Complexity: O(N) (to store board state and recursion stack).
+
+
+
+Problem 2: Divide Nodes Into the Maximum Number of Groups
+
+Problem Description:
+
+Given an undirected graph with n nodes (1 to n), divide the nodes into m groups where:
+
+Each node belongs to exactly one group.
+
+If two nodes are connected by an edge, their groups must differ by exactly 1.
+
+Return maximum m or -1 if no valid grouping exists.
+
+
+
+Approach:
+
+1) Graph Representation:
+
+• The problem can be visualized as layered BFS or graph coloring.
+
+• If the graph is bipartite, then we can maximize m.
+
+• Otherwise, no valid grouping exists → return -1.
+
+
+
+2) BFS/DFS for Graph Coloring:
+
+• Assign level (or group number) to each node.
+
+• If any node in the same connected component has conflicting groups, return -1.
+
+• Maximum groups m = longest path in the bipartite graph (i.e., maximum BFS depth).
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(N+E) (BFS traversal of graph).
+
+• Space Complexity: O(N+E) (to store adjacency list and queue).
+
+
+
+Reflection:
+
+1) N-Queens:
+
+• Classic backtracking problem.
+
+• Practiced constraint handling and recursion pruning.
+
+
+
+2) Divide Nodes Into Maximum Groups:
+
+• Strengthened graph traversal (BFS/DFS) and bipartiteness checking.
+
+• Reinforced layered BFS concept for distance-based problems.
+
+#Backtracking #GraphTheory #BipartiteGraphs #BreadthFirstSearch 🚀
+
+
+
+4o
+
+
+
+
+
