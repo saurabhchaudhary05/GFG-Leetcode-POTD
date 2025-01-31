@@ -1,0 +1,112 @@
+#Day 212 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Making A Large Island
+
+Problem Description:
+
+Given an n × n binary matrix, an island is a connected group of 1s (4-directionally connected).
+
+You are allowed to change at most one 0 into a 1.
+
+Return the size of the largest possible island after this operation.
+
+
+
+Approach:
+
+1) Find all islands and assign unique IDs:
+
+• Use DFS/BFS to find connected components of 1s and store their sizes in a map {id: size}.
+
+• Mark each island with a unique identifier (island ID) to differentiate them.
+
+
+
+2) Evaluate each 0 cell:
+
+• For each 0, check its adjacent island IDs.
+
+• Compute the potential new island size by merging neighboring islands.
+
+
+
+3) Edge Cases:
+
+• If the grid is all 1s, return n × n.
+
+• If there's no 1 in the grid, return 1.
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(N2) (DFS + checking every 0).
+
+• Space Complexity: O(N2) (for storing island IDs and sizes).
+
+
+
+Problem 2: Solve the Sudoku
+
+Problem Description:
+
+Given an incomplete Sudoku board (9 × 9 grid), fill the empty cells (0s) to produce a valid Sudoku solution.
+
+It is guaranteed that there exists exactly one solution.
+
+
+
+1) Approach:
+
+• Backtracking + Constraint Checking:
+
+• Recursive function: Try placing numbers 1-9 in each empty cell (0).
+
+• Validation: Before placing a number, check:
+
+• Row Constraint: Number should not be in the same row.
+
+• Column Constraint: Number should not be in the same column.
+
+3×3 Subgrid Constraint: Number should not be in the same 3×3 box.
+
+• If the placement is valid, proceed to the next empty cell.
+
+• If stuck, backtrack and try another number.
+
+
+
+Optimizations:
+
+• Precompute empty cells: Avoid iterating through the entire board repeatedly.
+
+• Use bitmasking for fast constraints checking (optional optimization).
+
+
+
+Complexity Analysis:
+
+• Time Complexity: Worst case O(9N) where N is the number of empty cells.
+
+• Space Complexity: O(1) (constant auxiliary space).
+
+
+
+Reflection:
+
+1) Making A Large Island:
+
+• Reinforced graph traversal (DFS/BFS) and connected components.
+
+• Practiced grid-based optimizations (tracking islands efficiently).
+
+
+
+2) Solve the Sudoku:
+
+• Strengthened backtracking and pruning techniques.
+
+• Improved constraint-handling skills for search-based problems.
+
+#GraphTheory #DFS #BFS #Backtracking #SudokuSolver 🚀
+
