@@ -1,0 +1,47 @@
+Problem 1: Word Search
+Problem Description:
+Given an n × m grid of English alphabets and a word, check if the word exists in the grid.
+The word can be formed by using horizontally or vertically adjacent letters.
+Same cell cannot be used more than once in the same word search.
+
+Approach:
+1) Backtracking with DFS:
+• Iterate through the grid to find the first letter of the word.
+• If found, perform DFS in all four directions (up, down, left, right).
+• Keep track of visited cells to prevent reusing.
+• If all letters are matched, return True; otherwise, backtrack.
+
+2) Optimization:
+• Early Termination: If a prefix of the word cannot be formed, stop searching.
+• Pruning: If the first letter appears less frequently, start search from the least occurring ones.
+
+Complexity Analysis:
+• Time Complexity: O(n×m×4L), where L is the word length.
+• Space Complexity: O(L) (recursive call stack for backtracking).
+
+Problem 2: Special Array I
+Problem Description:
+An array is considered special if every pair of adjacent elements has different parity (one is even, the other is odd).
+Given an integer array, return True if it is a special array, otherwise return False.
+
+Approach:
+1) Iterate through the array:
+• Check if nums[i] and nums[i+1] have opposite parity (one even, one odd).
+• If any adjacent pair fails this condition, return False.
+
+Edge Cases:
+• Single element array: Always returns True.
+• All even or all odd elements: Returns False.
+
+Complexity Analysis:
+• Time Complexity: O(n) (single pass check).
+• Space Complexity: O(1) (no extra space used).
+
+Reflection:
+1) Word Search:
+• Strengthened backtracking skills and DFS traversal on grids.
+• Practiced constraint handling (tracking visited cells).
+
+2) Special Array I:
+• Reinforced parity checking and basic array traversal optimizations.
+hashtag#Backtracking hashtag#DFS hashtag#GridSearch hashtag#ArrayTraversal 🚀
