@@ -1,0 +1,48 @@
+Problem 1: Level Order Traversal
+Problem Description:
+Given the root of a binary tree, return its level order traversal (i.e., nodes at each level from top to bottom).
+Level order traversal follows a Breadth-First Search (BFS) pattern.
+
+Approach:
+1) Use a Queue (BFS):
+• Start with the root in the queue.
+• For each node, dequeue it, process its value, and enqueue its left and right children (if present).
+• Repeat until the queue is empty.
+
+2) Implementation:
+• Maintain a queue (Queue<TreeNode>).
+• Iterate level by level and store node values in a result list.
+
+3) Complexity Analysis:
+• Time Complexity: O(n) (each node is processed once).
+• Space Complexity: O(n) (storing nodes in queue at max level width).
+
+Problem 2: Check if Array is Sorted and Rotated
+Problem Description:
+Given an integer array, check if it was originally sorted in non-decreasing order and then rotated some positions.
+The array may contain duplicates.
+
+Approach:
+1) Count "out-of-order" pairs:
+• Traverse the array and count occurrences where nums[i] > nums[i+1].
+• If this count is at most 1, the array can be a sorted-rotated array.
+• Also, check if nums[n-1] > nums[0] (handling the rotated case).
+
+Edge Cases:
+• Already sorted: If no rotations, return True.
+• All equal elements: Always True.
+• More than one "out-of-order" pair: Return False.
+
+Complexity Analysis:
+• Time Complexity: O(n) (single pass check).
+• Space Complexity: O(1) (constant space).
+
+Reflection:
+1) Level Order Traversal:
+• Strengthened BFS tree traversal concepts.
+• Practiced queue-based iterative tree processing.
+
+2) Sorted & Rotated Array Check:
+• Improved array traversal optimizations.
+• Reinforced rotation and sorted array conditions.
+hashtag#BFS hashtag#TreeTraversal hashtag#Sorting hashtag#ArrayRotation 🚀
