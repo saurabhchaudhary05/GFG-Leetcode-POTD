@@ -1,0 +1,116 @@
+#Day 215 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Diameter of a Binary Tree
+
+Problem Description:
+
+Given a binary tree, find its diameter.
+
+The diameter is the number of edges in the longest path between two leaf nodes (not necessarily passing through the root).
+
+
+
+Approach:
+
+1) Recursive DFS (Depth-First Search):
+
+• Define a helper function to calculate the height of the tree.
+
+• At each node, compute:
+
+• Left subtree height
+
+• Right subtree height
+
+• Diameter through the node = left height + right height
+
+• Keep track of the maximum diameter globally.
+
+
+
+2) Implementation Details:
+
+• Use a global variable (maxDiameter) to store the maximum diameter encountered.
+
+• Perform post-order traversal to compute heights and diameters.
+
+• The diameter at each node is the sum of the heights of its left and right subtrees.
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(n)(each node is processed once).
+
+• Space Complexity: O(h) (recursive depth, where h is the height of the tree).
+
+
+
+Problem 2: Maximum Ascending Subarray Sum
+
+Problem Description:
+
+Given an array of positive integers, find the maximum sum of an ascending subarray.
+
+A subarray is ascending if each element is strictly greater than the previous one.
+
+
+
+Approach:
+
+1) Sliding Window / Two-Pointer Approach:
+
+• Traverse the array while maintaining:
+
+• A running sum of the current ascending subarray.
+
+• A maximum sum encountered so far.
+
+• If nums[i] > nums[i-1], extend the subarray.
+
+• Otherwise, reset the sum to start a new subarray.
+
+
+
+2) Implementation Details:
+
+• Initialize maxSum = 0 and currentSum = nums[0].
+
+• Iterate from 1 to n-1:
+
+• If nums[i] > nums[i-1], add to currentSum.
+
+• Else, update maxSum and reset currentSum.
+
+• Finally, return max(maxSum, currentSum).
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(n) (single pass through the array).
+
+• Space Complexity: O(1) (only a few variables used).
+
+
+
+Reflection:
+
+1) Diameter of Binary Tree:
+
+• Strengthened post-order traversal and tree recursion concepts.
+
+• Learned height-based tree processing for diameter computation.
+
+
+
+2) Maximum Ascending Subarray Sum:
+
+• Practiced array traversal optimizations.
+
+• Improved understanding of subarray-based problems.
+
+#BinaryTree #DFS #Recursion #SlidingWindow #ArrayProcessing 🚀
+
+
+
