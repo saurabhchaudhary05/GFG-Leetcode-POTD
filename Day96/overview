@@ -1,0 +1,100 @@
+#Day 216 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Convert a Binary Tree to its Mirror Tree
+
+
+
+Problem Description:
+
+Given a binary tree, convert it to its mirror tree.
+
+In a mirror tree, left and right children of all non-leaf nodes are swapped.
+
+
+
+Approach:
+
+1) Recursive DFS (Depth-First Search):
+
+• Swap the left and right child at each node.
+
+• Recursively mirror the left and right subtrees.
+
+• Base Case: If the node is NULL, return.
+
+• Iterative Approach (Using Queue - BFS):
+
+
+
+2) Use a queue (BFS traversal).
+
+• Swap left and right children at each level while processing nodes.
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(n) (each node is visited once).
+
+• Space Complexity: O(h) (recursive depth, where hhh is tree height) in DFS, O(n)O(n)O(n) in BFS (queue storage).
+
+
+
+Problem 2: Check if One String Swap Can Make Strings Equal
+
+Problem Description:
+
+Given two strings s1 and s2 of equal length, determine if they can be made equal by performing at most one swap in one of the strings.
+
+
+
+Approach:
+
+1) Compare Characters at Mismatched Positions:
+
+• If s1 == s2, they are already equal → return true.
+
+• Find indices where s1[i] != s2[i].
+
+• If there are more than 2 mismatches, return false.
+
+• If exactly 2 mismatches, check if swapping the characters makes them equal.
+
+
+
+2) Implementation Details:
+
+• Use a list to store mismatch indices.
+
+• If mismatch count is not 0 or 2, return false.
+
+• If there are exactly 2 mismatches, check if swapping makes s1 == s2.
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(n) (one pass to find mismatches, one check for swap).
+
+• Space Complexity: O(1) (only a few variables used).
+
+
+
+Reflection:
+
+1) Mirror Tree:
+
+• Strengthened tree traversal techniques.
+
+• Practiced both recursive and iterative approaches.
+
+
+
+2) String Swap Check:
+
+• Improved string comparison skills.
+
+• Learned to efficiently find mismatched positions and validate swap conditions.
+
+#BinaryTree #Recursion #BFS #StringManipulation #Greedy 🚀
+
