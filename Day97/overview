@@ -1,0 +1,100 @@
+#Day 217 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Construct Tree from Inorder & Preorder Traversals
+
+Problem Description:
+
+Given two arrays representing the inorder and preorder traversals of a binary tree, construct the binary tree.
+
+Return the root node of the constructed tree.
+
+The output should be printed in postorder traversal.
+
+
+
+Approach:
+
+1) Understanding Traversals:
+
+• Preorder (Root → Left → Right): The first element in preorder is always the root.
+
+• Inorder (Left → Root → Right): The root's position splits the inorder array into left and right subtrees.
+
+
+
+2) Recursive Construction:
+
+• Identify the root from preorder.
+
+• Find the root’s index in inorder.
+
+• Recursively construct the left and right subtrees.
+
+• Base Case: If the range of indices is invalid, return NULL.
+
+
+
+Complexity Analysis:
+
+• Time Complexity: O(n) (each node is processed once).
+
+• Space Complexity: O(n) (recursion stack in the worst case).
+
+
+
+Problem 2: Tuple with Same Product
+
+Problem Description:
+
+Given an array of distinct positive integers, return the number of tuples (a, b, c, d) such that: a×b=c×d.
+
+Where a,b,c,d are all distinct elements in the array.
+
+
+
+Approach:
+
+1) Brute Force (Inefficient for Large Inputs):
+
+• Iterate over all pairs (a,b) and (c,d) and check if their product is the same.
+
+• Time Complexity: O(n4) (not optimal).
+
+
+
+2) Optimized Approach (Using HashMap):
+
+• Use a hashmap (dictionary) to store the product as a key and the list of pairs that produce that product.
+
+• Iterate over all pairs (i, j) and store their product in the map.
+
+• If the product is already present, count valid tuples using combinations.
+
+• Time Complexity: O(n2), which is much better.
+
+
+
+3) Tuple Counting:
+
+• If a product appears k times, the number of valid tuples is k×(k−1)×4 (due to 4 possible arrangements of (a,b,c,d).
+
+
+
+Reflection:
+
+1) Constructing a Tree from Traversals:
+
+• Strengthened recursion and tree-building skills.
+
+• Understood how preorder and inorder traversals help reconstruct a unique tree.
+
+
+
+2) Tuple with Same Product:
+
+• Practiced hashing for quick lookup.
+
+• Learned an efficient way to count valid product pairs.
+
+#BinaryTree #Recursion #Hashing #Combinations #TreeConstruction 🚀
+
