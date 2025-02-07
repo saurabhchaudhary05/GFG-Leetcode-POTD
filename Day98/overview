@@ -1,0 +1,98 @@
+#Day 218 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Inorder Traversal of a Binary Tree
+
+Problem Description:
+
+Given a binary tree, return its inorder traversal sequence.
+
+Inorder Traversal Order:
+
+Left Subtree → Root → Right Subtree
+
+Follow-up: Solve with O(1) auxiliary space (Morris Traversal).
+
+
+
+Approaches:
+
+1) Recursive Approach (DFS)
+
+• Base Case: If the node is NULL, return.
+
+• Traverse left subtree → Visit root → Traverse right subtree.
+
+• Time Complexity: O(n)
+
+• Space Complexity: O(n) (recursion stack).
+
+• Iterative Approach (Using Stack)
+
+• Use a stack to simulate recursion.
+
+• Traverse left, store nodes in stack, then pop and process.
+
+
+
+• Time Complexity: O(n)
+
+• Space Complexity: O(n) (stack space).
+
+• Morris Traversal (O(1) Space)
+
+• Uses threaded binary trees (modifying tree structure).
+
+• Instead of using stack/recursion, establish temporary links.
+
+• Time Complexity: O(n)O(n)O(n)
+
+• Space Complexity: O(1) (modifies tree structure but restores it).
+
+
+
+Problem 2: Number of Distinct Colors Among the Balls
+
+Problem Description:
+
+Given an integer limit (representing balls labeled from 0 to limit) and an array of queries of size n×2.
+
+Each query [x, y] assigns color y to ball x.
+
+After each query, return the number of distinct colors among all colored balls.
+
+
+
+Approach:
+
+1) Hash Set Approach:
+
+• Use a dictionary (hashmap) to store ball → color mappings.
+
+• Maintain a set of distinct colors.
+
+• After each query, add color y to the set and record the size.
+
+• Time Complexity: O(n) (each query takes O(1) on average).
+
+• Space Complexity: O(limit) (for storing ball-color mappings).
+
+
+
+Reflection:
+
+1) Inorder Traversal:
+
+• Practiced three different traversal methods.
+
+• Explored Morris Traversal for O(1) space solution.
+
+
+
+2) Distinct Colors Among Balls:
+
+• Used hashmap + set for fast updates.
+
+• Strengthened real-time query handling techniques.
+
+#BinaryTree #TreeTraversal #Hashing #MorrisTraversal #InorderTraversal 🚀
+
