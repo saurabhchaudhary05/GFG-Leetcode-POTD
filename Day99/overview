@@ -1,0 +1,90 @@
+#Day 219 Problem-Solving #GFG potd and #leetcode
+
+Problem 1: Design a Number Container System
+
+Problem Description:
+
+You need to design a system that efficiently supports the following operations:
+
+🔹 change(index, number): Inserts or replaces the number at the given index.
+
+ 🔹 find(number): Returns the smallest index containing the given number, or -1 if the number is not found.
+
+
+
+Approach:
+
+1️⃣ Data Structures Used:
+
+ • HashMap (index → number): Stores the latest number at each index.
+
+ • MinHeap (number → set of indices): Helps retrieve the smallest index quickly.
+
+2️⃣ Operations:
+
+ • On change(index, number), update the mapping and maintain the heap structure.
+
+ • On find(number), return the smallest index stored in the heap in O(1) time.
+
+
+
+Complexity:
+
+• Insertion/Update: O(log⁡N)
+
+ • Find Operation: O(1)
+
+
+
+Problem 2: Tree Boundary Traversal 🌳
+
+Problem Description:
+
+Given a binary tree, return its boundary traversal in this order:
+
+🔹 Left Boundary: Nodes from root to leftmost leaf (excluding leaves).
+
+ 🔹 Leaf Nodes: All leaf nodes from left to right.
+
+ 🔹 Reverse Right Boundary: Nodes from the rightmost leaf back to the root (excluding the root).
+
+
+
+Approach:
+
+1️⃣ Tree Traversals:
+
+ • DFS Traversal for left boundary (excluding leaves).
+
+ • Inorder Traversal to collect all leaf nodes.
+
+ • DFS Traversal for the right boundary (stored in reverse order).
+
+2️⃣ Steps:
+
+ • Start from the root, traverse the left boundary.
+
+ • Collect all leaf nodes using an inorder traversal.
+
+ • Traverse the right boundary and store it in reverse order.
+
+
+
+Complexity:
+
+• Time Complexity: O(N)
+
+ • Space Complexity: O(N)
+
+Reflection:
+
+✅ Design Problem: Used Heap + HashMap for efficient retrieval in the number container system.
+
+ ✅ Tree Traversal Mastery: Reinforced DFS traversal techniques for boundary traversal.
+
+ ✅ Optimized Search: Learned how min-heaps help in efficiently tracking minimum indices.
+
+🔹 Next Steps: Practice more tree traversal variations and efficient data structure design problems.
+
+ #DataStructures #BinaryTree #TreeTraversal #Heap #HashMap #CodingJourney 🚀
+
