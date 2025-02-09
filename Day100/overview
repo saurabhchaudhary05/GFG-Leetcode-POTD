@@ -1,0 +1,83 @@
+Day 220 of solving #GFG potd and #leetcode
+
+Problem 1: Maximum Path Sum from Any Node 🌳
+
+Problem Description:
+
+Given a binary tree, find the maximum path sum, where the path can start and end at any node.
+
+
+
+Approach:
+
+1️⃣ Recursive DFS Traversal:
+
+ • Compute the max path sum passing through each node.
+
+ • Maintain a global max to store the highest sum encountered.
+
+2️⃣ Steps:
+
+ • Recursively calculate the max sum from left and right subtrees.
+
+ • The max path sum at a node = node value + max(left, right, 0).
+
+ • Update the global max considering paths that pass through the node.
+
+
+
+Complexity:
+
+• Time Complexity: O(N)
+
+ • Space Complexity: O(H) (H = tree height)
+
+
+
+Problem 2: Count Number of Bad Pairs 🔢
+
+Problem Description:
+
+Given a 0-indexed array nums, a pair (i, j) is bad if:
+
+j−i≠nums[j]−nums[i]Find the total number of bad pairs in the array.
+
+
+
+Approach:
+
+1️⃣ Transform the Condition:
+
+ Rewriting the equation:
+
+nums[j]−j≠nums[i]−iDefine a new transformed array:
+
+value=nums[i]−iA pair is good if it has the same value, so a pair is bad otherwise.
+
+2️⃣ Steps:
+
+ • Use a HashMap to store frequency of nums[i] - i.
+
+ • Total pairs = n * (n - 1) / 2
+
+ • Subtract the good pairs from total to get the bad pairs.
+
+
+
+Complexity:
+
+• Time Complexity: O(N)
+
+ • Space Complexity: O(N)
+
+
+
+Reflection:
+
+✅ Binary Tree Mastery: Strengthened DFS traversal for max path sum problems.
+
+ ✅ Optimized Counting with HashMap: Learned efficient pair counting with prefix sum properties.
+
+ ✅ Improved Problem-Solving Speed: Practiced breaking complex conditions into simpler transformations.
+
+ #BinaryTree #DFS #HashMap #PrefixSum #CodingJourney #ProblemSolving
