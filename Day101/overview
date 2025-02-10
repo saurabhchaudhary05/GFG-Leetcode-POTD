@@ -1,0 +1,45 @@
+Problem 1: K Sum Paths 🌳
+Problem Description:
+Given a binary tree and an integer k, find the number of downward-only paths where the sum of node values in the path equals k.
+ A path must always move downward (parent to child) and can start and end at any node.
+
+Approach:
+1️⃣ Recursive DFS with Prefix Sum:
+ • Use a HashMap to store the prefix sum frequencies encountered.
+ • If current sum - k exists in the map, it means there’s a valid path.
+2️⃣ Steps:
+ • Traverse the tree using DFS.
+ • Maintain a prefix sum and store the count of sums encountered.
+ • Check if (current sum - k) exists in the HashMap.
+ • Recur for left and right subtrees while updating the prefix sum map.
+
+Complexity:
+• Time Complexity: O(N)
+ • Space Complexity: O(H) (for recursion stack & HashMap)
+
+Problem 2: Clear Digits 🔢
+Problem Description:
+Given a string s, remove all digits iteratively using the following rule:
+ For each digit, remove it along with the closest non-digit character to its left.
+ Return the resulting string after all digits are removed.
+
+Approach:
+1️⃣ Stack Simulation:
+ • Traverse the string while maintaining a stack.
+ • If a digit is encountered, remove the last non-digit character from the stack.
+ • Otherwise, push non-digit characters onto the stack.
+2️⃣ Steps:
+ • Initialize an empty stack.
+ • Iterate over each character:
+If digit, pop the last non-digit from the stack.
+Else, push the character onto the stack.
+ • The remaining stack represents the final string.
+
+Complexity:
+• Time Complexity: O(N)
+ • Space Complexity: O(N)
+
+Reflection:
+✅ Prefix Sum Mastery: Improved prefix sum usage with HashMap for tree path sum counting.
+ ✅ Stack-Based Removal: Learned efficient in-place string manipulation using stacks.
+ ✅ Enhanced Problem-Solving: Strengthened pattern recognition in graph/tree traversal and string processing.
