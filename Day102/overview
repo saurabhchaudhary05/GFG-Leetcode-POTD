@@ -1,0 +1,91 @@
+Day 222 of solving #GFG potd and #leetcode
+
+Problem 1: Remove All Occurrences of a Substring ✂️🔡
+
+Problem Description:
+
+Given two strings s and part, repeatedly remove the leftmost occurrence of part from s until part no longer exists in s.
+
+ Return the modified string.
+
+
+
+Approach:
+
+1️⃣ Iterative String Replacement:
+
+ • Use the find() function to locate the first occurrence of part in s.
+
+ • Remove it and continue searching until part is no longer found.
+
+2️⃣ Using Stack for Efficient Processing:
+
+ • Iterate through s, pushing characters onto a stack.
+
+ • After each insertion, check if the last characters in the stack match part.
+
+ • If found, remove them from the stack.
+
+
+
+Complexity:
+
+• Time Complexity: O(NM) (for repeated substring search & removal)
+
+ • Space Complexity: O(N) (for stack-based approach)
+
+
+
+Problem 2: Check for BST 🌳✅
+
+Problem Description:
+
+Given the root of a binary tree, check whether it is a Binary Search Tree (BST).
+
+ A BST must satisfy:
+
+Left subtree < Root
+
+Right subtree > Root
+
+Both subtrees must be valid BSTs
+
+
+
+Approach:
+
+1️⃣ Recursive Inorder Traversal:
+
+ • Perform an inorder traversal (Left → Root → Right).
+
+ • If the traversal is sorted, the tree is a BST.
+
+2️⃣ Using Min-Max Approach:
+
+ • Each node must be within a valid range (min,max)(min, max).
+
+ • Recursively check:
+
+Left subtree: Valid if all values < root.
+
+Right subtree: Valid if all values > root.
+
+
+
+Complexity:
+
+• Time Complexity: O(N)
+
+ • Space Complexity:  (H = height of the tree for recursion stack)
+
+
+
+Reflection:
+
+✅ String Manipulation: Mastered iterative and stack-based substring removal techniques.
+
+ ✅ BST Validation: Strengthened understanding of inorder traversal and min-max constraints.
+
+ ✅ Enhanced Problem-Solving: Improved efficiency in tree-based and string processing problems.
+
+ #BinarySearchTree #BST #InorderTraversal #StringProcessing #Stack #CodingChallenge
