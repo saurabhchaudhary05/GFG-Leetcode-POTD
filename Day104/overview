@@ -1,0 +1,87 @@
+Day 223 of solving #GFG potd and #leetcode
+
+Problem 1: Pair Sum in BST 🌳🔢
+
+Problem Description:
+
+Given a Binary Search Tree (BST) and a target sum, determine if any two nodes in the BST sum up to the target value.
+
+
+
+Approach:
+
+1️⃣ Using Inorder Traversal + Two-Pointer Technique:
+
+ • Perform an inorder traversal to get a sorted array representation of the BST.
+
+ • Use the two-pointer approach (start from both ends of the array) to check if any pair sums to the target.
+
+2️⃣ Using HashSet (Optimized for Unsorted BSTs):
+
+ • Traverse the BST while storing visited nodes in a HashSet.
+
+ • For each node x, check if target - x is in the set.
+
+ • If found, return True; otherwise, continue traversal.
+
+
+
+Complexity:
+
+• Time Complexity: O(N) (for both approaches)
+
+ • Space Complexity: O(N) (for storing elements in an array or set)
+
+
+
+Problem 2: Minimum Operations to Exceed Threshold Value II 🔢⚡
+
+Problem Description:
+
+Given a 0-indexed integer array nums and an integer k, perform operations to ensure all elements are ≥ k.
+
+ Operation:
+
+Pick the two smallest elements (x, y).
+
+Remove them from the array.
+
+Add min(x, y) * 2 + max(x, y) back into the array.
+
+Repeat until all elements ≥ k.
+
+ Return the minimum number of operations required.
+
+
+
+Approach:
+
+1️⃣ Using Min-Heap (Priority Queue) for Efficiency:
+
+ • Use a Min-Heap (priority queue) to efficiently get the two smallest elements.
+
+ • Apply the operation and push the new value back into the heap.
+
+ • Repeat until the smallest element in the heap is ≥ k.
+
+
+
+Complexity:
+
+• Time Complexity: O(Nlog⁡N) (heap operations)
+
+ • Space Complexity: O(N) (for heap storage)
+
+
+
+Reflection:
+
+✅ BST Pair Sum: Strengthened understanding of two-pointer and hash-based search techniques in BSTs.
+
+ ✅ Heap Operations: Improved efficiency in combining elements to exceed a threshold.
+
+ ✅ Optimized Search & Sorting: Practiced inorder traversal, hash-based lookups, and heap-based priority operations.
+
+
+
+ #BinarySearchTree #BST #TwoPointers #HashSet #MinHeap #PriorityQueue #GreedyAlgorithm #CodingChallenge
